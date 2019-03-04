@@ -10,10 +10,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_04_134826) do
+ActiveRecord::Schema.define(version: 2019_03_04_151337) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "items", force: :cascade do |t|
+    t.string "name"
+    t.string "ingredients"
+    t.string "cruelty"
+    t.string "price"
+    t.string "brand"
+    t.string "picture_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.string "status"
+    t.integer "amount_cents", default: 0, null: false
+    t.string "amount_currency", default: "USD", null: false
+    t.bigint "package_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["package_id"], name: "index_orders_on_package_id"
+  end
+
+  create_table "package_items", force: :cascade do |t|
+    t.bigint "package_id"
+    t.bigint "item_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_package_items_on_item_id"
+    t.index ["package_id"], name: "index_package_items_on_package_id"
+  end
+
+  create_table "packages", force: :cascade do |t|
+    t.string "description"
+    t.string "price_range"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_packages_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +66,8 @@ ActiveRecord::Schema.define(version: 2019_03_04_134826) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "orders", "packages"
+  add_foreign_key "package_items", "items"
+  add_foreign_key "package_items", "packages"
+  add_foreign_key "packages", "users"
 end
