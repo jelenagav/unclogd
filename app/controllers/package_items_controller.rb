@@ -11,11 +11,7 @@ class PackageItemsController < ApplicationController
   def create
     @package_item = PackageItem.new(package_item_params)
     authorize @package_item
-    if (@package_item.save)
-     redirect_to user_path(current_user)
-    else
-     redirect_to items_path
-    end
+    redirect_to items_path
   end
 
   def edit
