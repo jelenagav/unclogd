@@ -12,6 +12,7 @@ class ItemsController < ApplicationController
 
   def show
     authorize @item
+    @package_item = PackageItem.new(package: current_user.active_package, item: @item)
   end
 
   private
