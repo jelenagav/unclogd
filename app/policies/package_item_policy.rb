@@ -1,4 +1,4 @@
-class PackagePolicy < ApplicationPolicy
+class PackageItemPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
@@ -6,7 +6,7 @@ class PackagePolicy < ApplicationPolicy
   end
 
   def create?
-
+    return true
   end
 
   def edit?
@@ -18,7 +18,7 @@ class PackagePolicy < ApplicationPolicy
   end
 
   def show?
-    return true
+
   end
 
   def destroy?
