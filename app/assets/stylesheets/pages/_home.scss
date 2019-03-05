@@ -7,6 +7,8 @@ body {
 
 body.pages.home {
 
+  text-decoration: none;
+
   height: 100vh;
   h1 {
  font-family: 'Crimson Text', serif;
@@ -60,9 +62,10 @@ body.pages.home {
     flex-flow: row wrap;
     text-align: center;
     position: relative;
-
-    transition: opacity 2s ease-in;
+    transition: all .3s ease-in;
+    flex-direction: column;
     text-decoration: none;
+
 
     > div {
       // height: 100%;
@@ -83,7 +86,7 @@ body.pages.home {
 }
 
 .check-container {
-  float: right;
+    float: right;
     background-color: #212529;
     color: #fff;
     width: 100%;
@@ -95,6 +98,7 @@ body.pages.home {
     text-align: center;
     position: relative;
     transition: opacity 2s ease-in;
+    flex-direction: column;
     text-decoration: none;
 
     > div {
@@ -112,12 +116,32 @@ body.pages.home {
         width: 100%;
       }
     }
+
+    > .col2 {
+
+      > h1, p {
+        color: #B5B5B5;
+        text-decoration: none;
+      }
+
+      > h1, h1 {
+        color: #B5B5B5;
+        text-decoration: none;
+      }
+    }
+}
+
+.col2 {
+  a:hover {
+    text-decoration: none;
+  }
 }
 
 .picture {
   width: 80px;
   height: 80px;
 }
+
 
 .hidden-text {
   opacity: 0;
@@ -132,9 +156,16 @@ body.pages.home {
 }
 
 .find-container:hover {
-  color: black
+  color: black;
 
+  .picture {
+    opacity: 1;
+  }
 }
+
+
+
+
 .find-container:hover .hidden-text{
   color: black;
   opacity: 1;
@@ -144,6 +175,10 @@ body.pages.home {
 .browse-container:hover {
   color: white;
 
+  .picture {
+    opacity: 1;
+  }
+
 }
 .browse-container:hover .hidden-text{
   color: white;
@@ -151,23 +186,33 @@ body.pages.home {
 
 }
 
+.check-container:hover {
+  color: white;
+
+  p, h1{
+    color: white;
+  }
+
+  .picture {
+    opacity: 1;
+  }
+
+}
+
+.check-container:hover .hidden-text{
+  color: white;
+  opacity: 1;
+
+}
+
+
+
 .picture {
   opacity: 0;
 }
 
-.picture:hover {
-  opacity: 1;
+
+
 }
 
-// .text-container {
-//   position: absolute;
-//   margin-left: 30px;
-//   margin-top: 300px;
-//   margin-bottom: 200px;
-// }
 
-// .col {
-//   display: flex;
-//   vertical-align: center;
-// }
-}

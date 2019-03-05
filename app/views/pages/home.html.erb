@@ -12,7 +12,7 @@
     </div>
 
     <div class = "col3">
-      <div class="text-container">
+      <div class="hidden-text">
         <p >Browse a skin care product<br>Browse through carefully chosen skincare products</p>
       </div>
     </div>
@@ -24,13 +24,13 @@
     </div>
 
     <div class = "col2">
-     <%= image_tag 'magnifying-glass-white.svg', class: "picture" %>
-      <h1>Browse</h1>
+     <%= image_tag 'solution.svg', class: "picture" %>
+      <h1>Find</h1>
       <p>⟶</p>
     </div>
 
     <div class = "col3">
-      <div class="text-container">
+      <div class="hidden-text">
         <p >Browse a skin care product<br>Browse through carefully chosen skincare products</p>
       </div>
     </div>
@@ -41,26 +41,24 @@
         <div class = "col1">
         </div>
 
-    <% if current_user %>
-      <% link_to user_path(current_user) do %>
         <div class = "col2">
-          <%= image_tag 'tick-white.svg', class: "picture" %>
-          <h1>Check</h1>
-          <p>⟶</p>
+          <% if current_user %>
+            <%= link_to user_path(current_user) do %>
+                <%= image_tag 'tick-white.svg', class: "picture" %>
+                <h1>Check</h1>
+                <p>⟶</p>
+            <% end %>
+          <% else %>
+            <%= link_to new_user_session_path do %>
+                <%= image_tag 'tick-white.svg', class: "picture" %>
+                <h1>Check</h1>
+                <p>⟶</p>
+            <% end %>
+          <% end %>
         </div>
-      <% end %>
-    <% else %>
-      <% link_to new_user_session_path do %>
-        <div class ="col2">
-          <%= image_tag 'tick-white.svg', class: "picture" %>
-          <h1>Check</h1>
-          <p>⟶</p>
-        </div>
-      <% end %>
-    <% end %>
 
       <div class = "col3">
-        <div class="text-container">
+        <div class="hidden-text">
           <p >Browse a skin care product<br>Browse through carefully chosen skincare products</p>
         </div>
       </div>
