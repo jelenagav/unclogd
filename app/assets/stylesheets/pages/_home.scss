@@ -1,5 +1,18 @@
 // Specific CSS for your home-page
 
+
 body {
-  background-color: gray;
+  background: transparent;
+}
+
+body.pages.home {
+
+  h1 {
+ font-family: 'Crimson Text', serif;
+}
+
+  h4 {
+ font-family: 'Crimson Text', serif;
+}
+
 }

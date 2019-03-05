@@ -9,6 +9,7 @@ gem 'puma'
 gem 'rails', '5.2.2'
 gem 'redis'
 gem 'money-rails'
+gem 'faker', '~> 1.6', '>= 1.6.6'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
