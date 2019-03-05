@@ -1,3 +1,6 @@
+
+if (document.querySelector('.pages.quiz')) {
+
 jQuery('.mm-prev-btn').hide();
 
   var x;
@@ -5,7 +8,6 @@ jQuery('.mm-prev-btn').hide();
   var current;
   var percent;
   var z = [];
-
 
   init();
   getCurrentSlide();
@@ -39,6 +41,8 @@ jQuery('.mm-prev-btn').hide();
       const firstPage = document.querySelector('.mm-survey-page')
       firstPage.classList.add('active')
       getCurrentSlide()
+
+      document.querySelector('.welcome').classList.add('hidden')
     })
 
   }
@@ -284,3 +288,4 @@ jQuery('.mm-prev-btn').hide();
       jQuery('.mm-survey-results').slideUp();
     });
   }
+}
