@@ -8,14 +8,12 @@
   <div class="main-nav">
     <% if user_signed_in? %>
       <ul>
-        <%= link_to t(".search", default: "Seach"), root_path, class: "main-nav-link" %><!-- <li><a href="Search" class="is-active">Search</li> -->
-        <%= link_to t("Quiz", default: "Quiz"), root_path, class: "main-nav-link" %>
-        <%= link_to t("Account", default: "Account"), root_path, class: "main-nav-link" %>
-        <%= link_to t("Basket", default: "Basket"), root_path, class: "main-nav-link" %>
-        <%= link_to t("Check", default: "Check"), root_path, class: "main-nav-link" %>
-        <%= link_to destroy_user_session_path, method: :delete do %>
-        <%= t("sign out", default: "Sign Out") %>
-        <% end %>
+        <li><%= link_to "Search", items_path, class: "is-active" %></li>
+        <li><%= link_to "Quiz", quiz_path %></li>
+        <li><%= link_to "Account", user_path(current_user) %></li>
+        <li><%= link_to "Basket", package_path(current_user.active_package) %></li>
+        <li><a href="Compare">Check</a></li>
+        <li><%= link_to t(".sign_out", default: "Log out"), destroy_user_session_path, method: :delete %></li>
       </ul>
 
         <a href="#" class="main-nav-trigger">
@@ -31,6 +29,7 @@
     </ul>
         <a href="#" class="main-navbar-trigger">
           <i class="fas fa-bars"></i>
+        </a>
     <% end %>
     </div>
   </div>

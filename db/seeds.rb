@@ -2,6 +2,8 @@ require 'faker'
 
 Item.destroy_all
 User.destroy_all
+Package.destroy_all
+PackageItem.destroy_all
 
 
 user = User.create!(email: "test2@gmail.com", password:"123456")
