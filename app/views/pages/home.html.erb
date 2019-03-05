@@ -2,7 +2,8 @@
 <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans" rel="stylesheet">
 
 <div class="main-container">
-  <a href="/items" class="browse-container">
+  <%= link_to items_path, class: 'browse-container' do %>
+
     <div class = "col1">
     </div>
 
@@ -17,16 +18,17 @@
         <p >Browse a skin care product<br>Browse through carefully chosen skincare products</p>
       </div>
     </div>
-  </a>
+  <% end %>
 
 
-  <a href="/quiz" class="find-container">
+
+  <%= link_to quiz_path, class: 'find-container' do %>
     <div class = "col1">
     </div>
 
     <div class = "col2">
      <%= image_tag 'solution.svg', class: "picture" %>
-      <h1>Find</h1>
+      <h1>Quiz</h1>
       <p>⟶</p>
     </div>
 
@@ -35,7 +37,7 @@
         <p >Browse a skin care product<br>Browse through carefully chosen skincare products</p>
       </div>
     </div>
-  </a>
+  <% end %>
 
 
   <div class="check-container">
