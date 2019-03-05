@@ -1,22 +1,24 @@
-<div class="navbar-unclogd">
+
   <!-- Logo -->
-  <%= link_to root_path, class: "navbar-unclogd-brand" do %>
-    <%= image_tag "logo.png", height: 50 %>
-  <% end %>
+  <%#= link_to root_path, class: "navbar-unclogd-brand" do %>
+    <%#= image_tag "logo.png", height: 50 %>
+  <%# end %>
 
   <!-- Right Navigation -->
-  <div class="navbar-white-hamburger-right hidden-xs hidden-sm">
+  <div class="main-nav">
+        <ul>
+          <li><a href="Search" class="is-active">Search</li>
+          <li><a href="Quiz">Quiz</a></li>
+          <li><a href="Account">Account</a></li>
+          <li><a href="Basket">Basket</a></li>
+          <li><a href="Check">Check</a></li>
+          <li><a href="Sign Out">Sign Out</a></li>
+        </ul>
 
-
-    <i class="fas fa-bars">
-      <ul class="dropdown-menu dropdown-menu-right navbar-white-hamburger-dropdown-menu">
-        <li><%= link_to "Sign In" %></li>
-        <li><%= link_to "Sign Up" %></li>
-      </ul>
-
-    </i>
-
-
+        <a href="#" class="main-nav-trigger">
+          <i class="fas fa-bars"></i>
+        </a>
+    </div>
 
 
 
@@ -26,10 +28,10 @@
 
       <!-- Avatar with dropdown menu -->
 
-  </div>
+  <!-- </div>
 
-  <!-- Dropdown list appearing on mobile only -->
-  <div class="navbar-wagon-item hidden-md hidden-lg">
+  <-- Dropdown list appearing on mobile only -->
+  <!-- <div class="navbar-wagon-item hidden-md hidden-lg">
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
@@ -39,5 +41,5 @@
       </ul>
     </div>
   </div>
-</div>
+</div> -->
 
