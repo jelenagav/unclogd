@@ -1,1 +1,14 @@
-<h1>Hello from show page of item no. <%= @item.id %>!</h1>
+<h1>Hello from show page of item <%= @item.name %>!</h1>
+
+<div class="cards">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),  url(<%= @item.picture_url %>)">
+      <%= @item.name %>
+      <%= simple_form_for(@package_item) do |f| %>
+        <%=  f.hidden_field :package_id %>
+        <%=  f.hidden_field :item_id %>
+        <%= f.button :submit, "Put in Basket", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+</div>
+
+    <!-- t.bigint "package_id" -->
