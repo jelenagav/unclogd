@@ -5,6 +5,10 @@ class PackagesController < ApplicationController
     @packages = Package.all
   end
 
+  def show
+    authorize @package
+  end
+
   def new
     @package = Package.new
     if current_user
