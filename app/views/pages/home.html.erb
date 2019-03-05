@@ -16,7 +16,11 @@
 </div>
 
 <div class="check-container">
-<h1><%= link_to "Check", items_path %></h1>
-<h4>Search and find more about a product</h4>
+  <% if current_user %>
+    <h1><%= link_to "Check", user_path(current_user) %></h1>
+  <% else %>
+    <h1><%= link_to t(".sign_in", default: "Check"), new_user_session_path %></h1>
+  <% end %>
+  <h4>Search and find more about a product</h4>
 </div>
 
