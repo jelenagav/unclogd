@@ -1,4 +1,99 @@
-/* Main navbar */
+
+// main-navbar
+.main-navbar {
+    position: fixed;
+    top: 0;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    transition: .10s;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.main-navbar ul{
+  visibility: hidden;
+  padding-top: 10px;
+  overflow: hidden;
+  -webkit-transition: all .1s ease-in-out;
+  -moz-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+.main-navbar:hover ul {
+    // height: 40px;
+  visibility: visible;
+
+
+
+}
+
+
+
+.main-navbar ul li {
+    //margin: 0;
+    padding: 0px 10px;
+    // transition: .10s;
+    // transform: translateY(-81%);
+    display: inline-block;
+}
+
+  .main-navbar ul li, .main-nav ul li a:hover {
+    color: #74E4D6;
+    text-decoration: none;
+
+  }
+
+.main-navbar ul li a {
+    text-transform: uppercase;
+    display: inline-block;
+    transition: .10s;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: black
+
+}
+
+
+
+  a:visited {
+    color: inherit;
+  }
+
+  a {
+    background-color: transparent;
+  }
+
+
+
+
+  .main-navbar .main-navbar-trigger .fa-bars {
+    // display: inline-block;
+    // width: 0;
+    // height: 5px;
+    //margin-top: 15px;
+    color: black;
+    font-size: 30px;
+    // position: relative;
+    // margin-bottom: 20px;
+    //transition: .4s;
+    //background: #1D1D1F;
+  }
+
+
+
+
+
+
+
+
+
+
+
+/* main-nav */
 
 
 // a {
@@ -22,10 +117,10 @@
   visibility: hidden;
   padding-top: 10px;
   overflow: hidden;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all .1s ease-in-out;
+  -moz-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
 }
 
 .main-nav:hover ul {
@@ -38,37 +133,6 @@
 
 
 
-
-// .main-nav::before {
-//     content: '';
-//     display: block;
-//     background: white;
-//     height: 80px;
-//     border-bottom: 1px solid white;
-//     margin-top: -80px;
-//     transition: .10s;
-//   }
-  // .main-nav-trigger:hover {
-  //   .main-nav {
-  //     display: block;
-  //     position: fixed;
-  //     top: 20px;
-  //     right: 30px;
-  //     padding: 10px 0;
-  //     cursor: pointer;
-  //   }
-  // }
-
-//   .main-nav ul {
-//     position: absolute;
-//     left: 0;
-//     right: 0;
-//     padding: 20px;
-//     margin: 0;
-//     list-style: none;
-//     transform: none;
-// }
-
 .main-nav ul li {
     //margin: 0;
     padding: 0px 10px;
@@ -77,8 +141,9 @@
     display: inline-block;
 }
 
-  .main-nav ul li a.is-active, .main-nav ul li a:hover {
+  .main-nav ul li, .main-nav ul li a:hover {
     color: #74E4D6;
+    text-decoration: none;
 
   }
 
@@ -102,10 +167,6 @@
     background-color: transparent;
   }
 
-  // .main-nav .main-nav-trigger.is-visible i.fa-bars {
-  //   width: 30px;
-  // }
-
 
 
 
@@ -114,7 +175,7 @@
     // width: 0;
     // height: 5px;
     //margin-top: 15px;
-    color: white;
+    color: black;
     font-size: 30px;
     // position: relative;
     // margin-bottom: 20px;
@@ -122,45 +183,5 @@
     //background: #1D1D1F;
   }
 
-
-  // .main-nav .main-nav-trigger.is-visible i.fa-bars:before {
-  //   width: 30px;
-  //   transition-delay: .20s;
-  // }
-
-//   .main-nav .main-nav-trigger .fa-bars:before {
-//     top: 8px;
-//   }
-
-//   .main-nav .main-nav-trigger .fa-bars:after, .main-nav .main-nav-trigger .fa-bars:before {
-//     content: '';
-//     display: block;
-//     width: 0;
-//     height: 3px;
-//     left: 0;
-//     position: absolute;
-//     background: #1D1D1F;
-//     transition: .20s;
-// }
-
-// .main-nav .main-nav-trigger.is-visible i.fa-bars:after {
-//     width: 30px;
-//     transition-delay: .20s;
-//   }
-
-// .main-nav .main-nav-trigger .fa-bars:after {
-//     top: 16px;
-//   }
-
-//   .main-nav .main-nav-trigger .fa-bars:after, .main-nav .main-nav-trigger .fa-bars:before {
-//     content: '';
-//     display: block;
-//     width: 0;
-//     height: 3px;
-//     left: 0;
-//     position: absolute;
-//     background: #1D1D1F;
-//     transition: .20s;
-//   }
 
 
