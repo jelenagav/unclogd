@@ -7,12 +7,167 @@ body {
 
 body.pages.home {
 
+  height: 100vh;
   h1 {
  font-family: 'Crimson Text', serif;
 }
 
-  h4 {
+  p {
  font-family: 'Crimson Text', serif;
 }
 
+.browse-container {
+    float: left;
+    background-color: #212529;
+    color: #B5B5B5;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    text-align: center;
+    position: relative;
+    transition: all .3s ease-in;
+    flex-direction: column;
+    text-decoration: none;
+
+    > div {
+      // height: 100%;
+      width: 100%;
+      flex: 1 1;
+    }
+
+    > .col3 {
+      position: relative;
+
+      > div {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+      }
+    }
+}
+
+.find-container {
+    background-color: white;
+    color: #B5B5B5;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    text-align: center;
+    position: relative;
+
+    transition: opacity 2s ease-in;
+    text-decoration: none;
+
+    > div {
+      // height: 100%;
+      width: 100%;
+      flex: 1 1;
+    }
+
+    > .col3 {
+      position: relative;
+
+      > div {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+      }
+    }
+
+}
+
+.check-container {
+  float: right;
+    background-color: #212529;
+    color: #fff;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    text-align: center;
+    position: relative;
+    transition: opacity 2s ease-in;
+    text-decoration: none;
+
+    > div {
+      // height: 100%;
+      width: 100%;
+      flex: 1 1;
+    }
+
+    > .col3 {
+      position: relative;
+
+      > div {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+      }
+    }
+}
+
+.picture {
+  width: 80px;
+  height: 80px;
+}
+
+.hidden-text {
+  opacity: 0;
+  transition: all .5s ease-in;
+}
+
+.main-container {
+    overflow: hidden;
+    display: flex;
+    height: 100%;
+    margin: 0;
+}
+
+.find-container:hover {
+  color: black
+
+}
+.find-container:hover .hidden-text{
+  color: black;
+  opacity: 1;
+
+}
+
+.browse-container:hover {
+  color: white;
+
+}
+.browse-container:hover .hidden-text{
+  color: white;
+  opacity: 1;
+
+}
+
+.picture {
+  opacity: 0;
+}
+
+.picture:hover {
+  opacity: 1;
+}
+
+// .text-container {
+//   position: absolute;
+//   margin-left: 30px;
+//   margin-top: 300px;
+//   margin-bottom: 200px;
+// }
+
+// .col {
+//   display: flex;
+//   vertical-align: center;
+// }
 }
