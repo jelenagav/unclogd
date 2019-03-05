@@ -1,11 +1,19 @@
 <h1> Available items (<%= @items.length %>) </h1>
 
+<%= form_tag items_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "flash flash-success",
+    placeholder: "Find an item"
+  %>
+<% end %>
+
 <div class="cards">
   <% @items.each do |item| %>
-    <%= link_to item_path(item) do %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),  url(<%= item.picture_url %>)">
-          <%= item.name %>
-      </div>
-    <% end %>
+  <%= link_to item_path(item) do %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),  url(<%= item.picture_url %>)">
+    <%= item.name %>
+  </div>
+  <% end %>
   <% end %>
 </div>

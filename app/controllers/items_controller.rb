@@ -2,11 +2,17 @@ class ItemsController < ApplicationController
   before_action :find_item, only: [:show]
 
   def index
-    @items = policy_scope(Item.all)
+    if params[:query].present?
+      sql_query = "name ILIKE :query OR ingredients ILIKE :query OR brand ILIKE :query"
+      @items = policy_scope(Item.where(sql_query, query: "%#{params[:query]}%"))
+    else
+      @items = policy_scope(Item.all)
+    end
   end
 
   def show
     authorize @item
+    @package_item = PackageItem.new(package: current_user.active_package, item: @item)
   end
 
   private
