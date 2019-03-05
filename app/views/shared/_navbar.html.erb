@@ -1,4 +1,4 @@
-<div class="main-navbar"></div>
+<div class="main-navbar">
   <!-- Logo -->
   <%#= link_to root_path, class: "navbar-unclogd-brand" do %>
     <%#= image_tag "logo.png", height: 50 %>
@@ -8,26 +8,32 @@
   <div class="main-nav">
     <% if user_signed_in? %>
       <ul>
-        <li><a href="Search" class="is-active">Search</li>
-        <li><a href="Quiz">Quiz</a></li>
-        <li><a href="Account">Account</a></li>
-        <li><a href="Basket">Basket</a></li>
-        <li><a href="Check">Check</a></li>
-        <li><a href="Sign Out">Sign Out</a></li>
+        <%= link_to t(".search", default: "Seach"), root_path, class: "main-nav-link" %><!-- <li><a href="Search" class="is-active">Search</li> -->
+        <%= link_to t("Quiz", default: "Quiz"), root_path, class: "main-nav-link" %>
+        <%= link_to t("Account", default: "Account"), root_path, class: "main-nav-link" %>
+        <%= link_to t("Basket", default: "Basket"), root_path, class: "main-nav-link" %>
+        <%= link_to t("Check", default: "Check"), root_path, class: "main-nav-link" %>
+        <%= link_to destroy_user_session_path, method: :delete do %>
+        <%= t("sign out", default: "Sign Out") %>
+        <% end %>
       </ul>
+
         <a href="#" class="main-nav-trigger">
           <i class="fas fa-bars"></i>
         </a>
     <% else %>
     <!-- Login Link (when logged out) -->
-    <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "main-navbar" %>
-    <%= link_to t(".sign_up", default: "Sign Up"), new_user_registration_path, class: "main-navbar" %>
-      <a href="#" class="main-nav-trigger">
+    <div class="homepage-login">
+      <ul>
+    <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "main-navbar-link" %>
+
+    <%= link_to t(".sign_up", default: "Sign Up"), new_user_registration_path, class: "main-navbar-link" %>
+    </ul>
+        <a href="#" class="main-navbar-trigger">
           <i class="fas fa-bars"></i>
     <% end %>
-
     </div>
-
+  </div>
   </div>
 
 

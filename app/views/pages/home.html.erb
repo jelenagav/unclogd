@@ -40,9 +40,18 @@
 
   <div class="check-container">
         <div class = "col1">
+          <div class="homepage-login hidden-text">
+            <ul>
+              <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "main-navbar-link" %>
+
+              <%= link_to t(".sign_up", default: "Sign Up"), new_user_registration_path, class: "main-navbar-link" %>
+             </ul>
+        </div>
         </div>
 
         <div class = "col2">
+
+
           <% if current_user %>
             <%= link_to user_path(current_user) do %>
                 <%= image_tag 'tick-white.svg', class: "picture" %>
@@ -56,13 +65,12 @@
                 <p>⟶</p>
             <% end %>
           <% end %>
-        </div>
+      </div>
 
       <div class = "col3">
         <div class="hidden-text">
           <p >Browse a skin care product<br>Browse through carefully chosen skincare products</p>
         </div>
       </div>
-  </div>
 
 </div>
