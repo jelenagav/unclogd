@@ -6,6 +6,7 @@ jQuery('.mm-prev-btn').hide();
   var percent;
   var z = [];
 
+
   init();
   getCurrentSlide();
   goToNext();
@@ -32,6 +33,13 @@ jQuery('.mm-prev-btn').hide();
       //item.html(page);
 
     });
+
+    const beginButton = document.getElementById('begin-survey')
+    beginButton.addEventListener('click', () => {
+      const firstPage = document.querySelector('.mm-survey-page')
+      firstPage.classList.add('active')
+      getCurrentSlide()
+    })
 
   }
 
@@ -242,64 +250,33 @@ jQuery('.mm-prev-btn').hide();
     });
   }
 
-  function collectData() {
+  // function collectData() {
 
-    var map = {};
-    var ax = ['0','red','mercedes','3.14','3'];
-    var answer = '';
-    var total = 0;
-    var ttl = 0;
-    var g;
-    var c = 0;
+  //   var map = {};
+  //   var ax = ['0','red','mercedes','3.14','3'];
+  //   var answer = '';
+  //   var total = 0;
+  //   var ttl = 0;
+  //   var g;
+  //   var c = 0;
 
-    jQuery('.mm-survey-item input:checked').each(function(index, val) {
-      var item;
-      var data;
-      var name;
-      var n;
+    // jQuery('.mm-survey-item input:checked').each(function(index, val) {
+    //   var item;
+    //   var data;
+    //   var name;
+    //   var n;
 
-      item = jQuery(this);
-      data = item.val();
-      name = item.data('item');
-      n = parseInt(data);
-      total += n;
+    //   item = jQuery(this);
+    //   data = item.val();
+    //   name = item.data('item');
+    //   n = parseInt(data);
+    //   total += n;
 
-      map[name] = data;
+    //   map[name] = data;
 
-    });
+    // });
 
-    jQuery('.mm-survey-results-container .mm-survey-results-list').html('');
 
-    for (i = 1; i <= count; i++) {
-
-      var t = {};
-      var m = {};
-      answer += map[i] + '<br>';
-
-      if( map[i] === ax[i]) {
-        g = map[i];
-        p = 'correct';
-        c = 1;
-      }
-      else {
-        g = map[i];
-        p = 'incorrect';
-        c = 0;
-      }
-
-      jQuery('.mm-survey-results-list').append('<li class="mm-survey-results-item '+p+'"><span class="mm-item-number">'+i+'</span><span class="mm-item-info">'+g+' - '+p+'</span></li>');
-
-      m[i] = c;
-      ttl += m[i];
-
-    }
-
-    var results;
-    results = ( ( ttl / count ) * 100 ).toFixed(0);
-
-    jQuery('.mm-survey-results-score').html( results + '%' );
-
-  }
 
   function goBack() {
     jQuery('.mm-back-btn').on('click', function() {
