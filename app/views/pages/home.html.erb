@@ -1,26 +1,68 @@
 
 <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans" rel="stylesheet">
 
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="main-container">
+  <a href="/items" class="browse-container">
+    <div class = "col1">
+    </div>
+
+    <div class = "col2">
+     <%= image_tag 'magnifying-glass-white.svg', class: "picture" %>
+      <h1>Browse</h1>
+      <p>⟶</p>
+    </div>
+
+    <div class = "col3">
+      <div class="hidden-text">
+        <p >Browse a skin care product<br>Browse through carefully chosen skincare products</p>
+      </div>
+    </div>
+  </a>
 
 
-<div class="browse-container">
-<h1><%= link_to "Browse", items_path %></h1>
-<h4>Search and find more about a product</h4>
+  <a href="/items" class="find-container">
+    <div class = "col1">
+    </div>
 
-</div>
+    <div class = "col2">
+     <%= image_tag 'solution.svg', class: "picture" %>
+      <h1>Find</h1>
+      <p>⟶</p>
+    </div>
 
-<div class="find-container">
-<h1><%= link_to "Find", items_path %></h1>
-<h4>Search and find more about a product</h4>
-</div>
+    <div class = "col3">
+      <div class="hidden-text">
+        <p >Browse a skin care product<br>Browse through carefully chosen skincare products</p>
+      </div>
+    </div>
+  </a>
 
-<div class="check-container">
-  <% if current_user %>
-    <h1><%= link_to "Check", user_path(current_user) %></h1>
-  <% else %>
-    <h1><%= link_to t(".sign_in", default: "Check"), new_user_session_path %></h1>
-  <% end %>
-  <h4>Search and find more about a product</h4>
+
+  <div class="check-container">
+        <div class = "col1">
+        </div>
+
+        <div class = "col2">
+          <% if current_user %>
+            <%= link_to user_path(current_user) do %>
+                <%= image_tag 'tick-white.svg', class: "picture" %>
+                <h1>Check</h1>
+                <p>⟶</p>
+            <% end %>
+          <% else %>
+            <%= link_to new_user_session_path do %>
+                <%= image_tag 'tick-white.svg', class: "picture" %>
+                <h1>Check</h1>
+                <p>⟶</p>
+            <% end %>
+          <% end %>
+        </div>
+
+      <div class = "col3">
+        <div class="hidden-text">
+          <p >Browse a skin care product<br>Browse through carefully chosen skincare products</p>
+        </div>
+      </div>
+  </div>
+
 </div>
