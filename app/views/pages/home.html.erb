@@ -37,32 +37,34 @@
   </a>
 
 
-  <a href="/items" class="check-container">
-
+  <div class="check-container">
+        <div class = "col1">
+        </div>
 
     <% if current_user %>
-      <h1><%= link_to user_path(current_user) do %></h1>
-        <div>
-          <h1>check</h1>
-
+      <% link_to user_path(current_user) do %>
+        <div class = "col2">
+          <%= image_tag 'tick-white.svg', class: "picture" %>
+          <h1>Check</h1>
+          <p>⟶</p>
         </div>
+      <% end %>
     <% else %>
-      <h1><%= link_to new_user_session_path %></h1>
+      <% link_to new_user_session_path do %>
+        <div class ="col2">
+          <%= image_tag 'tick-white.svg', class: "picture" %>
+          <h1>Check</h1>
+          <p>⟶</p>
+        </div>
+      <% end %>
     <% end %>
 
-
-
-      <div>
-        <%= image_tag 'tick-white.svg', class: "picture" %>
-        <h1>Check</h1>
-        <p>⟶</p>
-      </div>
-
-        <div class = "hidden-text">
-          <p>Check your cabinet<br>Check if your chosen products are compatible</p>
+      <div class = "col3">
+        <div class="text-container">
+          <p >Browse a skin care product<br>Browse through carefully chosen skincare products</p>
         </div>
       </div>
-  </a>
+  </div>
 
 </div>
 
