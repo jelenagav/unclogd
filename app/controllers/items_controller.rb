@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
   before_action :find_item, only: [:show]
 
   def index
-    @items = Item.all
+    @items = policy_scope(Item.all)
   end
 
   def show

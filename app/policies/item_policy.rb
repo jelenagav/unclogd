@@ -5,7 +5,6 @@ class ItemPolicy < ApplicationPolicy
     end
   end
 
-
   def create?
 
   end
