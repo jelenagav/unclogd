@@ -45,13 +45,13 @@
           <% if current_user %>
             <%= link_to user_path(current_user) do %>
                 <%= image_tag 'tick-white.svg', class: "picture" %>
-                <h1>Check</h1>
+                <h1>Compare</h1>
                 <p>⟶</p>
             <% end %>
           <% else %>
             <%= link_to new_user_session_path do %>
                 <%= image_tag 'tick-white.svg', class: "picture" %>
-                <h1>Check</h1>
+                <h1>Compare</h1>
                 <p>⟶</p>
             <% end %>
           <% end %>
@@ -59,7 +59,7 @@
 
       <div class = "col3">
         <div class="hidden-text">
-          <p >Browse a skin care product<br>Browse through carefully chosen skincare products</p>
+          <p >Compare a skin care product<br>Compare through carefully chosen skincare products</p>
         </div>
       </div>
   </div>
