@@ -6,6 +6,10 @@
   <% end %>
 </ul>
 
-<% if current_user.active_package.package_items.count >= 3 %>
-  <% helllooooo %>
-<% end %>
+<% if @number_package >= 3 && @existing_order.nil?%>
+  <%= simple_form_for @new_order do |f| -%>
+    <%= f.hidden_field :package_id %>
+    <%= f.submit "order package" %>
+  <% end %>
+<% end -%>
+
