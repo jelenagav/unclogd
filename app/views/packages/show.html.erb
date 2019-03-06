@@ -1,4 +1,4 @@
-<ul>
+<ul style="padding-top: 100px">
   <% current_user.active_package.package_items.each do |package| %>
     <li>
       <%= package.item.name %>
@@ -6,10 +6,15 @@
   <% end %>
 </ul>
 
-<% if @number_package >= 3 && @existing_order.nil?%>
+<% if @number_package >= 2 && @existing_order.nil? %>
   <%= simple_form_for @new_order do |f| -%>
     <%= f.hidden_field :package_id %>
-    <%= f.submit "order package" %>
+    <%= f.button :submit, "order package" %>
   <% end %>
 <% end -%>
 
+<% if @existing_order %>
+  <%= link_to "Delete", order_path(@existing_order),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+<% end %>
