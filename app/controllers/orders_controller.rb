@@ -14,13 +14,8 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.new(order_params)
-    @order.user = current_user
     authorize @order
-    if (@order.save)
-     redirect_to user_path(@order.user)
-    else
-      render :new
-    end
+    redirect_to items_path
   end
 
   def edit
