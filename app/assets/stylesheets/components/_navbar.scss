@@ -1,5 +1,5 @@
 body {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Karla', sans-serif;
 }
 
 
@@ -45,11 +45,12 @@ body {
   height: 40px;
   // visibility: visible;
   padding-top: 10px;
-  // overflow: hidden;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  padding-bottom: 20px;
+  overflow: hidden;
+  -webkit-transition: all .1s ease-in-out;
+  -moz-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
 
 }
 
@@ -99,6 +100,7 @@ body {
 .main-nav ul {
   visibility: hidden;
   padding-top: 10px;
+  padding-bottom: 10px;
   overflow: hidden;
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;

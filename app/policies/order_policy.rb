@@ -23,6 +23,6 @@ class OrderPolicy < ApplicationPolicy
   end
 
   def destroy?
-
+    return true
   end
 end
