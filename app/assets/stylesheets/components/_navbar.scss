@@ -42,8 +42,8 @@ body {
 
 
 .homepage-login .main-navbar:hover ul {
-    // height: 40px;
-  visibility: dropdown;
+  height: 40px;
+  visibility: visible;
   padding-top: 10px;
   overflow: hidden;
   -webkit-transition: all .1s ease-in-out;
@@ -99,10 +99,10 @@ body {
   visibility: hidden;
   padding-top: 10px;
   overflow: hidden;
-  -webkit-transition: all .1s ease-in-out;
-  -moz-transition: all .1s ease-in-out;
-  -o-transition: all .1s ease-in-out;
-  transition: all .1s ease-in-out;
+  -webkit-transition: all .20s ease-in-out;
+  -moz-transition: all .20s ease-in-out;
+  -o-transition: all .20s ease-in-out;
+  transition: all .20s ease-in-out;
 }
 
 .main-nav:hover ul {
@@ -134,13 +134,13 @@ body {
     transition: .10s;
     font-size: 12px;
     letter-spacing: 1px;
-    color: white;
+    color: black;
 
 }
 
 
   a:visited {
-    color: inherit;
+    color: black;
   }
 
   a {
@@ -151,7 +151,7 @@ body {
 
 
   .main-nav .main-nav-trigger .fa-bars {
-    color: white;
+    color: black;
     font-size: 30px;
 
   }
