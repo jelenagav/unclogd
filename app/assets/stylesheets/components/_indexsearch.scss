@@ -1,0 +1,81 @@
+body.items.index {
+
+    background: white;
+
+  .picture {
+    width: 300px;
+    padding: 10px;
+    height: 300px;
+  }
+
+  // .picture1 {
+  //   width: 300px;
+  //   padding: 20px;
+  // }
+
+  .row1 {
+    display: flex;
+    vertical-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+  }
+
+
+//need to alter picture container of width if you want the picture card width change
+  .picture-container {
+    width: 280px;
+    height: 330px;
+    background: white;
+    border: solid 4px;
+
+  }
+
+  .row2 {
+    display: flex;
+    vertical-align: center;
+    align-items: center;
+    justify-content: center;
+
+    > col {
+      width: 300px;
+      padding: 40px;
+      background-color: green;
+    }
+
+    .index-card {
+     padding: 10px;
+     width: 300px;
+    }
+
+  }
+
+  .item-picture {
+      width: 274px;
+      height: 324px;
+      padding: 15px;
+
+
+    img {
+        height: 100%;
+        width: 100%;
+      }
+
+  }
+
+  .search-bar {
+    margin-left: 470px;
+    margin-bottom: 60px;
+  }
+
+
+  .flash-success {
+    justify-content: center;
+    width: 60%;
+    border-radius: 0;
+    border: solid 4px;
+    box-shadow: none;
+  }
+
+
+}
