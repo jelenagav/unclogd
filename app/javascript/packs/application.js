@@ -1,3 +1,5 @@
 import "bootstrap";
 import "./quiz";
-import "navbar";
+import "./form";
+import anime from 'lib/anime.es.js';
+
