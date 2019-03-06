@@ -15,6 +15,7 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new(order_params)
     authorize @order
+    @order.save
     redirect_to items_path
   end
 
@@ -28,6 +29,9 @@ class OrdersController < ApplicationController
   end
 
   def destroy
+    authorize @order
+    @order.destroy
+    redirect_to package_path(@order.package_id)
   end
 
   private
