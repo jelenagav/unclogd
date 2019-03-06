@@ -14,13 +14,9 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.new(order_params)
-    @order.user = current_user
     authorize @order
-    if (@order.save)
-     redirect_to user_path(@order.user)
-    else
-      render :new
-    end
+    @order.save
+    redirect_to items_path
   end
 
   def edit
@@ -33,6 +29,9 @@ class OrdersController < ApplicationController
   end
 
   def destroy
+    authorize @order
+    @order.destroy
+    redirect_to package_path(@order.package_id)
   end
 
   private

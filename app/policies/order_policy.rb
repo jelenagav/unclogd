@@ -7,7 +7,7 @@ class OrderPolicy < ApplicationPolicy
 
 
   def create?
-
+    return true
   end
 
   def edit?
@@ -23,6 +23,6 @@ class OrderPolicy < ApplicationPolicy
   end
 
   def destroy?
-
+    return true
   end
 end
