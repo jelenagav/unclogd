@@ -6,17 +6,17 @@ body {
 // main-navbar
 
 
-// .main-navbar .homepage-login {
-//     position: relative;
-//     top: 20px;
-//     height: auto;
-//     text-align: center;
-//     transition: .10s;
-//     display: flex;
-//     justify-content: flex-end;
-//     align-items: center;
-//     padding: 0px 10px;
-// }
+.main-navbar .homepage-login {
+    position: relative;
+    top: 20px;
+    height: auto;
+    text-align: center;
+    transition: .10s;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 10px;
+}
 
 .homepage-login .main-navbar {
   color: white;
@@ -43,13 +43,13 @@ body {
 
 .homepage-login .main-navbar:hover ul {
   height: 40px;
-  visibility: visible;
+  // visibility: visible;
   padding-top: 10px;
-  overflow: hidden;
-  -webkit-transition: all .1s ease-in-out;
-  -moz-transition: all .1s ease-in-out;
-  -o-transition: all .1s ease-in-out;
-  transition: all .1s ease-in-out;
+  // overflow: hidden;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 
 }
 
@@ -100,10 +100,10 @@ body {
   visibility: hidden;
   padding-top: 10px;
   overflow: hidden;
-  -webkit-transition: all .20s ease-in-out;
-  -moz-transition: all .20s ease-in-out;
-  -o-transition: all .20s ease-in-out;
-  transition: all .20s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .main-nav:hover ul {
