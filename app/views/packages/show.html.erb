@@ -1,2 +1,11 @@
-<%= current_user.active_package %>
-<%= current_user.active_package.package_items.first.item.name %>
+<ul>
+  <% current_user.active_package.package_items.each do |package| %>
+    <li>
+      <%= package.item.name %>
+    </li>
+  <% end %>
+</ul>
+
+<% if current_user.active_package.package_items.count >= 3 %>
+  <% helllooooo %>
+<% end %>
