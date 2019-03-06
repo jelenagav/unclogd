@@ -3,3 +3,12 @@
 // @import "dashboard";
 // @import "profile";
 // @import "map";
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  > .main-container {
+    min-height: 100vh;
+  }
+}

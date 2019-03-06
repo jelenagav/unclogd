@@ -1,2 +1,15 @@
-<%= current_user.active_package %>
-<%= current_user.active_package.package_items.first.item.name %>
+<ul>
+  <% current_user.active_package.package_items.each do |package| %>
+    <li>
+      <%= package.item.name %>
+    </li>
+  <% end %>
+</ul>
+
+<% if @number_package >= 3 && @existing_order.nil?%>
+  <%= simple_form_for @new_order do |f| -%>
+    <%= f.hidden_field :package_id %>
+    <%= f.submit "order package" %>
+  <% end %>
+<% end -%>
+
