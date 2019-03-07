@@ -6,7 +6,7 @@ class PackagePolicy < ApplicationPolicy
   end
 
   def create?
-
+    return true
   end
 
   def edit?
