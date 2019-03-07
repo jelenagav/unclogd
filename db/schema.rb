@@ -10,20 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_05_141505) do
+ActiveRecord::Schema.define(version: 2019_03_07_115103) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "ingredient_lists", force: :cascade do |t|
+    t.bigint "ingredient_id"
+    t.bigint "item_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ingredient_id"], name: "index_ingredient_lists_on_ingredient_id"
+    t.index ["item_id"], name: "index_ingredient_lists_on_item_id"
+  end
+
+  create_table "ingredients", force: :cascade do |t|
+    t.string "name"
+    t.string "properties"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "items", force: :cascade do |t|
     t.string "name"
-    t.string "ingredients"
     t.string "cruelty"
     t.string "price"
     t.string "brand"
     t.string "picture_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "type_category"
+    t.string "product_category"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -68,6 +85,8 @@ ActiveRecord::Schema.define(version: 2019_03_05_141505) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "ingredient_lists", "ingredients"
+  add_foreign_key "ingredient_lists", "items"
   add_foreign_key "orders", "packages"
   add_foreign_key "package_items", "items"
   add_foreign_key "package_items", "packages"
