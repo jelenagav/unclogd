@@ -160,11 +160,11 @@
                     <label for="radio6a"><span></span><p> Biological </p></label>
                   </div>
                   <div class="mm-survey-item">
-                    <input type="radio" id="radio5b" data-item="6" name="radio6b" value="Dry" />
+                    <input type="radio" id="radio5b" data-item="6" name="radio6b" value="Cruelty Free" />
                     <label for="radio6b"><span></span><p> Cruelty Free </p></label>
                   </div>
                   <div class="mm-survey-item">
-                    <input type="radio" id="radio5c" data-item="6" name="radio6b" value="Allergies" />
+                    <input type="radio" id="radio5c" data-item="6" name="radio6b" value="Hypoallergenic" />
                     <label for="radio6c"><span></span><p> Hypoallergenic </p></label>
                   </div>
                 </div>
@@ -180,7 +180,10 @@
                   <button disabled="true"> > </button>
                 </div>
                 <div class="mm-finish-btn">
-                  <button>Submit</button>
+                  <%= simple_form_for @package do |f| -%>
+                    <%= f.hidden_field :quiz_results %>
+                    <%= f.button :button, "Submit" %>
+                  <% end %>
                 </div>
               </div>
             </div>
