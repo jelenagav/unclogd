@@ -1,12 +1,135 @@
-<h1> Available items (<%= @items.length %>) </h1>
 
-<%= form_tag items_path, method: :get do %>
+
+
+
+
+
+
+
+
+<div class = "inner-container">
+  <div class = "row1">
+    <div class = "colA">
+      <%= image_tag 'face1.png', class: "picture" %>
+    </div>
+    <div class = "colB">
+    <%= image_tag 'face2.png', class: "picture" %>
+    </div>
+    <div class = "colC">
+    <%= image_tag 'face3.png', class: "picture" %>
+    </div>
+
+    <div class = "colD">
+    <%= image_tag 'face4.png', class: "picture" %>
+    </div>
+
+  </div>
+
+  <div class = 'search-bar'>
+
+  <%= form_tag items_path, method: :get do %>
   <%= text_field_tag :query,
     params[:query],
     class: "flash flash-success",
-    placeholder: "Find an item"
-  %>
+    placeholder: "Find an item"%>
 <% end %>
+  </div>
+
+  <div class = "row2">
+    <div class = "col  1">
+
+      <div class = "index-card">
+         <div class = "picture-container">
+         <div class = "item-picture">
+           <img src="https://www.tangs.com//ProductImages/5e21c359-4504-474c-9c44-6dd82b90ad38/1/480x480/sk-ii-facial-treatment-essence.jpg">
+         </div>
+
+      </div>
+
+      <div class = "information">
+        <h5>Name</h5>
+        <h5>Brand</h5>
+      </div>
+
+    </div>
+    </div>
+
+    <div class = "col 2">
+
+    <div class = "index-card">
+        <div class = "picture-container">
+         <div class = "item-picture">
+           <img src="https://cdn.parfumdreams.de/Img/Art/7/Kiehls-Augenpflege-Creamy-Eye-Treatment-with-Avocado-58487.jpg">
+         </div>
+
+      </div>
+
+      <div class = "information">
+        <h5>Name</h5>
+        <h5>Brand</h5>
+      </div>
+    </div>
+    </div>
+
+    <div class = "col 3">
+
+    <div class = "index-card">
+        <div class = "picture-container">
+         <div class = "item-picture">
+           <img src="https://cdn.parfumdreams.de/Img/Art/7/Kiehls-Anti-Aging-Pflege-Midnight-Recovery-Concentrate-58446_1.jpg">
+         </div>
+
+      </div>
+
+      <div class = "information">
+        <h5>Name</h5>
+        <h5>Brand</h5>
+      </div>
+      </div>
+    </div>
+
+    <div class = "col 4">
+
+    <div class = "index-card">
+        <div class = "picture-container">
+         <div class = "item-picture">
+           <img src="https://cdn1.feelunique.com/img/products/53102/alternative/Est_eacute_e_Lauder_Advanced_Night_Repair_Synchronized_Recovery_Complex_II_30ml_0_1505386537_main.jpg" alt="Estee-lauder">
+         </div>
+
+      </div>
+
+      <div class = "information">
+        <h5>name</h5>
+        <h5>Brand</h5>
+      </div>
+  </div>
+  </div>
+
+
+
+  <div class = "row3">
+    <div class = "col1"></div>
+    <div class = "col2"></div>
+    <div class = "col3"></div>
+    <div class = "col4"></div>
+  </div>
+  <div class = "row4">
+    <div class = "col1"></div>
+    <div class = "col2"></div>
+    <div class = "col3"></div>
+    <div class = "col4"></div>
+  </div>
+</div>
+
+
+
+
+<!-- david's code below -->
+
+
+
+
+<!--
 
 <div class="cards">
   <% @items.each do |item| %>
@@ -17,3 +140,6 @@
   <% end %>
   <% end %>
 </div>
+ -->
+
+ <!-- now I need to link pics with the url  -->
