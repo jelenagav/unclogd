@@ -20,9 +20,17 @@ class PackagesController < ApplicationController
   end
 
   def create
-    @package = Package.new(package_params)
+    if params[:package][:quiz_results]
+      # something fancy
+      quiz_results = params[:package][:quiz_results].split(",")
+      @package = Package.new_from_quiz_results(quiz_results)
+    else
+      @package = Package.new(package_params)
+    end
+
     @package.user = current_user
     authorize @package
+
     if (@package.save)
      redirect_to user_path(@package.user)
     else
