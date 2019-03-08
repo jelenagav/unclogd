@@ -1,7 +1,7 @@
 <ul style="padding-top: 100px">
-  <% current_user.active_package.package_items.each do |package| %>
+  <% @package.items.each do |item| %>
     <li>
-      <%= package.item.name %>
+      <%= render 'items/item', { item: item } %>
     </li>
   <% end %>
 </ul>
