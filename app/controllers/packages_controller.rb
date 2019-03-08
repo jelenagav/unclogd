@@ -21,8 +21,7 @@ class PackagesController < ApplicationController
 
   def create
     if params[:package][:quiz_results]
-      # something fancy
-      quiz_results = params[:package][:quiz_results].split(",")
+      quiz_results = params[:package][:quiz_results].values
       @package = Package.new_from_quiz_results(quiz_results)
     else
       @package = Package.new(package_params)
@@ -32,7 +31,7 @@ class PackagesController < ApplicationController
     authorize @package
 
     if (@package.save)
-     redirect_to user_path(@package.user)
+     redirect_to package_path(@package.user)
     else
      render :new
     end
