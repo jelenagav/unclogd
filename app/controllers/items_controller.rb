@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
 
   def index
     if params[:query].present?
-      sql_query = "name ILIKE :query OR ingredients ILIKE :query OR brand ILIKE :query"
+      sql_query = "name ILIKE :query OR brand ILIKE :query"
       @items = policy_scope(Item.where(sql_query, query: "%#{params[:query]}%"))
     else
       @items = policy_scope(Item.all)
