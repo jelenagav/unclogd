@@ -118,11 +118,12 @@ body {
 
 
 .main-nav ul li {
-    padding: 0px 20px;
+    padding: 0px 16px;
     // transition: .10s;
     // transform: translateY(-81%);
     display: inline-block;
-    text-decoration: none
+    text-decoration: none;
+    // font-size: 13px;
 
 }
 
@@ -136,7 +137,7 @@ body {
     text-transform: uppercase;
     display: inline-block;
     transition: .10s;
-    font-size: 12px;
+    font-size: 13px;
     letter-spacing: 1px;
     color: black;
 
@@ -156,12 +157,17 @@ body {
 }
 
 
-
-  .main-nav .main-nav-trigger .fa-bars {
+.main-nav .main-nav-trigger .fa-bars {
     color: black;
     font-size: 30px;
 
-  }
+}
 
 
+.pages.home a:visited {
+  color: white;
+}
 
+.pages.home .main-nav .search {
+  color: black;
+}
