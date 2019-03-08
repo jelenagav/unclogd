@@ -1,4 +1,14 @@
-<h2>Log in</h2>
+<div class="page">
+  <div class="container">
+      <div class="Log In"> Log In</div>
+ <div class="img"> -->
+      <%= image_tag("BW.jpg", size: "225x225") %>
+   </div>
+  </div>
+
+<div class="right">
+
+<div class="form">
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
@@ -10,11 +20,17 @@
                 required: false,
                 input_html: { autocomplete: "current-password" } %>
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+
+    <div class="form-actions">
+      <%= f.button :submit, "Submit" %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
 <% end %>
+</div>
+</div>
+</div>
+</div>
+
 
 <%= render "devise/shared/links" %>
