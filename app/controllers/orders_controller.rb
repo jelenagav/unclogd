@@ -5,6 +5,10 @@ class OrdersController < ApplicationController
     @orders = Order.all
   end
 
+  def show
+    @order = current_user.orders.where(state: 'paid').find(params[:id])
+  end
+
   def new
     @order = Order.new
     if current_user
@@ -13,13 +17,21 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @order = Order.new(order_params)
+    package = current_user.active_package
+    order  = Order.create!(package: package, amount: package.price_range, status: 'pending')
     authorize @order
-    @order.save
-    redirect_to items_path
+    redirect_to new_order_payment_path(order)
   end
 
+  # def create
+  #   @order = Order.new(order_params)
+  #   authorize @order
+  #   @order.save
+  #   redirect_to items_path
+  # end
+
   def edit
+
   end
 
   def update

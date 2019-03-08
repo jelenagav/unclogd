@@ -31,7 +31,7 @@ class PackagesController < ApplicationController
     authorize @package
 
     if (@package.save)
-     redirect_to package_path(@package.user)
+     redirect_to package_path(@package)
     else
      render :new
     end

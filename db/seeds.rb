@@ -1,5 +1,6 @@
 require 'faker'
 
+Order.destroy_all
 PackageItem.destroy_all
 User.destroy_all
 Package.destroy_all
