@@ -6,6 +6,5 @@ class PagesController < ApplicationController
 
   def quiz
     @package = Package.new(quiz_results: "<25,female,normal,rarely,acne,Biological")
-    raise
   end
 end
