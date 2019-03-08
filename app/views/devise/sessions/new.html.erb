@@ -1,15 +1,15 @@
 <div class="page">
   <div class="container">
-   <!--  <div class="left"> -->
-     <!--  <div class="Log In"> Log In</div> -->
-   <!--    <div class="img"> -->
-      <%#= image_tag("BW.jpg", size: "225x225") %>
-    </div>
+      <div class="Log In"> Log In</div>
+ <div class="img"> -->
+      <%= image_tag("BW.jpg", size: "225x225") %>
+   </div>
   </div>
 
-<!-- <div class="right"> -->
+<div class="right">
 
 <div class="form">
+
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
     <%= f.input :email,
