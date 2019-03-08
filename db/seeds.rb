@@ -36,11 +36,11 @@ CSV_FILES.each do |file_name|
   CSV.foreach(file_name, :headers => true) do |row|
 puts row
     item = Item.new
-    item.brand = row['brand'].downcase
-    item.name = row['product_name'].downcase
-    item.price = row['price'].downcase
-    item.product_category = row['product_category'].downcase
-    item.type_category = row['type_category'].downcase
+    item.brand = row['brand'].upcase
+    item.name = row['product_name'].upcase
+    item.price = row['price'].upcase
+    item.product_category = row['product_category'].upcase
+    item.type_category = row['type_category'].upcase
     item.picture_url = row['url']
 
 

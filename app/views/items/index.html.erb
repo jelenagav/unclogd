@@ -14,13 +14,15 @@
     </div>
   </div>
   <div class = 'search-bar'>
-    <%= form_tag items_path, method: :get do %>
+    <%= form_tag items_path, method: :get, class: "search-form" do %>
     <%= text_field_tag :query,
     params[:query],
     class: "flash flash-success",
     placeholder: "Find an item"%>
-    <button type="submit"><i class="fa fa-search"></i></button>
+    <button type="submit" class="button1"><i class="fa fa-search"></i></button>
     <% end %>
+
+
   </div>
   <div class = "row2">
     <% @items.each do |item| %>
