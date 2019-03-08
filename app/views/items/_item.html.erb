@@ -1,0 +1,80 @@
+<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans|Karla" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<div class = "inner-container">
+
+  <div class = "row1-main">
+
+  <div class = "col1">
+   <div class = "picture-container">
+    <div class = "picture">
+      <%= image_tag(item.picture_url) %>
+    </div>
+   </div>
+  </div>
+
+  <div class = "col2" >
+
+    <div class ="row1-info">
+      <p class ="title"> <strong><%= item.name %> </strong></p>
+      <p> Brand (Estee Lauder) </p>
+      <p> Price (150 pounds) </p>
+      <%#= simple_form_for(@package_item) do |f| %>
+        <%#=  f.hidden_field :package_id %>
+        <%#=  f.hidden_field :item_id %>
+        <%#= f.button :button, class: "buy-button" do %>
+
+        <i class="fas fa-shopping-cart"></i>
+
+        <%# end %>
+      <%# end %>
+    </div>
+
+    <div class ="row2-info">
+
+      <div class="container--tabs">
+        <section class="row">
+          <ul class="nav nav-tabs">
+            <li class="active ingredient-text"><a href="#tab-1">INGREDIENTS</a></li>
+            <li class="ingredient-text last"><a href="#tab-2">MORE INFORMATION</a></li>
+          </ul>
+          <div class="tab-content">
+            <div id="tab-1" class="tab-pane active">
+              <span class="col-md-10">
+                <!-- <h3>Feature 1</h3> -->
+                <p> Water\Aqua\Eau; Bifida Ferment Lysate; Methyl Gluceth-20; Peg-75; Bis-Peg-18 Methyl Ether Dimethyl Silane; Butylene Glycol; Propanediol; Cola Acuminata (Kola) Seed Extract; Hydrolyzed Algin; Pantethine; Caffeine; Lecithin; Tripeptide-32; Ethylhexylglycerin; Sodium Rna; Bisabolol; Glycereth-26; Squalane; Sodium Hyaluronate; Oleth-3 Phosphate; Caprylyl Glycol; Lactobacillus Ferment; Oleth-3; Oleth-5; Anthemis Nobilis (Chamomile); Yeast Extract\Faex\Extrait De Levure; Choleth-24; Hydrogenated Lecithin; Ceteth-24; Tocopheryl Acetate; Ethylhexyl Methoxycinnamate; Hexylene Glycol; Carbomer; Triethanolamine; Trisodium Edta; Bht; Xanthan Gum; Phenoxyethanol; Red 4 (Ci 14700); Yellow 5 (Ci 19140) </p>
+              </span>
+            </div>
+            <div id="tab-2" class="tab-pane">
+              <span class="col-md-10">
+                <!-- <h3>Feature 2</h3> -->
+                <p>What we say Drum roll, standing ovation, sound the klaxon - this award-winning serum is a best-seller for a very good reason - it works! And boy does it work; containing exclusive technology it gets to work overnight on all signs of aging for brighter, more youthful skin come morning. Apply a few drops to your finger tips and really massage it into your skin for more hydration and fewer fine lines and wrinkles.</p>
+              </span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+       <!--  <div class ="col1-info">
+          ingredients
+        </div>
+
+        <div class ="col2-info">
+          more informations
+        </div> -->
+    </div>
+  </div>
+
+  </div>
+
+
+
+
+
+
+
+
+</div>
+
+
