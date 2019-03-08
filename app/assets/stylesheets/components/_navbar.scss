@@ -103,10 +103,10 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
   overflow: hidden;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-transition: all .1s ease-in-out;
+  -moz-transition: all .1s ease-in-out;
+  -o-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
 }
 
 .main-nav:hover ul {
@@ -137,7 +137,7 @@ body {
     text-transform: uppercase;
     display: inline-block;
     transition: .10s;
-    font-size: 13px;
+    font-size: 12px;
     letter-spacing: 1px;
     color: black;
 
@@ -171,3 +171,9 @@ body {
 .pages.home .main-nav .search {
   color: black;
 }
+
+.pages.home .main-nav a:hover {
+    color: #74E4D6;
+    text-decoration: none;
+
+  }
