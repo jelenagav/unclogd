@@ -15,94 +15,75 @@ user2 = User.create!(email: "test4@gmail.com", password:"123456")
 
 # seed file below
 
-# require 'csv'
+require 'csv'
 
-# # ASIAN_BEAUTY1 = Rails.root.join('db', 'seed_data', 'AB1.csv')
-# # ASIAN_BEAUTY2 = Rails.root.join('db', 'seed_data', 'AB2.csv')
-# # PRODUCT1 = Rails.root.join('db', 'seed_data', 'Prod1.csv')
-# PRODUCT2 = Rails.root.join('db', 'seed_data', 'Prod2.csv')
-# RED1 = Rails.root.join('db', 'seed_data', 'red1.csv')
+# ASIAN_BEAUTY1 = Rails.root.join('db', 'seed_data', 'AB1.csv')
+# ASIAN_BEAUTY2 = Rails.root.join('db', 'seed_data', 'AB2.csv')
+# PRODUCT1 = Rails.root.join('db', 'seed_data', 'Prod1.csv')
+PRODUCT1 = Rails.root.join('db', 'seed_data', 'new1.csv')
+PRODUCT2 = Rails.root.join('db', 'seed_data', 'new2.csv')
 
-# CSV_FILES = [PRODUCT2, RED1]
+CSV_FILES = [PRODUCT2, PRODUCT1]
 
-# # Product model seeds
-# CSV_FILES.each do |file_name|
-#   puts "products"
-#   puts "#{file_name}"
+# Product model seeds
+CSV_FILES.each do |file_name|
+  puts "products"
+  puts "#{file_name}"
 
-#   failures = []
+  failures = []
 
-#   CSV.foreach(file_name, :headers => true) do |row|
-
-#     item = Item.new
-#     item.brand = row['brand'].downcase
-
-#     item.name = row['product_name'].downcase
-
-
-#     ingredients = row[2..-1].join(',').downcase.split(",")
-
-#     PROPERTY = ["oily", "dry", "sensitive", "antiaging"]
-
-#     ingredients.each do |ingredient|
-
-#       if Ingredient.where(name: ingredient).first
-#         link = IngredientList.new
-#         link.item = item
-#         link.ingredient = Ingredient.where(name: ingredient).first
-#         link.save
-#         puts "true"
-#       else
-#         puts "false"
-
-#         ing = Ingredient.new
-#         ing.name = ingredient
-#         ing.properties = PROPERTY.sample
-#         ing.save
-
-#         link = IngredientList.new
-#         link.item = item
-#         link.ingredient = ing
-#         link.save
-#       end
-#     end
+  CSV.foreach(file_name, :headers => true) do |row|
+puts row
+    item = Item.new
+    item.brand = row['brand'].downcase
+    item.name = row['product_name'].downcase
+    item.price = row['price'].downcase
+    item.product_category = row['product_category'].downcase
+    item.type_category = row['type_category'].downcase
+    item.picture_url = row['url']
 
 
-#     successful = item.save
-#     if !successful
-#       failures << item
-#     end
-#   end
-# end
+
+    ingredients = row["ingredients"].split(",")
+
+    ingredients.each do |ingredient|
+
+      if Ingredient.where(name: ingredient).first
+        link = IngredientList.new
+        link.item = item
+        link.ingredient = Ingredient.where(name: ingredient).first
+        link.save
+
+      else
+
+
+        ing = Ingredient.new
+        ing.name = ingredient
+        ing.save
+
+        link = IngredientList.new
+        link.item = item
+        link.ingredient = ing
+        link.save
+      end
+    end
+
+
+    successful = item.save
+    if !successful
+      failures << item
+    end
+  end
+end
 
 # Manual seed creater
 
 # water = Ingredient.create! name: "Water", properties: "nil"
 # retinA = Ingredient.create! name: "retin A.", properties: "antiaging, mild"
-
 # kiehl_rare = Item.create! name: "Handcream", ingredients: [water, aloe, retinA], type: "moistersier"
 
 
 
-Water = Ingredient.create! name: "Water", properties: "nil"
-Kaolin
-Bentonite
-Propanediol
-Glycerin
-Titanium Dioxide
-Caprylic
-Capric Triglyceride,Cetearyl Alcohol
-Zea Mays Starch
-Corn Starch
-Phenoxyethanol
-Caprylyl Glycol
-Xanthan Gum
-Ethylhexylglycerin
-Tocopherol
-Lecithin
-Aloe Barbadensis
-Avena Sativa Flour
-Oat Kernel Flour,Allantoin
 
 # Tim deleted below
 
