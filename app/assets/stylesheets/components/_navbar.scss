@@ -78,13 +78,13 @@ body {
 
 
   .homepage-login .main-navbar .fa-bars {
-
     color: white;
     font-size: 30px;
 
   }
 
 .main-nav {
+    z-index: 12;
     position: fixed;
     top: 0;
     height: auto;
@@ -151,6 +151,9 @@ body {
     background-color: transparent;
   }
 
+.pages.home .main-nav .main-nav-trigger  .fa-bars {
+  color: white;
+}
 
 
 

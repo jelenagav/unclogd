@@ -41,41 +41,40 @@
 
 
   <div class="check-container">
-        <div class = "col1">
-          <div class="homepage-login hidden-text">
-            <ul>
-              <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "main-navbar-link", id: "login" %>
-
-              <%= link_to t(".sign_up", default: "Sign Up"), new_user_registration_path, class: "main-navbar-link", id: "signup" %>
-             </ul>
-             </div>
-        </div>
-        </div>
-
-        <div class = "col2">
-
-
-          <% if current_user %>
-            <%= link_to user_path(current_user) do %>
-                <%= image_tag 'tick-white.svg', class: "picture" %>
-                <h1>Compare</h1>
-                <p>⟶</p>
-            <% end %>
-          <% else %>
-            <%= link_to new_user_session_path do %>
-                <%= image_tag 'tick-white.svg', class: "picture" %>
-                <h1>Compare</h1>
-                <p>⟶</p>
-            <% end %>
-          <% end %>
+    <div class = "col1">
+      <% if current_user.nil? %>
+      <div class="homepage-login hidden-text">
+        <ul>
+          <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "main-navbar-link", id: "login" %>
+          <%= link_to t(".sign_up", default: "Sign Up"), new_user_registration_path, class: "main-navbar-link", id: "signup" %>
+         </ul>
       </div>
+      <% end %>
+    </div>
+       <!--  </div> -->
 
-      <div class = "col3">
-        <div class="hidden-text">
-          <p >Compare a skin care product<br>Compare through carefully chosen skincare products</p>
-        </div>
+    <div class = "col2">
+      <% if current_user %>
+        <%= link_to user_path(current_user) do %>
+            <%= image_tag 'tick-white.svg', class: "picture" %>
+            <h1>Compare</h1>
+            <p>⟶</p>
+        <% end %>
+      <% else %>
+        <%= link_to new_user_session_path do %>
+            <%= image_tag 'tick-white.svg', class: "picture" %>
+            <h1>Compare</h1>
+            <p>⟶</p>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class = "col3">
+      <div class="hidden-text">
+        <p >Compare a skin care product<br>Compare through carefully chosen skincare products</p>
       </div>
     </div>
+  </div>
 </div>
 
 
