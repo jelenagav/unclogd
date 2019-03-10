@@ -1,0 +1,124 @@
+body.packages.show {
+
+    background: white;
+
+  .picture {
+    width: 300px;
+    padding: 10px;
+    height: 300px;
+  }
+
+
+  .picture-front {
+    width: 70%;
+    height: 400px;
+    display: flex;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+  // .picture1 {
+  //   width: 300px;
+  //   padding: 20px;
+  // }
+
+  .row1 {
+    display: flex;
+    vertical-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+  }
+
+  a:visited {
+    color: black;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+//need to alter picture container of width if you want the picture card width change
+  .picture-container {
+    width: 280px;
+    height: 330px;
+    background: white;
+    border: solid 4px;
+
+  }
+
+  .button1{
+    background: black;
+    width: 66px;
+    height: 66px;
+    margin-top: 7.5px;
+    margin-left: -9.5px;
+  }
+
+  .search-form {
+    display: flex;
+  }
+
+  .row2 {
+    flex-wrap: wrap;
+    display: flex;
+    vertical-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 1300px;
+    margin-left: 190px;
+
+    > col {
+      width: 300px;
+      padding: 40px;
+      background-color: green;
+    }
+
+    .index-card {
+     padding: 10px;
+     width: 300px;
+    }
+
+  }
+
+  .item-picture {
+      width: 274px;
+      height: 324px;
+      padding: 15px;
+
+
+    img {
+        height: 100%;
+        width: 100%;
+      }
+
+  }
+
+  .search-bar {
+    margin-left: 470px;
+    margin-bottom: 60px;
+  }
+
+
+  .flash-success {
+    justify-content: center;
+    width: 60%;
+    border-radius: 0;
+    border: solid 4px;
+    box-shadow: none;
+  }
+
+  button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+}
