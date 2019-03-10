@@ -1,0 +1,5 @@
+meta_product_name: "Unclogd"
+meta_title: "Unclogd - Find the perfect beauty products."
+meta_description: "Find the perfect beauty product package for your skintype"
+meta_image: "landing_page.png" # should exist in `app/assets/images/`
+twitter_account: "@BordeleauDavid"   # required for Twitter Cards
