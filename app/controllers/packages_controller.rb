@@ -12,6 +12,17 @@ class PackagesController < ApplicationController
     @new_order = Order.new(package: @package)
   end
 
+  def show_multiple
+    @package_1 = Package.find(params[:package_1_id])
+    @package_2 = Package.find(params[:package_2_id])
+    @package_3 = Package.find(params[:package_3_id])
+    authorize @package_1
+    authorize @package_2
+    authorize @package_3
+  end
+
+
+
   def new
     @package = Package.new
     if current_user

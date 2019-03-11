@@ -1,0 +1,66 @@
+<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans|Karla" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div>
+  <div>
+    <img src="https://images.unsplash.com/photo-1522714213491-2e5b9dc52084?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2106&q=80" alt="" class="picture-front">
+  </div>
+  <div class = "row2">
+    <% @package_1.items.each do |item| %>
+    <div class = "col  1">
+      <%= link_to item_path(item) do %>
+      <div class = "index-card">
+        <div class = "picture-container">
+          <div class = "item-picture">
+            <%= image_tag(item.picture_url) %>
+          </div>
+        </div>
+        <div class = "information">
+          <h5><%= item.name %></h5>
+          <h5><%= item.brand %></h5>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <% end %>
+
+    <div class = "row2">
+      <% @package_2.items.each do |item| %>
+      <div class = "col  1">
+        <%= link_to item_path(item) do %>
+        <div class = "index-card">
+          <div class = "picture-container">
+            <div class = "item-picture">
+              <%= image_tag(item.picture_url) %>
+            </div>
+          </div>
+          <div class = "information">
+            <h5><%= item.name %></h5>
+            <h5><%= item.brand %></h5>
+          </div>
+        </div>
+        <% end %>
+      </div>
+      <% end %>
+  </div>
+
+    <div class = "row2">
+    <% @package_3.items.each do |item| %>
+    <div class = "col  1">
+      <%= link_to item_path(item) do %>
+      <div class = "index-card">
+        <div class = "picture-container">
+          <div class = "item-picture">
+            <%= image_tag(item.picture_url) %>
+          </div>
+        </div>
+        <div class = "information">
+          <h5><%= item.name %></h5>
+          <h5><%= item.brand %></h5>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <% end %>
+</div>
+</div>
