@@ -6,7 +6,7 @@ class Package < ApplicationRecord
   attribute :quiz_results
 
   def self.new_from_quiz_results(quiz_results)
-    items = Item.all.limit(3)
+    items = Item.all.limit(4)
     Package.new(items: items)
   end
   # Package.create_from_quiz_results
