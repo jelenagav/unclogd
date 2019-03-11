@@ -2,6 +2,8 @@ class User < ApplicationRecord
   before_validation :set_active_package
   belongs_to :active_package, class_name: "Package", dependent: :destroy
   has_many :packages, dependent: :destroy
+  has_many :orders, through: :packages, dependent: :destroy
+
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable

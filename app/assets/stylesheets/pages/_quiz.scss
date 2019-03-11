@@ -79,7 +79,8 @@ button.begin-btn {
 
 .mm-survey-container {
   width: 100%;
-  min-height: 500px;
+  min-height: 250px;
+  max-height: 250px;
   background: #FFFFFF;
 }
 
@@ -101,14 +102,13 @@ button.begin-btn {
 
 .mm-survey-controller {
   position: relative;
-    height: 60px;
     background: #FFFFFF;
     padding: 0px 0px;
 }
 
 .mm-survey-results-controller {
   position: relative;
-    height: 60px;
+    // height: 60px;
     background: #FFFFFF;
     padding: 12px 14px;
 }
@@ -119,19 +119,31 @@ button.begin-btn {
     float: left;
 }
 
-.mm-prev-btn {
+.mm-prev-btn .btn{
   display: inline-block;
     position: relative;
+    opacity: 0.8;
     float: left;
     padding: 0px;
     margin: 0px;
+    font-size: 35px;
 }
 
-.mm-next-btn {
-  display: inline-block;
-  opacity: 0.25;
+.mm-prev-btn .btn:hover {
+ color: #74E4D6;
+
+}
+
+.mm-next-btn .btn{
+  // display: inline-block;
+  opacity: 0.8;
     position: relative;
     float: right;
+    font-size: 35px;
+}
+
+.mm-next-btn .btn:hover {
+  color: #74E4D6;
 }
 
 .mm-finish-btn {
@@ -165,7 +177,7 @@ button.begin-btn {
 }
 
 .mm-survey-progress {
-  width: 100%;
+  width: %;
   height: 5px;
   background: #FFFFFF;
   overflow: hidden;
@@ -285,7 +297,7 @@ input[type="radio"]:checked + label span {
 }
 
 .mm-survey.okay .mm-next-btn {
-  display: inline-block;
+  // display: inline-block;
   opacity: 1;
 }
 
