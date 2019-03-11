@@ -14,17 +14,16 @@ class Package < ApplicationRecord
     concern = ""
 
 
+    item1 = Item.where(type_category: "Cleanser").where("product_category ILIKE :query", query: "%#{sensitivity}%").where("product_category ILIKE :query", query: "%#{skin_type}%").where("product_category ILIKE :query", query: "%#{concern}%").where(price: price_range.capitalize).first
+
+    item2 = Item.where(type_category: "Moisturizer").where("product_category ILIKE :query", query: "%#{sensitivity}%").where("product_category ILIKE :query", query: "%#{skin_type}%").where("product_category ILIKE :query", query: "%#{concern}%").where(price: price_range.capitalize).first
 
 
-    item1 = Item.where(type_category: "Moisturizer").where("product_category ILIKE :query", query: "%#{sensitivity}%").where("product_category ILIKE :query", query: "%#{skin_type}%").where("product_category ILIKE :query", query: "%#{concern}%").where(price: price_range.capitalize).limit(1)
+    item3 = Item.where(type_category: "serum").where("product_category ILIKE :query", query: "%#{sensitivity}%").where("product_category ILIKE :query", query: "%#{skin_type}%").where("product_category ILIKE :query", query: "%#{concern}%").where(price: price_range.capitalize).first
 
-    item2 = Item.where(type_category: "Cleanser").where("product_category ILIKE :query", query: "%#{sensitivity}%").where("product_category ILIKE :query", query: "%#{skin_type}%").where("product_category ILIKE :query", query: "%#{concern}%").where(price: price_range.capitalize).limit(1)
+    # item4 = Item.where(type_category: "eyecream").first
 
-
-    item3 = Item.where(type_category: "Serum").where("product_category ILIKE :query", query: "%#{sensitivity}%").where("product_category ILIKE :query", query: "%#{skin_type}%").where("product_category ILIKE :query", query: "%#{concern}%").where(price: price_range.capitalize).limit(1)
-
-    items = [item1, item2]
-    raise
+    items = [item1, item2, item3].compact
     Package.new(items: items)
   end
   # Package.create_from_quiz_results

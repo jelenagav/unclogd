@@ -1,7 +1,13 @@
-body.packages.show, body.packages.show_multiple {
+body.packages.show_multiple {
 
-    background: white;
-    height: 100vh;
+
+  background: white;
+
+
+  img {
+    width: 10px;
+
+  }
 
   button {
     width: 100%;
@@ -35,15 +41,6 @@ body.packages.show, body.packages.show_multiple {
     padding-bottom: 50px;
   }
 
-  .row3 {
-    display: flex;
-    vertical-align: center;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 50px;
-  }
-
-
   a:visited {
     color: black;
   }
@@ -74,18 +71,7 @@ body.packages.show, body.packages.show_multiple {
     display: flex;
   }
 
-
   .row2 {
-
-    display: flex;
-    vertical-align: center;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 50px;
-
-  }
-  .row2 {
-
     flex-wrap: wrap;
     display: flex;
     vertical-align: center;
@@ -151,6 +137,8 @@ body.packages.show, body.packages.show_multiple {
   border: 1px solid grey;
   border-left: none; /* Prevent double borders */
   cursor: pointer;
+}
+
 }
 
 }
