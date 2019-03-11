@@ -28,4 +28,5 @@ if (document.querySelector('.pages.home')) {
     document.querySelector('.bg-modal.signup').style.display = 'none';
   });
 
+
 }
