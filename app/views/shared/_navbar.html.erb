@@ -14,7 +14,7 @@
         <li><%= link_to "Quiz", quiz_path %></li>
         <li><%= link_to "Account", user_path(current_user) %></li>
         <li><%= link_to "Basket", package_path(current_user.active_package) %></li>
-        <li><a href="Compare">Check</a></li>
+        <li><%= link_to "Compare", package_path(current_user.active_package) %></li>
         <li><%= link_to t(".sign_out", default: "Log out"), destroy_user_session_path, method: :delete %></li>
       </ul>
 
