@@ -6,7 +6,7 @@ class OrdersController < ApplicationController
   end
 
   def show
-    @order = current_user.orders.where(status: 'paid').find(params[:id])
+    @order = current_user.orders.where(state: 'paid').find(params[:id])
   end
 
   def new
@@ -17,9 +17,9 @@ class OrdersController < ApplicationController
   end
 
   def create
-    package = Package.find(order_params[:package_id])
+    package = current_user.active_package
     order = Order.create!(package: package, amount: package.price_range, status: 'pending')
-    authorize order
+    authorize @order
     redirect_to new_order_payment_path(order)
   end
 
@@ -49,7 +49,7 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:package_id)
+    params.require(:order).permit(:package_id, :status)
   end
 
   def find_order
