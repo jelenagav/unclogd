@@ -21,6 +21,10 @@ class PackagePolicy < ApplicationPolicy
     return true
   end
 
+  def show_multiple?
+    return true
+  end
+
   def destroy?
 
   end
