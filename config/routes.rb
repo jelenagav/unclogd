@@ -6,7 +6,10 @@ Rails.application.routes.draw do
   resources :orders
 
   resources :items, only: [:index, :show] # /items
+
+  get 'packages/:package_1_id,:package_2_id,:package_3_id', to: 'packages#show_multiple', as: :show_multiple_packages
   resources :packages
+
 
   get 'quiz', to: 'pages#quiz', as: :quiz
   resources :package_items
