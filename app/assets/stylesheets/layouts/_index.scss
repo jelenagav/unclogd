@@ -12,3 +12,21 @@ body {
     min-height: 100vh;
   }
 }
+
+.display-block {
+  display: block !important;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.remove-button {
+  position: absolute;
+  top: 0;
+  right: 14px;
+  font-size: 40px;
+  transform: rotate(45deg);
+  color: black;
+  font-weight: 10px;
+}
