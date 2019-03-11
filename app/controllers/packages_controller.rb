@@ -8,7 +8,7 @@ class PackagesController < ApplicationController
   def show
     authorize @package
     @existing_order = Order.where(package: @package).first
-    @number_package = current_user.active_package.package_items.count
+    @number_package = @package.package_items.count
     @new_order = Order.new(package: @package)
   end
 
