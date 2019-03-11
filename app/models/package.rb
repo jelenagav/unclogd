@@ -6,6 +6,10 @@ class Package < ApplicationRecord
   attribute :quiz_results
 
   def self.new_from_quiz_results(quiz_results)
+    # query = quiz_results.first
+
+    sensitivity = quiz_results["sensitivity"]
+    items = Item.where("product_category ILIKE :query", query: "#{sensitivity}%")
     items = Item.all.limit(4)
     Package.new(items: items)
   end
