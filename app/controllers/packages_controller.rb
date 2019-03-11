@@ -19,6 +19,13 @@ class PackagesController < ApplicationController
     authorize @package_1
     authorize @package_2
     authorize @package_3
+    @existing_order_1 = Order.where(package: @package_1).first
+    @existing_order_2 = Order.where(package: @package_2).first
+    @existing_order_3 = Order.where(package: @package_3).first
+    @new_order_1 = Order.new(package: @package_1)
+    @new_order_2 = Order.new(package: @package_2)
+    @new_order_3 = Order.new(package: @package_3)
+
   end
 
 
