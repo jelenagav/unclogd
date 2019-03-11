@@ -58,7 +58,7 @@ body.items.index {
     align-items: center;
     justify-content: center;
     width: 1300px;
-    margin-left: 190px;
+    // margin-left: 190px;
 
     > col {
       width: 300px;
@@ -100,7 +100,7 @@ body.items.index {
     box-shadow: none;
   }
 
-  button {
+  .button1 {
   float: left;
   width: 20%;
   padding: 10px;

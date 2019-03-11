@@ -19,6 +19,13 @@ class PackagesController < ApplicationController
     authorize @package_1
     authorize @package_2
     authorize @package_3
+    @existing_order_1 = Order.where(package: @package_1).first
+    @existing_order_2 = Order.where(package: @package_2).first
+    @existing_order_3 = Order.where(package: @package_3).first
+    @new_order_1 = Order.new(package: @package_1)
+    @new_order_2 = Order.new(package: @package_2)
+    @new_order_3 = Order.new(package: @package_3)
+
   end
 
 
@@ -32,17 +39,22 @@ class PackagesController < ApplicationController
 
   def create
     if params[:package][:quiz_results]
-      quiz_results = params[:package][:quiz_results].values
-      @package = Package.new_from_quiz_results(quiz_results)
-    else
-      @package = Package.new(package_params)
+      quiz_results = params[:package][:quiz_results]
+      @package_1 = Package.new_from_quiz_results(quiz_results, "cheap")
+      @package_2 = Package.new_from_quiz_results(quiz_results, "normal")
+      @package_3 = Package.new_from_quiz_results(quiz_results, "expensive")
     end
 
-    @package.user = current_user
-    authorize @package
+    @package_1.user = current_user
+    @package_2.user = current_user
+    @package_3.user = current_user
 
-    if (@package.save)
-     redirect_to package_path(@package)
+    authorize @package_1
+    authorize @package_2
+    authorize @package_3
+
+    if @package_1.save && @package_2.save && @package_3.save
+     redirect_to show_multiple_packages_path(@package_1,@package_2,@package_3)
     else
      render :new
     end

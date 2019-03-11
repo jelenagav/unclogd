@@ -3,11 +3,21 @@
 
 <div>
   <div>
-    <img src="https://images.unsplash.com/photo-1522714213491-2e5b9dc52084?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2106&q=80" alt="" class="picture-front">
+    <img src="<%= image_path("Faces.jpg") %>" alt="" class="picture-front" width="400" height="250">
   </div>
-  <div class = "row2">
-    <% @package_1.items.each do |item| %>
-    <div class = "col  1">
+
+  <%
+    packages = [
+      [@package_1, @existing_order_1, @new_order_1],
+      [@package_2, @existing_order_2, @new_order_2],
+      [@package_3, @existing_order_3, @new_order_3],
+    ]
+    packages.each_with_index do |p,i|
+      package, existing_order, new_order = *p
+  %>
+  <div class = "row<%= i+1 %>">
+    <% package.items.each do |item| %>
+    <div class = "col1">
       <%= link_to item_path(item) do %>
       <div class = "index-card">
         <div class = "picture-container">
@@ -24,43 +34,16 @@
     </div>
     <% end %>
 
-    <div class = "row2">
-      <% @package_2.items.each do |item| %>
-      <div class = "col  1">
-        <%= link_to item_path(item) do %>
-        <div class = "index-card">
-          <div class = "picture-container">
-            <div class = "item-picture">
-              <%= image_tag(item.picture_url) %>
-            </div>
-          </div>
-          <div class = "information">
-            <h5><%= item.name %></h5>
-            <h5><%= item.brand %></h5>
-          </div>
-        </div>
-        <% end %>
-      </div>
+        <div class = "shopping-cart">
+      <% if true # existing_order.nil? %>
+        <%= simple_form_for new_order do |f| -%>
+          <%= f.hidden_field :package_id %>
+          <%= f.button :button, "Select" %>
       <% end %>
-  </div>
-
-    <div class = "row2">
-    <% @package_3.items.each do |item| %>
-    <div class = "col  1">
-      <%= link_to item_path(item) do %>
-      <div class = "index-card">
-        <div class = "picture-container">
-          <div class = "item-picture">
-            <%= image_tag(item.picture_url) %>
-          </div>
-        </div>
-        <div class = "information">
-          <h5><%= item.name %></h5>
-          <h5><%= item.brand %></h5>
-        </div>
-      </div>
       <% end %>
     </div>
+
+    </div>
+
     <% end %>
-</div>
 </div>

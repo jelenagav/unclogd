@@ -3,7 +3,7 @@
 
 <div>
   <div>
-    <img src="https://images.unsplash.com/photo-1522714213491-2e5b9dc52084?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2106&q=80" alt="" class="picture-front">
+    <img src="<%= image_path("Faces.jpg") %>" alt="" class="picture-front" width="400" height="250">
   </div>
   <div class = "row2">
     <% @package.items.each do |item| %>
@@ -50,6 +50,14 @@
   <#% end %>
 </div>
  -->
+
+
+<% if @number_package >= 2 && @existing_order.nil? %>
+  <%= simple_form_for @new_order do |f| -%>
+    <%= f.hidden_field :package_id %>
+    <%= f.button :submit, "order package" %>
+  <% end %>
+<% end -%>
 
 <!--
 <%# if @number_package >= 2 && @existing_order.nil? %>
