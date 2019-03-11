@@ -56,7 +56,7 @@ jQuery('.mm-prev-btn').hide();
 
   function goToNext() {
 
-    jQuery('.mm-next-btn').on('click', function() {
+    jQuery('.mm-next').on('click', function() {
       goToSlide(x);
       getCount();
       current = x + 1;
