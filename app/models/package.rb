@@ -5,12 +5,26 @@ class Package < ApplicationRecord
   belongs_to :user
   attribute :quiz_results
 
-  def self.new_from_quiz_results(quiz_results)
+  def self.new_from_quiz_results(quiz_results, price_range)
     # query = quiz_results.first
 
+    skin_type = quiz_results["skin_type"]
     sensitivity = quiz_results["sensitivity"]
-    items = Item.where("product_category ILIKE :query", query: "#{sensitivity}%")
-    items = Item.all.limit(4)
+    concern = quiz_results["concern"]
+    concern = ""
+
+
+
+
+    item1 = Item.where(type_category: "Moisturizer").where("product_category ILIKE :query", query: "%#{sensitivity}%").where("product_category ILIKE :query", query: "%#{skin_type}%").where("product_category ILIKE :query", query: "%#{concern}%").where(price: price_range.capitalize).limit(1)
+
+    item2 = Item.where(type_category: "Cleanser").where("product_category ILIKE :query", query: "%#{sensitivity}%").where("product_category ILIKE :query", query: "%#{skin_type}%").where("product_category ILIKE :query", query: "%#{concern}%").where(price: price_range.capitalize).limit(1)
+
+
+    item3 = Item.where(type_category: "Serum").where("product_category ILIKE :query", query: "%#{sensitivity}%").where("product_category ILIKE :query", query: "%#{skin_type}%").where("product_category ILIKE :query", query: "%#{concern}%").where(price: price_range.capitalize).limit(1)
+
+    items = [item1, item2]
+    raise
     Package.new(items: items)
   end
   # Package.create_from_quiz_results

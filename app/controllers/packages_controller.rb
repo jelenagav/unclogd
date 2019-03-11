@@ -33,9 +33,9 @@ class PackagesController < ApplicationController
   def create
     if params[:package][:quiz_results]
       quiz_results = params[:package][:quiz_results]
-      @package_1 = Package.new_from_quiz_results(quiz_results)
-      @package_2 = Package.new_from_quiz_results(quiz_results)
-      @package_3 = Package.new_from_quiz_results(quiz_results)
+      @package_1 = Package.new_from_quiz_results(quiz_results, "cheap")
+      @package_2 = Package.new_from_quiz_results(quiz_results, "normal")
+      @package_3 = Package.new_from_quiz_results(quiz_results, "expensive")
     end
 
     @package_1.user = current_user
