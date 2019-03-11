@@ -24,7 +24,7 @@ window.addEventListener("load", function() {
     let activePane = document.querySelector(activePaneId);
     activePane.classList.add("active");
   }
-  for (i = 0; i < myTabs.length; i++) {
+  for (let i = 0; i < myTabs.length; i++) {
     myTabs[i].addEventListener("click", myTabClicks)
   }
 });
