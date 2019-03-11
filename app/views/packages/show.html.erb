@@ -38,7 +38,6 @@
 </div>
  -->
 
-
 <% if @number_package >= 2 && @existing_order.nil? %>
   <%= simple_form_for @new_order do |f| -%>
     <%= f.hidden_field :package_id %>
