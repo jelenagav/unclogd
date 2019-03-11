@@ -210,13 +210,20 @@ jQuery('.mm-prev-btn').hide();
   }
 
   function buildStatus() {
-    jQuery('.mm-survery-content .mm-survey-item').on('click', function() {
-      var item;
-      item = jQuery(this);
-      item.addClass('bingo');
-      item.closest('.mm-survey-page').addClass('pass');
-      jQuery('.mm-survey-container').addClass('good');
-    });
+    document.querySelectorAll('.mm-survery-content .mm-survey-item input').forEach((element) => {
+      element.addEventListener('click', (event) => {
+        const target = event.currentTarget;
+        if (target.parentElement.classList.contains('bingo')) {
+          target.parentElement.classList.remove('bingo');
+          target.checked = false
+        } else {
+          target.parentElement.classList.add('bingo');
+        }
+
+        jQuery(target).closest('.mm-survey-page').addClass('pass');
+        jQuery('.mm-survey-container').addClass('good');
+      })
+    })
   }
 
   function deliverStatus() {
