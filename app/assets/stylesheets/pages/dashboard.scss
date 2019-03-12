@@ -11,16 +11,21 @@ body.dashboard {
 
   main {
     grid-area: content;
-    background-color:#E8ECEF;
+    background-color:#FFFFFF;
     width: 710px;
     padding-top: 25px;
     padding-left: 80px;
     padding-bottom: 30px;
-    border: solid 4px;
+    border: solid 1px;
+    border-color: #3D3D3D;
   }
 
   header {
     grid-area: header;
+  }
+
+  .col-md-5 {
+    font-family: 'Karla', serif;
   }
 
   .side-nav {
@@ -29,40 +34,55 @@ body.dashboard {
     background-color:#E8ECEF;
     margin-right: 20px;
     padding-top: 15px;
-    border: solid 4px;
+    border: solid 1px;
+    border-color: #3D3D3D;
 
-  ul, ol {
+    ul, ol {
       margin-top: 30px;
       margin-bottom: 12.5px;
+    }
+
+    a {
+    font-family: 'Karla', serif;
+    font-size: 20px;
+    }
+
+    a:hover {
+      text-decoration: none;
+      font-weight: bold;
+    }
   }
-
- a {
-  font-family: 'Crimson Text', serif;
-  font-size: 24px;
- }
-
- a:hover {
-  text-decoration: none;
-  font-weight: bold;
- }
-}
- .btn.btn-success {
-    background-color: #74E4D6;
-    border-color: #74E4D6;
+  .btn.btn-success {
+    background-color: black;
+    border-color: black;
     position:absolute;
     left: 0px;
     margin-top: 15px;
     margin-bottom: 15px;
     font-weight: lighter;
-}
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px
+  }
 
-.btn.btn-success:hover {
-  background-color: #34d8d0;
-  position:absolute;
-  left: 0px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  font-weight: lighter;
- }
+  .btn.btn-success:hover {
+    color: black;
+    border-color: black;
+    background-color: white;
+    position:absolute;
+    left: 0px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: lighter;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px
+  }
+
+  .btn-success:active:focus {
+    box-shadow: white !important;
+  }
 }
 
