@@ -38,18 +38,19 @@ body.dashboard {
     border-color: #3D3D3D;
 
     ul, ol {
-      margin-top: 30px;
-      margin-bottom: 12.5px;
+    margin-top: 30px;
+    margin-bottom: 12.5px;
     }
 
     a {
     font-family: 'Karla', serif;
     font-size: 20px;
+    color: black;
     }
 
     a:hover {
-      text-decoration: none;
-      font-weight: bold;
+    text-decoration: none;
+    font-weight: bold;
     }
   }
   .btn.btn-success {
