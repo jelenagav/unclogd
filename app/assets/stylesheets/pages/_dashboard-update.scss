@@ -1,9 +1,4 @@
-body {
-  padding: 20px;
-  padding-left: 0px;
-  margin-left: 0px;
-  margin-bottom: 30px;
-}
+
 
 .container-grid {
   display: grid;
@@ -17,34 +12,16 @@ body {
   grid-template-columns: 330px 1fr;
   grid-template-rows: auto 1fr auto;
   grid-gap: 10px;
-  height: 100vh;
 }
 
 .center {
-padding-left: 220px;
+padding-left: 0px;
+overflow: auto;
 }
 
 li {
   font-family: 'Crimson Text', serif;
   font-size: 24px;
-}
-header {
-  grid-area: header;
-}
-
-nav {
-  grid-area: nav;
-  margin-left: 0.5rem;
-  background-color:#e8ecef;
-
-}
-
-main {
-  grid-area: content;
-  background-color:#e8ecef;
-  margin-left: 20px;
-  margin-right: 200px;
-
 }
 
 footer {
@@ -52,14 +29,6 @@ footer {
 }
 
 
-.form-horizontal .form-group {
-    margin-right: 70px;
-    margin-left: -15px;
-}
-
-.snippet {
-  position: absolute;
-}
 
 .upper-left {
   position: absolute;
