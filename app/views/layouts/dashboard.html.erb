@@ -10,8 +10,8 @@
       <ul class="dashboard-links" style="list-style-type:none;>
          <li class="<%= "active" if @active_tab == "Overview" %>"><%= link_to "Overview", user_path(current_user) %></li>
         <li class="<%= "active" if @active_tab == "account details" %>"><%= link_to "Account details", user_path(current_user) %></li>
-        <li class="<%= "active" if @active_tab == "Orders" %>"><%= link_to "Orders", orders_path(current_user) %></li>
-        <li class="<%= "active" if @active_tab == "Root" %>"><%= link_to "Back", orders_path(current_user) %></li>
+        <li class="<%= "active" if @active_tab == "Orders" %>"><%= link_to "Orders", orders_path %></li>
+        <li class="<%= "active" if @active_tab == "Root" %>"><%= link_to "Back", root_path %></li>
       </ul>
     </nav>
 
