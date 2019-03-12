@@ -20,10 +20,17 @@ class UsersController < ApplicationController
 
   def update
     authorize @user
-    if @user.update(user_params)
-      redirect_to user_path(@user)
+
+    if params[:user][:active_package_id]
+      package = Package.find(params[:user][:active_package_id])
+      @user.update(active_package: package)
+      redirect_to package_path(package)
     else
-      render :edit
+      if @user.update(user_params)
+        redirect_to user_path(@user)
+      else
+        render :edit
+      end
     end
   end
 

@@ -19,14 +19,10 @@
     <div class ="row1-info">
       <p class ="title"> <strong><%= item.name %> </strong></p>
       <p> Brand (Estee Lauder) </p>
-      <p> Price (150 pounds) <i class="fas fa-shopping-cart"></i></p>
-      <%= simple_form_for(@package_item) do |f| %>
+      <p> Price (150 pounds)<%= simple_form_for(@package_item) do |f| %>
         <%=  f.hidden_field :package_id %>
         <%=  f.hidden_field :item_id %>
-        <%= f.button :button, class: "buy-button" do %>
-
-
-
+        <%= f.button :button, class: "buy-button" do %> <i class="fas fa-shopping-cart"></i></p>
         <% end %>
       <% end %>
     </div>
