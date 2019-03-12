@@ -1,10 +1,11 @@
 <div class="container-grid">
   <header>
-    <h1> <strong> Unclogd </strong> </br></br></h1>
+    <h1 class="upper-left"> <strong> Unclogd </strong> </br></br></h1>
   </header>
 
   <nav>
-  </br>
+  </br> </br>
+
     <ul class="dashboard-links">
     <ul style="list-style-type:none;">
     <li><strong> << Account </strong></li>
@@ -17,8 +18,9 @@
   </nav>
 
   <main>
-  <div class="container bootstrap snippet">
-  <div class="edit"> <h1> <span class="glyphicon glyphicon-user"> </span>  Edit Profile</h1> </div>
+  <div class="container bootstrap center">
+  </br>
+  <div class="edit"> <h1 class="snippet"> <span class="glyphicon glyphicon-user"> </span>  Edit Profile</h1> </div>
   <br />
     <br />
   <div class="row">
@@ -85,7 +87,23 @@
         </div>
         <div class="form-group">
           <div class="col-lg-8">
-            <%= f.input :address %>
+            <%= f.input :address,
+             required: false,
+             input_html: { autocomplete: "your-address" } %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-8">
+            <%= f.input :postcode,
+             required: false,
+             input_html: { autocomplete: "your-postcode" } %>
+          </div>
+        </div>
+         <div class="form-group">
+          <div class="col-lg-8">
+            <%= f.input :city,
+             required: false,
+            input_html: { autocomplete: "your-city" } %>
           </div>
         </div>
         <div class="form-group">
