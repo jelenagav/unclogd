@@ -19,8 +19,6 @@ body.items.show {
 
   .col1 {
     padding: 10px;
-
-
   }
 
 
@@ -29,6 +27,7 @@ body.items.show {
     height: 390px;
     width: 780px;
   }
+
   .row1-info{
     padding: 10px;
 
@@ -50,7 +49,6 @@ body.items.show {
     height: 500px;
     margin-left: 250px;
     background: #E8ECEF;
-    position: relative;
     margin-top: 70px;
 
     .picture {
@@ -79,12 +77,21 @@ body.items.show {
     margin-top: -30px;
 
   }
-
   .row2-info {
     padding: 10px;
   }
 
 
+  .row2 {
+    position: relative;
+  }
+
+
+  .shopping-cart {
+    position: absolute;
+    right: 100px;
+    width: 100%;
+  }
   // trying
 
  .ingredient-text.last {

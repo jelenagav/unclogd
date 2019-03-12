@@ -6,6 +6,7 @@ import "./form";
 // myTabClicks();
 
 window.addEventListener("load", function() {
+  console.log("going to setup tabs")
   // store tabs variable
   let myTabs = document.querySelectorAll("ul.nav-tabs > li");
   function myTabClicks(tabClickEvent) {
@@ -16,7 +17,7 @@ window.addEventListener("load", function() {
     clickedTab.classList.add("active");
     tabClickEvent.preventDefault();
     let myContentPanes = document.querySelectorAll(".tab-pane");
-    for (i = 0; i < myContentPanes.length; i++) {
+    for (let i = 0; i < myContentPanes.length; i++) {
       myContentPanes[i].classList.remove("active");
     }
     let anchorReference = tabClickEvent.target;
@@ -24,7 +25,7 @@ window.addEventListener("load", function() {
     let activePane = document.querySelector(activePaneId);
     activePane.classList.add("active");
   }
-  for (i = 0; i < myTabs.length; i++) {
+  for (let i = 0; i < myTabs.length; i++) {
     myTabs[i].addEventListener("click", myTabClicks)
   }
 });

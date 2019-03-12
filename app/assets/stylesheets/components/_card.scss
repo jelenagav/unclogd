@@ -13,6 +13,10 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+.padding-card {
+  padding-bottom: 25px;
+}
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

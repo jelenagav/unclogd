@@ -3,6 +3,15 @@ class OrdersController < ApplicationController
 
   def index
     @orders = Order.all
+    @orders = policy_scope(Order.all)
+    @active_tab = "orders"
+    render layout: "dashboard"
+  end
+
+  def root
+    authorize @user
+    @active_tab = "returns"
+    redirect_to root_path
   end
 
   def show
@@ -18,8 +27,8 @@ class OrdersController < ApplicationController
 
   def create
     package = current_user.active_package
-    order  = Order.create!(package: package, amount: package.price_range, status: 'pending')
-    authorize @order
+    order = Order.create!(package: package, amount: package.price_range, status: 'pending')
+    authorize order
     redirect_to new_order_payment_path(order)
   end
 

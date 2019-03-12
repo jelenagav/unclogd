@@ -3,8 +3,14 @@ class UsersController < ApplicationController
 
   def show
     authorize @user
+    @active_tab = "account"
+    render layout: "dashboard"
   end
 
+  def overview
+    @active_tab = "overview"
+    render layout: "dashboard"
+  end
   def destroy
   end
 
@@ -14,10 +20,17 @@ class UsersController < ApplicationController
 
   def update
     authorize @user
-    if @user.update(user_params)
-      redirect_to user_path(@user)
+
+    if params[:user][:active_package_id]
+      package = Package.find(params[:user][:active_package_id])
+      @user.update(active_package: package)
+      redirect_to package_path(package)
     else
-      render :edit
+      if @user.update(user_params)
+        redirect_to user_path(@user)
+      else
+        render :edit
+      end
     end
   end
 

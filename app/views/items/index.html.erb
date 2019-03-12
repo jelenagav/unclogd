@@ -21,28 +21,14 @@
     placeholder: "Find an item"%>
     <button type="submit" class="button1"><i class="fa fa-search"></i></button>
     <% end %>
-
-
   </div>
-  <div class = "row2">
+
+  <div class = "container">
+    <div class = "row">
     <% @items.each do |item| %>
-    <div class = "col  1">
-      <%= link_to item_path(item) do %>
-      <div class = "index-card">
-        <div class = "picture-container">
-          <div class = "item-picture">
-            <%= image_tag(item.picture_url) %>
-          </div>
-        </div>
-        <div class = "information">
-          <h5><%= item.name %></h5>
-          <h5><%= item.brand %></h5>
-        </div>
-      </div>
-      <% end %>
-    </div>
+
+      <%= render 'item_card', { item: item } %>
     <% end %>
+    </div>
   </div>
 </div>
-<!-- david's code below -->
-<!-- now I need to link pics with the url  -->

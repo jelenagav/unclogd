@@ -1,4 +1,3 @@
-
 if (document.querySelector('.pages.quiz')) {
 
 jQuery('.mm-prev-btn').hide();
@@ -55,41 +54,42 @@ jQuery('.mm-prev-btn').hide();
   }
 
   function goToNext() {
-
-    jQuery('.mm-next-btn').on('click', function() {
-      goToSlide(x);
-      getCount();
-      current = x + 1;
-      var g = current/count;
-      buildProgress(g);
-      var y = (count + 1);
-      getButtons();
-      jQuery('.mm-survey-page').removeClass('active');
-      jQuery('.mm-page-'+current).addClass('active');
-      getCurrentSlide();
-      checkStatus();
-      if( jQuery('.mm-page-'+count).hasClass('active') ){
-        if( jQuery('.mm-page-'+count).hasClass('pass') ) {
-          jQuery('.mm-finish-btn').addClass('active');
-        }
-        else {
-          jQuery('.mm-page-'+count+' .mm-survery-content .mm-survey-item').on('click', function() {
+    jQuery('.mm-next').on('click', function() {
+      setTimeout(function() {
+        goToSlide(x);
+        getCount();
+        current = x + 1;
+        var g = current/count;
+        buildProgress(g);
+        var y = (count + 1);
+        getButtons();
+        jQuery('.mm-survey-page').removeClass('active');
+        jQuery('.mm-page-'+current).addClass('active');
+        getCurrentSlide();
+        checkStatus();
+        if( jQuery('.mm-page-'+count).hasClass('active') ){
+          if( jQuery('.mm-page-'+count).hasClass('pass') ) {
             jQuery('.mm-finish-btn').addClass('active');
-          });
-        }
-      }
-      else {
-        jQuery('.mm-finish-btn').removeClass('active');
-        if( jQuery('.mm-page-'+current).hasClass('pass') ) {
-          jQuery('.mm-survey-container').addClass('good');
-          jQuery('.mm-survey').addClass('okay');
+          }
+          else {
+            jQuery('.mm-page-'+count+' .mm-survery-content .mm-survey-item').on('click', function() {
+              jQuery('.mm-finish-btn').addClass('active');
+            });
+          }
         }
         else {
-          jQuery('.mm-survey-container').removeClass('good');
-          jQuery('.mm-survey').removeClass('okay');
+          jQuery('.mm-finish-btn').removeClass('active');
+          if( jQuery('.mm-page-'+current).hasClass('pass') ) {
+            jQuery('.mm-survey-container').addClass('good');
+            jQuery('.mm-survey').addClass('okay');
+          }
+          else {
+            jQuery('.mm-survey-container').removeClass('good');
+            jQuery('.mm-survey').removeClass('okay');
+          }
         }
-      }
-      buttonConfig();
+        buttonConfig();
+      }, 500);
     });
 
   }
@@ -188,8 +188,11 @@ jQuery('.mm-prev-btn').hide();
     jQuery(item).on('click', function() {
       if( jQuery('input:checked').length > 0 ) {
           // console.log(item.val());
-          jQuery('label').parent().removeClass('active');
-          item.closest( 'li' ).addClass('active');
+          setTimeout(() => {
+            console.log("going to do it")
+            jQuery('label').parent().removeClass('active');
+            item.closest( 'li' ).addClass('active');
+          }, 1000)
       }
       else {
         //
@@ -210,13 +213,20 @@ jQuery('.mm-prev-btn').hide();
   }
 
   function buildStatus() {
-    jQuery('.mm-survery-content .mm-survey-item').on('click', function() {
-      var item;
-      item = jQuery(this);
-      item.addClass('bingo');
-      item.closest('.mm-survey-page').addClass('pass');
-      jQuery('.mm-survey-container').addClass('good');
-    });
+    document.querySelectorAll('.mm-survery-content .mm-survey-item input').forEach((element) => {
+      element.addEventListener('click', (event) => {
+        const target = event.currentTarget;
+        if (target.parentElement.classList.contains('bingo')) {
+          target.parentElement.classList.remove('bingo');
+          target.checked = false
+        } else {
+          target.parentElement.classList.add('bingo');
+        }
+
+        jQuery(target).closest('.mm-survey-page').addClass('pass');
+        jQuery('.mm-survey-container').addClass('good');
+      })
+    })
   }
 
   function deliverStatus() {

@@ -1,20 +1,24 @@
 <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans|Karla" rel="stylesheet">
 
-<div class="main-navbar">
+<!-- <div class="main-navbar"> -->
+<!--    <%#= link_to root_path, class: "navbar-unclogd-brand" do %>
+    <%#= image_tag "logounclogd1.png", height: 50 %>
+    <%# end %>
+ -->
   <!-- Logo -->
-  <%= link_to root_path, class: "navbar-unclogd-brand" do %>
-    <%= image_tag "logounclogd1.png", height: 50 %>
-    <% end %>
+
 
   <!-- Right Navigation -->
   <div class="main-nav">
     <% if user_signed_in? %>
+
+
       <ul>
         <li><%= link_to "Search", items_path, class: "is-active search" %></li>
         <li><%= link_to "Quiz", quiz_path %></li>
         <li><%= link_to "Account", user_path(current_user) %></li>
         <li><%= link_to "Basket", package_path(current_user.active_package) %></li>
-        <li><a href="Compare">Check</a></li>
+        <li><%= link_to "Compare", package_path(current_user.active_package) %></li>
         <li><%= link_to t(".sign_out", default: "Log out"), destroy_user_session_path, method: :delete %></li>
       </ul>
 
@@ -25,7 +29,7 @@
     <!-- Login Link (when logged out) -->
 
   </div>
-  </div>
+</div>
 
 
 

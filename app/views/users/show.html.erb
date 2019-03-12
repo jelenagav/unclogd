@@ -1,1 +1,82 @@
-<h1>hello from dashboard user</h1>
+
+
+  </br>
+  <div class="edit"> <h1 class="snippet text-left"> <span class="glyphicon glyphicon-user"> </span>  Edit Profile</h1> </div>
+  <br />
+  <br />
+  <div class="row">
+    <!-- Below was the form to upload a pic -->
+    <div class="col-md-3">
+    <!--   <div class="text-center">
+        <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
+        <%= simple_form_for(@user) do |f| %> <br>
+        <%= f.button :submit, "Upload", class: "btn btn-success" %>
+        <% end %> <br> -->
+      </div>
+    </div>
+    <div class="col-md-9 personal-info">
+      <%= simple_form_for(@user, url: registration_path(:user), html: { method: :put }) do |f| %>
+      <%= f.error_notification %>
+      <!-- edit form column -->
+      <!-- <h3>Personal info</h3> -->
+      <div class="form-horizontal" role="form">
+     <!--    <div class="form-group"> -->
+          <!-- <div class="col-lg-8"> -->
+
+    <!--     <%#= f.input :photo, label: 'Upload Photo' %>
+        <%#= f.input :photo_cache, as: :hidden %>
+        </div>
+          </div> -->
+
+       <div class="row">
+          <div class="col-md-5">
+            <%= f.input :name,
+            required: false,
+            input_html: { autocomplete: "your-name" } %>
+          </div>
+
+          <div class="col-md-5 col-md-offset-2">
+            <%= f.input :email, required: true, autofocus: true %>
+          </div>
+        </div>
+
+       <div class="row">
+         <div class="col-md-5">
+            <%= f.input :password,
+            required: false,
+            input_html: { autocomplete: "new-password" } %>
+          </div>
+          <div class="col-md-5 col-md-offset-2">
+            <%= f.input :confirm_password,
+            required: false,
+            input_html: { autocomplete: "new-password" } %>
+          </div>
+        </div>
+       <div class="row">
+          <div class="col-md-12 form-group-large">
+            <%= f.input :address,
+             required: false,
+             input_html: { autocomplete: "your-address" } %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 form-group-large">
+            <%= f.input :postcode,
+             required: false,
+             input_html: { autocomplete: "your-postcode" } %>
+          </div>
+        </div>
+          <div class="row">
+          <div class="col-md-12 form-group-large">
+            <%= f.input :city,
+             required: false,
+            input_html: { autocomplete: "your-city" } %>
+        </div>
+      </div>
+          <div class="col-md-12 form-group-large"> </br>
+          </div>
+                      <%= f.button :submit, "Update", class: "btn btn-success" %>
+       </div>
+      <% end %>
+    </div>
+

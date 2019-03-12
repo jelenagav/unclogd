@@ -26,29 +26,29 @@
       <div class="mm-survey-bottom">
         <div class="mm-survey-container">
           <div class="welcome">
-            <h1> Welcome to your free skin consultation! </h1> <p> We are so excited to get to know you and your skin. The skin consultation will take about 5 minutes to complete. We will then compile a personalized package for you. </p>
+            <h1>Welcome to your free skin consultation!</h1> <p> We are so excited to get to know you and your skin. The consultation will take about 5 minutes to complete and at the end, we will compile a personalized package for you. </p>
             </br>
             <div class="btn begin-btn" id='begin-survey'> Let's begin </div>
           </div>
           <div class="mm-survey-page" data-page="1">
             <div class="mm-survery-content">
               <div class="mm-survey-question">
-                <p>What is your age range ?</p>
+                <strong><p>What is your age range ?</p></strong>
               </div>
               <div class="mm-survey-item">
-                <input type="radio" id="radio01" data-item="1" name="package[quiz_results][q1]" value="<25" />
+                <input type="radio" id="radio01" data-item="1" name="package[quiz_results][age][]" value="<25" class="mm-next"  />
                 <label for="radio01"><span></span><p>< 25 </p></label>
               </div>
               <div class="mm-survey-item">
-                <input type="radio" id="radio02" data-item="1" name="package[quiz_results][q2]" value="25-35" />
+                <input type="radio" id="radio02" data-item="1" name="package[quiz_results][age][]" value="25-35" class="mm-next"/>
                 <label for="radio02"><span></span><p> 25 - 35 </p></label>
               </div>
               <div class="mm-survey-item">
-                <input type="radio" id="radio03" data-item="1" name="package[quiz_results][q3]" value="36-45" />
+                <input type="radio" id="radio03" data-item="1" name="package[quiz_results][age][]" value="36-45" class="mm-next"/>
                 <label for="radio03"><span></span><p> 36 - 45 </p></label>
               </div>
               <div class="mm-survey-item">
-                <input type="radio" id="radio04" data-item="1" name="package[quiz_results][q4]" value="45+" />
+                <input type="radio" id="radio04" data-item="1" name="package[quiz_results][age][]" value="45+" class="mm-next" />
                 <label for="radio04"><span></span><p> 45 + </p></label>
               </div>
             </div>
@@ -56,15 +56,15 @@
           <div class="mm-survey-page" data-page="2">
             <div class="mm-survery-content">
               <div class="mm-survey-question">
-                <p> Are you </p>
+                <p> You are: </p>
               </div>
               <div class="mm-survey-item">
-                <input type="radio" id="radio05" data-item="2" name="package[quiz_results][q5]" value="male" />
+                <input type="radio" id="radio05" data-item="2" name="package[quiz_results][sex]" value="male" class="mm-next"/>
                 <label for="radio05"><span></span><p> Male </p></label>
               </div>
               <div class="mm-survey-item">
-                <input type="radio" id="radio05" data-item="2" name="package[quiz_results][q6]" value="female" />
-                <label for="radio05"><span></span><p> Female </p></label>
+                <input type="radio" id="radio06" data-item="2" name="package[quiz_results][sex]" value="female" class="mm-next"/>
+                <label for="radio06"><span></span><p> Female </p></label>
               </div>
             </div>
           </div>
@@ -74,19 +74,19 @@
                 <p>How would you describe your skin type?</p>
               </div>
               <div class="mm-survey-item">
-                <input type="radio" id="radio09" data-item="3" name="package[quiz_results][q7]" value="dry" />
+                <input type="radio" id="radio09" data-item="3" name="package[quiz_results][skin_type]" value="dry" class="mm-next"/>
                 <label for="radio09"><span></span><p>Dry</p></label>
               </div>
               <div class="mm-survey-item">
-                <input type="radio" id="radio10" data-item="3" name="package[quiz_results][q8]" value="normal" />
+                <input type="radio" id="radio10" data-item="3" name="package[quiz_results][skin_type]" value="normal" class="mm-next"/>
                 <label for="radio10"><span></span><p>Normal</p></label>
               </div>
               <div class="mm-survey-item">
-                <input type="radio" id="radio11" data-item="3" name="package[quiz_results][q9]" value="oily" />
+                <input type="radio" id="radio11" data-item="3" name="package[quiz_results][skin_type]" value="oily" class="mm-next"/>
                 <label for="radio11"><span></span><p>Oily</p></label>
               </div>
               <div class="mm-survey-item">
-                <input type="radio" id="radio12" data-item="3" name="package[quiz_results][q10]" value="combined" />
+                <input type="radio" id="radio12" data-item="3" name="package[quiz_results][skin_type]" value="normal" class="mm-next"/>
                 <label for="radio12"><span></span><p>Combination</p></label>
               </div>
             </div>
@@ -97,19 +97,19 @@
                 <p>Do  skin care products often irritate your skin?</p>
               </div>
               <div class="mm-survey-item">
-                <input type="radio" id="radio13" data-item="4" name="package[quiz_results][q11]" value="never" />
+                <input type="radio" id="radio13" data-item="4" name="package[quiz_results][sensitivity]" value="sen0" class="mm-next"/>
                 <label for="radio13"><span></span><p> Never </p></label>
               </div>
               <div class="mm-survey-item">
-                <input type="radio" id="radio14" data-item="4" name="package[quiz_results][q12]" value="rarely" />
+                <input type="radio" id="radio14" data-item="4" name="package[quiz_results][sensitivity]" value="sen0" class="mm-next"/>
                 <label for="radio14"><span></span><p> Rarely </p></label>
               </div>
               <div class="mm-survey-item">
-                <input type="radio" id="radio15" data-item="4" name="package[quiz_results][q13]" value="sometimes" />
+                <input type="radio" id="radio15" data-item="4" name="package[quiz_results][sensitivity]" value="sen1" class="mm-next"/>
                 <label for="radio15"><span></span><p> Sometimes </p></label>
               </div>
               <div class="mm-survey-item">
-                <input type="radio" id="radio16" data-item="4" name="package[quiz_results][q14]" value="often" />
+                <input type="radio" id="radio16" data-item="4" name="package[quiz_results][sensitivity]" value="sen1" class="mm-next"/>
                 <label for="radio16"><span></span><p> Often </p></label>
               </div>
             </div>
@@ -120,20 +120,23 @@
                 <p> What is your primary skin concern? </p>
               </div>
               <div class="mm-survey-item">
-                <input type="radio" id="radio5a" data-item="5" name="package[quiz_results][q15]" value="aging" />
-                <label for="radio5a"><span></span><p> Aging </p></label>
+
+                <input type="radio" id="radio5a" data-item="5" name="package[quiz_results][concern]" value="aging" class="mm-next"/>
+                <label for="radio5a"><span></span><p> Anti-Aging </p></label>
               </div>
               <div class="mm-survey-item">
-                <input type="radio" id="radio5b" data-item="5" name="package[quiz_results][q16]" value="acne" />
+                <input type="radio" id="radio5b" data-item="5" name="package[quiz_results][concern]" value="acne" class="mm-next"/>
                 <label for="radio5b"><span></span><p> Acne </p></label>
               </div>
               <div class="mm-survey-item">
-                <input type="radio" id="radio5c" data-item="5" name="package[quiz_results][q17]" value="skintone" />
+                <input type="radio" id="radio5c" data-item="5" name="package[quiz_results][concern]" value="uneven" class="mm-next"/>
                 <label for="radio5c"><span></span><p>Uneven skin tone</p></label>
               </div>
               <div class="mm-survey-item">
-                <input type="radio" id="radio5e" data-item="5" name="package[quiz_results][q18]" value="dry" />
-                <label for="radio5e"><span></span><p> Dryness </p></label>
+
+                <input type="radio" id="radio5e" data-item="5" name="package[quiz_results][concern]" value="pore" class="mm-next"/>
+                <label for="radio5e"><span></span><p> Pore </p></label>
+
               </div>
             </div>
           </div>
@@ -143,15 +146,18 @@
                 <p> You prefer your skin care ingredients to be </p>
               </div>
               <div class="mm-survey-item">
-                <input type="radio" id="radio5a" data-item="6" name="package[quiz_results][q19]" value="Biological" />
-                <label for="radio6a"><span></span><p> Biological </p></label>
+
+                <input type="radio" id="radio6a" data-item="6" name="package[quiz_results][q19]" value="Eco-friendly"/>
+                <label for="radio6a"><span></span><p> Eco-friendly </p></label>
               </div>
               <div class="mm-survey-item">
-                <input type="radio" id="radio5b" data-item="6" name="package[quiz_results][q20]" value="Cruelty Free" />
+                <input type="radio" id="radio6b" data-item="6" name="package[quiz_results][q20]" value="Cruelty Free"/>
                 <label for="radio6b"><span></span><p> Cruelty Free </p></label>
               </div>
               <div class="mm-survey-item">
-                <input type="radio" id="radio5c" data-item="6" name="package[quiz_results][q21]" value="Hypoallergenic" />
+
+                <input type="radio" id="radio6c" data-item="6" name="package[quiz_results][q21]" value="Hypoallergenic"/>
+
                 <label for="radio6c"><span></span><p> Hypoallergenic </p></label>
               </div>
             </div>
@@ -162,9 +168,6 @@
           <div class="mm-survey-controller">
             <div class="mm-prev-btn">
               <div class="btn"> < </div>
-            </div>
-            <div class="mm-next-btn">
-              <div class="btn"> > </div>
             </div>
             <div class="mm-finish-btn">
               <%= f.button :button, "Submit" %>
