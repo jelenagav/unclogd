@@ -8,7 +8,7 @@
     </div>
     <div class = "information">
       <h5><%= item.name.truncate(29) %></h5>
-      <h5><%= item.brand %></h5>
+      <h5 class="padding-card"><strong><%= item.brand %></strong></h5>
       <% if defined? package_item %>
       <%= link_to package_item_path(package_item), method: :delete, data: {confirm: "are you sure?"} do  %>
         <i class="fas fa-trash"></i>
