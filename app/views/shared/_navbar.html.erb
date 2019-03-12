@@ -1,14 +1,18 @@
 <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans|Karla" rel="stylesheet">
 
-<div class="main-navbar">
-  <!-- Logo -->
-  <%= link_to root_path, class: "navbar-unclogd-brand" do %>
+<!-- <div class="main-navbar"> -->
+   <%= link_to root_path, class: "navbar-unclogd-brand" do %>
     <%= image_tag "logounclogd1.png", height: 50 %>
     <% end %>
+
+  <!-- Logo -->
+
 
   <!-- Right Navigation -->
   <div class="main-nav">
     <% if user_signed_in? %>
+
+
       <ul>
         <li><%= link_to "Search", items_path, class: "is-active search" %></li>
         <li><%= link_to "Quiz", quiz_path %></li>
