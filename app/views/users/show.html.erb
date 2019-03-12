@@ -1,23 +1,110 @@
-<h1>hello from dashboard user</h1>
+<div class="container-grid">
+  <header>
+    <h1> <strong> Unclogd </strong> </br></br></h1>
+  </header>
 
-<p> This is where we will put the order of users</p>
+  <nav>
+  </br>
+    <ul class="dashboard-links">
+    <ul style="list-style-type:none;">
+    <li><strong> << Account </strong></li>
+    <li>Overview</li>
+    <li>My Cabinet</li>
+    <li>Account information</li>
+    <li>Orders</li>
+    <li>Returns</li>
+   </ul>
+  </nav>
 
-<% @user.orders.each do |order| %>
-  <% order.package.items.each do |item| %>
-      <div class = "col  1">
-        <%= link_to item_path(item) do %>
-        <div class = "index-card">
-          <div class = "picture-container">
-            <div class = "item-picture">
-              <%= image_tag(item.picture_url) %>
-            </div>
+  <main>
+  <div class="container bootstrap snippet">
+  <div class="edit"> <h1> <span class="glyphicon glyphicon-user"> </span>  Edit Profile</h1> </div>
+  <br />
+    <br />
+  <div class="row">
+    <!-- Below was the form to upload a pic -->
+    <div class="col-md-3">
+    <!--   <div class="text-center">
+        <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
+        <%= simple_form_for(@user) do |f| %> <br>
+        <%= f.button :submit, "Upload", class: "btn btn-success" %>
+        <% end %> <br> -->
+      </div>
+    </div>
+    <div class="col-md-9 personal-info">
+      <%= simple_form_for(@user, url: registration_path(:user), html: { method: :put }) do |f| %>
+      <%= f.error_notification %>
+      <!-- edit form column -->
+      <!-- <h3>Personal info</h3> -->
+      <div class="form-horizontal" role="form">
+     <!--    <div class="form-group"> -->
+          <!-- <div class="col-lg-8"> -->
+
+    <!--     <%#= f.input :photo, label: 'Upload Photo' %>
+        <%#= f.input :photo_cache, as: :hidden %>
+        </div>
+          </div> -->
+
+
+        <div class="form-group">
+          <div class="col-lg-8">
+            <%= f.input :name,
+            hint: "leave it blank if you don't want to change it",
+            required: false,
+            input_html: { autocomplete: "your-name" } %>
           </div>
-          <div class = "information">
-            <h5><%= item.name %></h5>
-            <h5><%= item.brand %></h5>
+          </div>
+
+          <div class="form-group">
+          <div class="col-lg-8">
+              <%= f.input :email, required: true, autofocus: true %>
+              <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+              <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+              <% end %>
           </div>
         </div>
-        <% end %>
+        <div class="form-group">
+          <div class="col-lg-8">
+            <%= f.input :password,
+            hint: "leave it blank if you don't want to change it",
+            required: false,
+            input_html: { autocomplete: "new-password" } %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-8">
+            <%= f.input :password_confirmation,
+            required: false,
+            input_html: { autocomplete: "new-password" } %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-8">
+            <%= f.input :current_password,
+            hint: "we need your current password to confirm your changes",
+            required: false,
+            input_html: { autocomplete: "current-password" } %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-8">
+            <%= f.input :address %>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-8">
+            <%= f.button :submit, "Update", class: "btn btn-success" %>
+          </div>
+        </div>
       </div>
       <% end %>
-<% end %>
+    </div>
+  </div>
+</div>
+<hr>
+
+
+  </main>
+
+
+</div>
