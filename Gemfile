@@ -21,6 +21,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'pundit'
+gem 'country-select'
 gem 'cloudinary', '~> 1.9.1'
 
 

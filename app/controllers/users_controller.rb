@@ -3,8 +3,14 @@ class UsersController < ApplicationController
 
   def show
     authorize @user
+    @active_tab = "account"
+    render layout: "dashboard"
   end
 
+  def overview
+    @active_tab = "overview"
+    render layout: "dashboard"
+  end
   def destroy
   end
 

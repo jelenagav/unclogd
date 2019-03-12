@@ -34,31 +34,13 @@
       <#%= render 'items/item', { item: item } %>
 
   <#% end %>
+
 </div>
- -->
-
-
-<% if @number_package >= 2 && @existing_order.nil? %>
-  <%= simple_form_for @new_order do |f| -%>
-    <%= f.hidden_field :package_id %>
-    <%= f.button :submit, "order package" %>
-  <% end %>
-<% end -%>
-
-<!--
-<%# if @number_package >= 2 && @existing_order.nil? %>
-  <#%= simple_form_for @new_order do |f| -%>
-    <#%= f.hidden_field :package_id %>
-    <#%= f.button :button, "order package" do %>
-     <i class="fas fa-shopping-cart"></i>
-  <#% end %>
-<#% end %>
-<#% end %> -->
 
 <% if @existing_order %>
   <%= link_to order_path(@existing_order),
       method: :delete,
       data: { confirm: "Are you sure?" } do %>
-      <i class="fas fa-shopping-cart"></i>
+      <i class="fas fa-trash"></i>
   <% end %>
 <% end %>
