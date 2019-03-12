@@ -18,35 +18,20 @@
   <div class="row">
     <div class="col-lg-11"><hr>
       Package: <%= i + 1 %>
-    <%= simple_form_for new_order do |f| -%>
-      <%= f.hidden_field :package_id %>
+    <%= simple_form_for current_user, method: :put do |f| -%>
+      <%= f.hidden_field :active_package_id, value: package.id %>
       <%= f.button :button, "Select", class: "select-button" %>
       <% end %>
     </div>
 
   </div>
 
-
-  <div class = "row">
+  <div class="row">
     <% package.items.each do |item| %>
-    <div class="col-lg-4">
-      <%= link_to item_path(item) do %>
-      <div class = "index-card">
-        <div class = "picture-container">
-          <div class = "item-picture">
-            <%= image_tag(item.picture_url) %>
-          </div>
-        </div>
-        <div class = "information">
-          <h5><%= item.name %></h5>
-          <h5><%= item.brand %></h5>
-        </div>
-      </div>
-      <% end %>
-    </div>
-    <% end %>
+      <%= render 'items/item_card', { item: item } %>
     <% end %>
   </div>
+  <% end %>
 </div>
 
 

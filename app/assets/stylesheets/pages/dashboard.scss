@@ -15,10 +15,12 @@ body.dashboard {
 
   main {
     grid-area: content;
-    background-color:#e8ecef;
+    background-color:#E8ECEF;
     width: 710px;
     padding-top: 30px;
     padding-left: 80px;
+    padding-bottom: 30px;
+    border: solid 4px;
   }
 
   header {
@@ -28,9 +30,10 @@ body.dashboard {
   .side-nav {
     grid-area: nav;
     margin-left: 0.5rem;
-    background-color:#e8ecef;
+    background-color:#E8ECEF;
     margin-right: 20px;
     padding-top: 15px;
+    border: solid 4px;
 
   }
 

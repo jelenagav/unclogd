@@ -28,7 +28,7 @@ class OrdersController < ApplicationController
   def create
     package = current_user.active_package
     order = Order.create!(package: package, amount: package.price_range, status: 'pending')
-    authorize @order
+    authorize order
     redirect_to new_order_payment_path(order)
   end
 

@@ -49,16 +49,6 @@ body.packages.show, body.packages.show_multiple {
     text-decoration: none;
   }
 
-//need to alter picture container of width if you want the picture card width change
-  .picture-container {
-    width: 300px;
-    height: 330px;
-    background: white;
-    border: solid 4px;
-
-  }
-
-
   .button1{
     background: black;
     width: 66px;
@@ -100,26 +90,8 @@ body.packages.show, body.packages.show_multiple {
       background-color: green;
     }
 
-    .index-card {
-     padding: 10px;
-     width: 300px;
-    }
-
   }
 
-  .item-picture {
-      width: 274px;
-      height: 324px;
-      padding: 15px;
-
-
-
-    img {
-        height: 100%;
-        width: 100%;
-      }
-
-  }
 
   .flash-success {
     justify-content: center;

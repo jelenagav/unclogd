@@ -30,14 +30,6 @@ body.items.index {
     text-decoration: none;
   }
 
-//need to alter picture container of width if you want the picture card width change
-  .picture-container {
-    width: 280px;
-    height: 330px;
-    background: white;
-    border: solid 4px;
-
-  }
 
   .button1 #search-button {
     background-color: black;
@@ -66,23 +58,6 @@ body.items.index {
       background-color: green;
     }
 
-    .index-card {
-     padding: 10px;
-     width: 300px;
-    }
-
-  }
-
-  .item-picture {
-      width: 274px;
-      height: 324px;
-      padding: 15px;
-
-
-    img {
-        height: 100%;
-        width: 100%;
-      }
 
   }
 
