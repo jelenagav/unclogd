@@ -1,0 +1,20 @@
+<div class="col-lg-3 col-md-4 col-sm-6 item-card">
+  <%= link_to item_path(item) do %>
+  <div class = "index-card">
+    <div class = "picture-container">
+      <div class = "item-picture">
+        <%= image_tag(item.picture_url) %>
+      </div>
+    </div>
+    <div class = "information">
+      <h5><%= item.name.truncate(29) %></h5>
+      <h5><%= item.brand %></h5>
+      <% if defined? package_item %>
+      <%= link_to package_item_path(package_item), method: :delete, data: {confirm: "are you sure?"} do  %>
+        <i class="fas fa-trash"></i>
+      <% end %>
+      <% end %>
+    </div>
+  </div>
+  <% end %>
+</div>

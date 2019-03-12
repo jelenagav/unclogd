@@ -12,7 +12,11 @@ class PackageItemsController < ApplicationController
   def create
     @package_item = PackageItem.new(package_item_params)
     authorize @package_item
-    redirect_to items_path
+    if @package_item.save
+      redirect_to package_path(@package_item.package)
+    else
+      raise "Couldnt add item to package"
+    end
   end
 
   def edit
