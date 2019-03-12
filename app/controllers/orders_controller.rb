@@ -3,6 +3,15 @@ class OrdersController < ApplicationController
 
   def index
     @orders = Order.all
+    @orders = policy_scope(Order.all)
+    @active_tab = "orders"
+    render layout: "dashboard"
+  end
+
+  def root
+    authorize @user
+    @active_tab = "returns"
+    redirect_to root_path
   end
 
   def show

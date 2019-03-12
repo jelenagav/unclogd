@@ -1,0 +1,33 @@
+<% content_for :content do %>
+<div class="container">
+  <div class="container-grid">
+    <header>
+      <h1 class="upper-left"> <strong> Unclogd </strong> </br></br></h1>
+    </header>
+
+    <nav class="side-nav">
+
+      <ul class="dashboard-links" style="list-style-type:none;>
+         <li class="<%= "active" if @active_tab == "Overview" %>"><%= link_to "Overview", user_path(current_user) %></li>
+        <li class="<%= "active" if @active_tab == "account details" %>"><%= link_to "Account details", user_path(current_user) %></li>
+        <li class="<%= "active" if @active_tab == "Orders" %>"><%= link_to "Orders", orders_path(current_user) %></li>
+        <li class="<%= "active" if @active_tab == "Root" %>"><%= link_to "Back", orders_path(current_user) %></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div class="container bootstrap center" style="overflow: auto; width:710px; height:600px;">
+
+        <%= yield %>
+
+      </div>
+
+    </main>
+  </div>
+</div>
+
+
+<% end %>
+<% @dashboard = true %>
+
+<%= render template: "layouts/application" %>
