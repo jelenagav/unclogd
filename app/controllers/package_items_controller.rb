@@ -1,6 +1,7 @@
 class PackageItemsController < ApplicationController
   before_action :find_package_item, only: [:destroy, :edit, :update]
 
+
   def new
     @package_item = PackageItem.new
     if current_user
@@ -24,6 +25,10 @@ class PackageItemsController < ApplicationController
   end
 
   def destroy
+    package = @package_item.package
+    authorize @package_item
+    @package_item.destroy
+    redirect_to package_path(package.id)
   end
 
   private
@@ -32,7 +37,9 @@ class PackageItemsController < ApplicationController
     params.require(:package_item).permit(:package_id, :item_id)
   end
 
-  def find_packageItem_item
+  def find_package_item
     @package_item = PackageItem.find(params[:id])
   end
+
+
 end

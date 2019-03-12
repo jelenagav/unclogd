@@ -18,10 +18,10 @@ class PackageItemPolicy < ApplicationPolicy
   end
 
   def show?
-
+    return true
   end
 
   def destroy?
-
+    return true
   end
 end

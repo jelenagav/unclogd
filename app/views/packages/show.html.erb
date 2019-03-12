@@ -6,8 +6,10 @@
     <img src="<%= image_path("Faces.jpg") %>" alt="" class="picture-front" width="400" height="250">
   </div>
   <div class = "row2">
-    <% @package.items.each do |item| %>
-    <div class = "col  1">
+
+    <% @package.package_items.each  do |package_item| %>
+    <% item = package_item.item  %>
+    <div class = "col 1">
       <%= link_to item_path(item) do %>
       <div class = "index-card">
         <div class = "picture-container">
@@ -18,14 +20,20 @@
         <div class = "information">
           <h5><%= item.name %></h5>
           <h5><%= item.brand %></h5>
+          <%= link_to package_item_path(package_item), method: :delete, data: {confirm: "are you sure?"} do  %>
+            <i class="fas fa-trash"></i>
+          <% end %>
+
         </div>
       </div>
       <% end %>
     </div>
     <% end %>
 
+
+
     <div class = "shopping-cart">
-      <% if @number_package >= 2 && @existing_order.nil? %>
+      <% if @existing_order.nil? %>
         <%= simple_form_for @new_order do |f| -%>
           <%= f.hidden_field :package_id %>
           <%= f.button :button, "Select" %>
@@ -35,10 +43,6 @@
 
   </div>
 </div>
-
-
-
-
 
 
 <!--
@@ -70,7 +74,7 @@
 <#% end %> -->
 
 <% if @existing_order %>
-  <%= link_to "Delete", order_path(@existing_order),
+  <%= link_to order_path(@existing_order),
       method: :delete,
       data: { confirm: "Are you sure?" } do %>
       <i class="fas fa-shopping-cart"></i>
