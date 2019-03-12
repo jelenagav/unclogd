@@ -1,7 +1,7 @@
 <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans|Karla" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<div>
+<div class="container center">
   <div>
     <img src="<%= image_path("Faces.jpg") %>" alt="" class="picture-front" width="400" height="250">
   </div>
@@ -15,9 +15,21 @@
     packages.each_with_index do |p,i|
       package, existing_order, new_order = *p
   %>
-  <div class = "row<%= i+1 %>">
+  <div class="row">
+    <div class="col-lg-11"><hr>
+      Package: <%= i + 1 %>
+    <%= simple_form_for new_order do |f| -%>
+      <%= f.hidden_field :package_id %>
+      <%= f.button :button, "Select", class: "select-button" %>
+      <% end %>
+    </div>
+
+  </div>
+
+
+  <div class = "row">
     <% package.items.each do |item| %>
-    <div class = "col1">
+    <div class="col-lg-4">
       <%= link_to item_path(item) do %>
       <div class = "index-card">
         <div class = "picture-container">
@@ -33,17 +45,9 @@
       <% end %>
     </div>
     <% end %>
-
-        <div class = "shopping-cart">
-      <% if true # existing_order.nil? %>
-        <%= simple_form_for new_order do |f| -%>
-          <%= f.hidden_field :package_id %>
-          <%= f.button :button, "Select" %>
-      <% end %>
-      <% end %>
-    </div>
-
-    </div>
-
     <% end %>
+  </div>
 </div>
+
+
+

@@ -13,9 +13,6 @@ body {
   }
 }
 
-.display-block {
-  display: block !important;
-}
 
 .center {
   margin: 0 auto;
@@ -29,4 +26,12 @@ body {
   transform: rotate(45deg);
   color: black;
   font-weight: 10px;
+}
+
+.display-block {
+  display: block !important;
+}
+
+.select-button {
+  width: 110px !important;
 }
