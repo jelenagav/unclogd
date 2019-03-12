@@ -1,7 +1,5 @@
 
 body.dashboard {
-  padding: 20px;
-  padding-top: 80px;
   padding-left: 0px;
   margin-left: 0px;
 
@@ -27,7 +25,7 @@ body.dashboard {
     grid-area: header;
   }
 
-  nav {
+  .side-nav {
     grid-area: nav;
     margin-left: 0.5rem;
     background-color:#e8ecef;

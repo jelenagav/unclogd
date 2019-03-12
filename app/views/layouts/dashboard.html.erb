@@ -5,13 +5,13 @@
       <h1 class="upper-left"> <strong> Unclogd </strong> </br></br></h1>
     </header>
 
-    <nav>
+    <nav class="side-nav">
 
       <ul class="dashboard-links" style="list-style-type:none;>
          <li class="<%= "active" if @active_tab == "Overview" %>"><%= link_to "Overview", user_path(current_user) %></li>
         <li class="<%= "active" if @active_tab == "account details" %>"><%= link_to "Account details", user_path(current_user) %></li>
-        <li class="<%= "active" if @active_tab == "Returns" %>"><%= link_to "Orders", orders_path(current_user) %></li>
-        <li class="<%= "active" if @active_tab == "Returns" %>"><%= link_to "Returns", orders_path(current_user) %></li>
+        <li class="<%= "active" if @active_tab == "Orders" %>"><%= link_to "Orders", orders_path(current_user) %></li>
+        <li class="<%= "active" if @active_tab == "Root" %>"><%= link_to "Back", orders_path(current_user) %></li>
       </ul>
     </nav>
 
