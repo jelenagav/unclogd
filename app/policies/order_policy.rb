@@ -19,7 +19,7 @@ class OrderPolicy < ApplicationPolicy
   end
 
   def show?
-
+    record.package.user == user
   end
 
   def destroy?

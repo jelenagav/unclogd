@@ -15,7 +15,10 @@ class OrdersController < ApplicationController
   end
 
   def show
-    @order = current_user.orders.where(state: 'paid').find(params[:id])
+    authorize @order
+    @order = current_user.orders.find(params[:id])
+    @active_tab = "orders"
+    render layout: "dashboard"
   end
 
   def new
@@ -27,9 +30,9 @@ class OrdersController < ApplicationController
 
   def create
     package = current_user.active_package
-    order = Order.create!(package: package, amount: package.price_range, status: 'pending')
+    order = Order.create!(package: package, amount: package.items.map(&:price_in_cents).sum/100, status: 'pending')
     authorize order
-    redirect_to new_order_payment_path(order)
+    redirect_to order_path(order)
   end
 
   # def create
