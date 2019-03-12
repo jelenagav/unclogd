@@ -30,7 +30,7 @@ body.pages.home {
     flex-flow: row wrap;
     text-align: center;
     position: relative;
-    transition: all .3s ease-in;
+    transition: all 2s ;
     flex-direction: column;
     text-decoration: none;
 
@@ -62,7 +62,7 @@ body.pages.home {
     flex-flow: row wrap;
     text-align: center;
     position: relative;
-    transition: all .3s ease-in;
+    transition: all 3s ;
     flex-direction: column;
     text-decoration: none;
 
@@ -209,6 +209,9 @@ body.pages.home {
 
 .picture {
   opacity: 0;
+}
+.picture{
+  transition: all 1s;
 }
 
 
