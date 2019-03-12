@@ -35,6 +35,16 @@ body.dashboard {
     padding-top: 15px;
     border: solid 4px;
 
-  }
 
+ a {
+  font-family: 'Crimson Text', serif;
+  font-size: 24px;
+ }
+
+ a:hover {
+  text-decoration: none;
+  font-weight: bold;
+ }
 }
+}
+
