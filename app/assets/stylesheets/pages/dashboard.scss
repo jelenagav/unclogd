@@ -3,10 +3,6 @@ body.dashboard {
   padding-left: 0px;
   margin-left: 0px;
 
-  ul, ol {
-      margin-top: 40px;
-      margin-bottom: 12.5px;
-  }
   .container-grid {
     width: 1100px;
     height: 100%;
@@ -17,7 +13,7 @@ body.dashboard {
     grid-area: content;
     background-color:#E8ECEF;
     width: 710px;
-    padding-top: 30px;
+    padding-top: 25px;
     padding-left: 80px;
     padding-bottom: 30px;
     border: solid 4px;
@@ -35,6 +31,38 @@ body.dashboard {
     padding-top: 15px;
     border: solid 4px;
 
+  ul, ol {
+      margin-top: 30px;
+      margin-bottom: 12.5px;
   }
 
+ a {
+  font-family: 'Crimson Text', serif;
+  font-size: 24px;
+ }
+
+ a:hover {
+  text-decoration: none;
+  font-weight: bold;
+ }
 }
+ .btn.btn-success {
+    background-color: #74E4D6;
+    border-color: #74E4D6;
+    position:absolute;
+    left: 0px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: lighter;
+}
+
+.btn.btn-success:hover {
+  background-color: #34d8d0;
+  position:absolute;
+  left: 0px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-weight: lighter;
+ }
+}
+
