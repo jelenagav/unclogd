@@ -11,6 +11,7 @@ class UsersController < ApplicationController
     @active_tab = "overview"
     render layout: "dashboard"
   end
+
   def destroy
   end
 

@@ -1,36 +1,29 @@
 
-
 .container-grid {
   display: grid;
   padding: 20px;
   padding-left: 20px;
   margin-left: 0px;
   grid-template-areas:
-    "header header header"
-    "nav content content";
-
+  "header header header"
+  "nav content content";
   grid-template-columns: 330px 1fr;
   grid-template-rows: auto 1fr auto;
   grid-gap: 10px;
-
-
-.center {
-padding-left: 0px;
-overflow: auto;
-}
-
-li {
+  .center {
+    padding-left: 0px;
+    overflow: auto;
+  }
+  li {
     font-family: 'Karla', serif;
-    font-size: 24px;
-}
-
-footer {
-  grid-area: footer;
-}
-
-.upper-left {
-  top: 30px ;
-  left: 450px;
-}
-
+    font-size: 35px;
+    color: black;
+  }
+  footer {
+    grid-area: footer;
+  }
+  .upper-left {
+    top: 30px ;
+    left: 450px;
+  }
 }
