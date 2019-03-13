@@ -7,14 +7,3 @@
   <%= render 'items/item_card', {item: item} %>
   </div>
   <% end %>
-
- <p> <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-    data-name="My Productssssds"
-    data-email="<%= current_user.email %>"
-    data-description="HI"
-    data-amount="<%= @order.amount_cents %>"
-    data-currency="<%= @order.amount.currency %>"></script></p>
-<ul>
-
-
