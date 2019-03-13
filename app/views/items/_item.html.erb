@@ -10,8 +10,7 @@
 			</div>
 		</div>
 		<div class="col-lg-6 col-xs-9">
-			<p> <strong>
-					<%= item.name %> </strong></p>
+			<p class="title"><strong><%= item.name %></strong></p>
 			<p> Brand (Estee Lauder), Price (150 pounds)</p>
 				<%= simple_form_for(@package_item) do |f| %>
 				<%=  f.hidden_field :package_id %>
