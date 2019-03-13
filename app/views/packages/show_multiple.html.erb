@@ -1,7 +1,7 @@
 <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans|Karla" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<div class="container center">
+<div class="container">
   <div>
     <img src="<%= image_path("Faces.jpg") %>" alt="" class="picture-front" width="400" height="250">
   </div>
@@ -16,9 +16,9 @@
       package, existing_order, new_order = *p
   %>
   <div class="row">
-    <div class="col-lg-11"><hr>
-      Package: <%= i + 1 %>
-    <%= simple_form_for current_user, method: :put do |f| -%>
+    <div class="col-lg-11"><hr class="bold">
+      <h4>Suggestion <%= i + 1 %></h4>
+    <%= simple_form_for current_user, class: "form-relative", method: :put do |f| -%>
       <%= f.hidden_field :active_package_id, value: package.id %>
       <%= f.button :button, "Select", class: "select-button" %>
       <% end %>
