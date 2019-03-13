@@ -1,6 +1,5 @@
 // Specific CSS for your home-page
 
-
 body {
   background: transparent;
 }
@@ -16,6 +15,10 @@ body.pages.home {
 
   p {
  font-family: 'Crimson Text', serif;
+}
+
+> .logo {
+  display: none;
 }
 
 .browse-container {

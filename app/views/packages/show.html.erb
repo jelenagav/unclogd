@@ -3,6 +3,13 @@
 
 <div>
 
+<<<<<<< HEAD
+
+  <div>
+    <img src="<%= image_path("Faces.jpg") %>" alt="" class="picture-front" width="400" height="250">
+  </div>
+
+
   <h1> Your Basket</h1>
 
   <div class ="text">
@@ -18,8 +25,6 @@
       <%= render 'items/item_card', { item: item, package_item: package_item } %>
     <% end %>
 
-
-
     <div class = "shopping-cart">
       <% if @existing_order.nil? %>
         <%= simple_form_for @new_order do |f| -%>
@@ -30,6 +35,7 @@
     </div>
 
   </div>
+</div>
 </div>
 
 
