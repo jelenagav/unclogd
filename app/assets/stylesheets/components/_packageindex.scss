@@ -9,6 +9,22 @@ body.packages.show, body.packages.show_multiple {
     height: 20px;
   }
 
+  h1 {
+  font-family: 'Crimson Text', serif;
+  font-size: 40px;
+  font-weight: heavier;
+  position: absolute;
+  left: 0px;
+    }
+
+  h2 {
+  font-family: 'Crimson Text', serif;
+  font-size: 30px;
+  position: relative;
+  left: 0px;
+  // font-weight: heavier;
+  }
+
   button {
     width: 100%;
   }
