@@ -1,7 +1,18 @@
+
+
 body {
   font-family: 'Karla', sans-serif;
 }
 
+.logo {
+  height: 60px;
+  width: 245px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  z-index: 13;
+}
 
 // main-navbar
 
@@ -84,6 +95,8 @@ body {
     color: #cecaca;
     font-size: 30px;
 
+
+
   }
 
 .main-nav {
@@ -99,6 +112,7 @@ body {
     align-items: center;
     padding: 0px 30px;
     padding-bottom: 40px;
+    margin-top: 15px;
 }
 
 .main-nav ul {
