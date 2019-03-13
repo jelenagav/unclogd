@@ -10,6 +10,7 @@ b {
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-top: 50px;
 }
 
 .column-left {
@@ -83,6 +84,7 @@ button.begin-btn {
   min-height: 250px;
   max-height: 250px;
   background: #FFFFFF;
+  margin-top: 15px;
 }
 
 .mm-survey-results-container {
