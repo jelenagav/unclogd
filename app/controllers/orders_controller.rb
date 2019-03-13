@@ -32,15 +32,26 @@ class OrdersController < ApplicationController
     package = current_user.active_package
     order = Order.create!(package: package, amount: package.items.map(&:price_in_cents).sum/100, status: 'pending')
     authorize order
-    redirect_to order_path(order)
-  end
 
-  # def create
-  #   @order = Order.new(order_params)
-  #   authorize @order
-  #   @order.save
-  #   redirect_to items_path
-  # end
+    customer = Stripe::Customer.create(
+      source: params[:stripeToken],
+      email:  params[:stripeEmail]
+    )
+
+    charge = Stripe::Charge.create(
+      customer:     customer.id,   # You should store this customer id and re-use it.
+      amount:       order.amount_cents,
+      description:  "Payment for order #{order.id}",
+      currency:     order.amount.currency
+    )
+
+    order.update(payment: charge.to_json, status: 'paid')
+    redirect_to order_path(order)
+
+    rescue Stripe::CardError => e
+    flash[:alert] = e.message
+    redirect_to package_path(package)
+  end
 
   def edit
 
