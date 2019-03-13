@@ -1,1 +1,5 @@
-index.html.erb
+
+
+<% current_user.orders.each do |order| %>
+<%= link_to "Order #{order.id}", order_path(order) %>
+<% end %>

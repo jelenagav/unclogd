@@ -2,9 +2,15 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div>
-  <div>
-    <img src="<%= image_path("Faces.jpg") %>" alt="" class="picture-front" width="400" height="250">
+
+  <h1> Your Basket</h1>
+
+  <div class ="text">
+    <h4> Product </h4>
+    <h4> Amount </h4>
   </div>
+
+
   <div class = "row2">
 
     <% @package.package_items.each  do |package_item| %>

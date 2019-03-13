@@ -3,9 +3,8 @@
   <article>
     <label class="amount">
       <span>Amount: <%= humanized_money_with_symbol(@order.amount) %></span>
+      <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
     </label>
   </article>
-
-
-
 <% end %>
+
