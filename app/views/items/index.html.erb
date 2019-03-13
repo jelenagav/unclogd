@@ -1,34 +1,33 @@
-<div class = "inner-container">
-  <div class = "row1 overfl">
-    <div class = "colA">
-      <%= image_tag 'face1.png', class: "picture" %>
-    </div>
-    <div class = "colB">
-      <%= image_tag 'face2.png', class: "picture" %>
-    </div>
-    <div class = "colC">
-      <%= image_tag 'face3.png', class: "picture" %>
-    </div>
-    <div class = "colD">
-      <%= image_tag 'face4.png', class: "picture" %>
-    </div>
-  </div>
-  <div class = 'search-bar '>
-    <%= form_tag items_path, method: :get, class: "search-form" do %>
-    <%= text_field_tag :query,
-    params[:query],
-    class: "flash flash-success",
-    placeholder: "Find an item"%>
-    <button type="submit" class="button1"><i class="fa fa-search"></i></button>
-    <% end %>
-  </div>
+<div class="inner-container">
+		<div class="row1 overfl">
+				<div class="colA">
+						<%= image_tag 'face1.png', class: "picture" %>
+				</div>
+				<div class="colB">
+						<%= image_tag 'face2.png', class: "picture" %>
+				</div>
+				<div class="colC">
+						<%= image_tag 'face3.png', class: "picture" %>
+				</div>
+				<div class="colD">
+						<%= image_tag 'face4.png', class: "picture" %>
+				</div>
+		</div>
+		<div class='search-bar col-md-offset-4 col-md-8'>
+				<%= form_tag items_path, method: :get, class: "search-form" do %>
+				<%= text_field_tag :query,
+		params[:query],
+		class: "flash flash-success",
+		placeholder: "Find an item"%>
+				<button type="submit" class="button1"><i class="fa fa-search"></i></button>
+				<% end %>
+		</div>
+		<div class="container">
+				<div class="row">
+						<% @items.each do |item| %>
+						<%= render 'item_card', { item: item } %>
+						<% end %>
+				</div>
+		</div>
 
-  <div class = "container">
-    <div class = "row">
-    <% @items.each do |item| %>
-
-      <%= render 'item_card', { item: item } %>
-    <% end %>
-    </div>
-  </div>
 </div>

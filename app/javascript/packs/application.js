@@ -8,7 +8,7 @@ import "./form";
 window.addEventListener("load", function() {
   console.log("going to setup tabs")
   // store tabs variable
-  let myTabs = document.querySelectorAll("ul.nav-tabs > li");
+  let myTabs = document.querySelectorAll("ul.nav-tabs-ingredients > li");
   function myTabClicks(tabClickEvent) {
     for (let i = 0; i < myTabs.length; i++) {
       myTabs[i].classList.remove("active");

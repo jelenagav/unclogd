@@ -1,197 +1,63 @@
-body.items.show {
+.picture {
+  border: solid 3px black;
+  overflow: hidden;
 
-  background: white;
-  font-family: 'Karla', sans-serif;
-
-  h3 {
-    font-family: 'Karla', serif;
-  }
-
-  .title {
-    font-size: 30px;
-    margin-left: -2px;
-  }
-
-  .inner-container {
-    width: 100%;
-    height: 800px;
-  }
-
-  .col1 {
-    padding: 10px;
-  }
-
-
-
-  .col2 {
-    height: 390px;
-    width: 780px;
-  }
-
-  .row1-info{
-    padding: 10px;
-
-
-  }
-  .row1-main {
-    display: flex;
-    vertical-align: center;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    height: 500px;
-    width: 100%;
-    padding-top: 200px;
-  }
-
-  .picture-container {
-    width: 400px;
-    height: 500px;
-    margin-left: 250px;
-    background: #E8ECEF;
-    margin-top: 70px;
-
-    .picture {
-      width: 370px;
-      height: 470px;
-      background: white;
-      border: solid 3px black;
-      position: absolute;
-      margin: 15px;
-      img {
-        height: 100%;
-        width: 100%;
-      }
-    }
-  }
-
-  .row1-info {
-    margin-left: 17px;
-
-  }
-
-  .row2-info {
-    display: flex;
-    vertical-align: center;
-    align-items: center;
-    margin-top: -30px;
-
-  }
-  .row2-info {
-    padding: 10px;
-  }
-
-
-  .row2 {
-    position: relative;
-  }
-
-
-  .shopping-cart {
-    position: absolute;
-    right: 100px;
+  img {
     width: 100%;
   }
-  // trying
+}
 
- .ingredient-text.last {
-  width: 480px;
- }
-  .ingredient-text {
-    border-bottom: solid 2px grey;
-  }
-  .ingredient-text.active {
+.color-gray {
+  border: solid 15px #E8ECEF;
+}
+
+.padding-top {
+  padding-top: 50px;
+}
+
+.title {
+  font-size: 30px;
+  margin-left: -2px;
+}
+
+.ingredient-text.active {
     border-bottom: solid 2px;
-  }
-
- .nav {
-  display: flex;
- }
-  .container--tabs {
-  margin: 2rem;
-  font-family: 'Karla', serif;
-
-  .nav-tabs {
-    float: left;
-    width: 100%;
-    margin: 0;
-    list-style-type: none;
-    border-bottom: 1px solid transparent;
-
-    > li {
-      float: left;
-      margin-bottom: -1px;
-
-      > a {
-        float: left;
-        margin-right: 2px;
-        line-height: 1.42857143;
-        padding: 10px;
-        border: none;
-
-        &:hover {
-          background-color: transparent;
-        }
-      }
-
-      &.active {
-        > a,
-        > a:hover,
-        > a:focus {
-          color: black;
-          cursor: default;
-          background-color: transparent;
-          border-bottom-color: transparent;
-        }
-      }
-    }
-  }
-
-  .picture {
-    width: 250px;
-    height: 250px;
-    background: white;
-    border: solid 3px black;
-  }
-
-  .nav-tabs li a{
-    color: grey;
-    border: none;
-  }
-  .tab-content {
-    float: left;
-    width: 100%;
-    margin-left: -6.5px;
-    margin-top: 10px;
-
-    > .tab-pane {
-      display: none;
-    }
-
-    > .active {
-      display: block;
-    }
-  }
-
 }
 
-.buy-button{
-  position: absolute;
-  background: transparent;
+.ingredient-text {
+    border-bottom: solid 2px grey;
+}
+
+.ingredient-text.last {
+    width: 480px;
+}
+
+.nav-tabs-ingredients {
+    display: flex;
+
+    li a:hover {
+      background-color: transparent;
+    }
+    li.active {
+      color: black;
+      border-bottom: 2px solid black;
+
+      .link-tab {
+        color: black;
+        background-color: white;
+      }
+    }
+
+    li:first-child .link-tab {
+      padding-left: 0;
+    }
+}
+
+.link-tab,
+.link-tab:hover {
+  color: gray;
+}
+
+.link-tab:active {
   color: black;
-  right: 156px;
-  top: 10px;
-
-
 }
-
-.col2{
-  position: relative;
-
-
-
-
-}
-
-}
-
