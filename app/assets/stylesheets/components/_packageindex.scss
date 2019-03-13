@@ -61,14 +61,18 @@ body.packages.show, body.packages.show_multiple {
   }
 
 
-  a:visited {
-    color: black;
-  }
+  // a:visited {
+  //   color: black;
+  // }
 
   a {
     color: black;
     text-decoration: none;
   }
+
+  // a:hover {
+  //   color: #74E4D6;
+  // }
 
   .button1{
     background: black;

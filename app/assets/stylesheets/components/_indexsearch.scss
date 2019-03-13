@@ -21,9 +21,18 @@ body.items.index {
     padding-bottom: 50px;
   }
 
-  a:visited {
-    color: black;
+  .overfl {
+    overflow-x: scroll;
   }
+
+  // a:visited {
+  //   color: black;
+  // }
+
+
+  // a:hover {
+  //   color: #74E4D6;
+  // }
 
   a {
     color: black;
@@ -62,8 +71,7 @@ body.items.index {
   }
 
   .search-bar {
-    margin-left: 470px;
-    margin-bottom: 60px;
+    height: 141px;
   }
 
 
@@ -76,6 +84,7 @@ body.items.index {
   }
 
   .button1 {
+  z-index: 1;
   float: left;
   width: 20%;
   padding: 10px;

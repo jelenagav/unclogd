@@ -3,8 +3,6 @@
 
 <div>
 
-
-
 <!--
   <div class='headers'>
     <h1> Your Basket</h1>
@@ -19,6 +17,7 @@
 
 
       <% if @existing_order.nil? %>
+
       <%= simple_form_for @new_order do |f| -%>
       <%= f.hidden_field :package_id %>
       <%= f.button :button, "Select", class: "shopping-cart" %>
@@ -40,15 +39,23 @@
 </div>
 
 
-<!--
-<div style="padding-top: 100px">
-  <#% @package.items.each do |item| %>
-
-      <#%= render 'items/item', { item: item } %>
-
-  <#% end %>
-
+        <%= simple_form_for @new_order do |f| -%>
+          <%= f.hidden_field :package_id %>
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                data-name="My Productssssds"
+                data-email="<%= current_user.email %>"
+                data-description="HI"
+                data-amount="<%= @new_order.amount_cents %>"
+                data-currency="<%= @new_order.amount.currency %>">
+            </script>
+          <% end %>
+      <% end %>
+    </div>
+  </div>
 </div>
+
+
 
 <% if @existing_order %>
   <%= link_to order_path(@existing_order),
