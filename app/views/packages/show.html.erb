@@ -1,66 +1,47 @@
-<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans|Karla" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans|Karla" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<div>
 
-<!--
+  <!--
   <div class='headers'>
     <h1> Your Basket</h1>
     <h4 class="h4"> Product </h4>
 
   </div>
- -->
+  -->
   <div class = "container">
-  <h2> Your Basket</h2> </br>
-  <div class = "shopping">
-  <h4 class="h4"> Product </h4>
+    <h2> Your Basket</h2> </br>
+    <div class = "shopping">
+      <h4 class="h4"> Product </h4>
 
-
-      <% if @existing_order.nil? %>
-
+      <% if true # @existing_order.nil? %>
       <%= simple_form_for @new_order do |f| -%>
       <%= f.hidden_field :package_id %>
-      <%= f.button :button, "Select", class: "shopping-cart" %>
-      <% end %>
-      <% end %>
-    </div>
-
-      <hr />
-
-    <% @package.package_items.each  do |package_item| %>
-    <% item = package_item.item  %>
-    <%= render 'items/item_card', { item: item, package_item: package_item } %>
-    <hr />
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+      data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+      data-name="My Productssssds"
+      data-email="<%= current_user.email %>"
+      data-description="HI"
+      data-amount="<%= @new_order.amount_cents %>"
+      data-currency="<%= @new_order.amount.currency %>">
+    </script>
     <% end %>
+    <% end %>
+  </div> <hr />
 
-  </div>
-</div>
-</div>
-</div>
-
-
-        <%= simple_form_for @new_order do |f| -%>
-          <%= f.hidden_field :package_id %>
-            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                data-name="My Productssssds"
-                data-email="<%= current_user.email %>"
-                data-description="HI"
-                data-amount="<%= @new_order.amount_cents %>"
-                data-currency="<%= @new_order.amount.currency %>">
-            </script>
-          <% end %>
-      <% end %>
-    </div>
-  </div>
-</div>
-
-
-
-<% if @existing_order %>
-  <%= link_to order_path(@existing_order),
-      method: :delete,
-      data: { confirm: "Are you sure?" } do %>
-      <i class="fas fa-trash"></i>
+  <% @package.package_items.each  do |package_item| %>
+  <% item = package_item.item  %>
+  <%= render 'items/item_card', { item: item, package_item: package_item } %>
+  <hr />
   <% end %>
-<% end %>
+  </div>
+
+
+
+  <% if @existing_order %>
+  <%= link_to order_path(@existing_order),
+  method: :delete,
+  data: { confirm: "Are you sure?" } do %>
+  <i class="fas fa-trash"></i>
+  <% end %>
+  <% end %>
