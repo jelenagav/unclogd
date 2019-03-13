@@ -1,5 +1,5 @@
 <div class = "inner-container">
-  <div class = "row1">
+  <div class = "row1 overfl">
     <div class = "colA">
       <%= image_tag 'face1.png', class: "picture" %>
     </div>
@@ -13,7 +13,7 @@
       <%= image_tag 'face4.png', class: "picture" %>
     </div>
   </div>
-  <div class = 'search-bar'>
+  <div class = 'search-bar col-md-offset-4 col-md-8'>
     <%= form_tag items_path, method: :get, class: "search-form" do %>
     <%= text_field_tag :query,
     params[:query],
