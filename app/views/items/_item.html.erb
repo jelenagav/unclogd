@@ -11,16 +11,18 @@
 		</div>
 		<div class="col-lg-6 col-xs-9">
 			<p class="title"><strong><%= item.name %></strong></p>
-			<p> Brand (Estee Lauder), Price (150 pounds)</p>
-				<%= simple_form_for(@package_item) do |f| %>
-				<%=  f.hidden_field :package_id %>
+			<p>Brand (Estee Lauder)</p>
+			<%= simple_form_for(@package_item) do |f| %>
+			<%=  f.hidden_field :package_id %>
 				<%=  f.hidden_field :item_id %>
+
+			<p>Price (150 pounds)
 				<%= f.button :button do %> <i class="fas fa-shopping-cart"></i>
 			<% end %>
-			<% end %>
-			<ul class="nav nav-tabs">
-				<li class="active ingredient-text"><a href="#tab-1">INGREDIENTS</a></li>
-				<li class="ingredient-text last"><a href="#tab-2">MORE INFORMATION</a></li>
+			<% end %></p>
+			<ul class="nav nav-tabs-ingredients">
+				<li class="active ingredient-text"><a class="link-tab" href="#tab-1">INGREDIENTS</a></li>
+				<li class="ingredient-text last"><a class="link-tab" href="#tab-2">MORE INFORMATION</a></li>
 			</ul>
 			<div class="tab-content">
 				<div id="tab-1" class="tab-pane active">

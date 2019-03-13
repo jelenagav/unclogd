@@ -1,6 +1,10 @@
 .picture {
   border: solid 3px black;
   overflow: hidden;
+
+  img {
+    width: 100%;
+  }
 }
 
 .color-gray {
@@ -14,4 +18,46 @@
 .title {
   font-size: 30px;
   margin-left: -2px;
+}
+
+.ingredient-text.active {
+    border-bottom: solid 2px;
+}
+
+.ingredient-text {
+    border-bottom: solid 2px grey;
+}
+
+.ingredient-text.last {
+    width: 480px;
+}
+
+.nav-tabs-ingredients {
+    display: flex;
+
+    li a:hover {
+      background-color: transparent;
+    }
+    li.active {
+      color: black;
+      border-bottom: 2px solid black;
+
+      .link-tab {
+        color: black;
+        background-color: white;
+      }
+    }
+
+    li:first-child .link-tab {
+      padding-left: 0;
+    }
+}
+
+.link-tab,
+.link-tab:hover {
+  color: gray;
+}
+
+.link-tab:active {
+  color: black;
 }
