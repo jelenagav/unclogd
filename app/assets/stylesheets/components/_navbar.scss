@@ -74,19 +74,18 @@ body {
   .main-navbar ul li, .main-nav ul li a:hover {
     color: #74E4D6;
     text-decoration: none;
-
   }
 
 
 
 
-  a:visited {
-    color: #cecaca;
-  }
+  // a:visited {
+  //   color: #cecaca;
+  // }
 
-  a {
-    background-color: transparent;
-  }
+  // a {
+  //   background-color: transparent;
+  // }
 
 
 
@@ -94,13 +93,12 @@ body {
   .homepage-login .main-navbar .fa-bars {
     color: #cecaca;
     font-size: 30px;
-
-
-
   }
 
+
+  // login-navbar//
 .main-nav {
-    z-index: 12;
+    // z-index: 12;
     position: fixed;
     top: 0;
     height: auto;
@@ -111,11 +109,11 @@ body {
     justify-content: flex-end;
     align-items: center;
     padding: 0px 30px;
-    padding-bottom: 40px;
     margin-top: 15px;
 }
 
 .main-nav ul {
+  color: #cecaca;
   visibility: hidden;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -135,6 +133,7 @@ body {
 
 
 .main-nav ul li {
+    color: #cecaca;
     padding: 0px 16px;
     // transition: .10s;
     // transform: translateY(-81%);
@@ -161,13 +160,13 @@ body {
 }
 
 
-  a:visited {
-    color: #cecaca;
-  }
+  // a:visited {
+  //   color: #cecaca;
+  // }
 
-  a {
-    background-color: transparent;
-  }
+  // a {
+  //   background-color: transparent;
+  // }
 
 .pages.home .main-nav .main-nav-trigger  .fa-bars {
   color: #cecaca;
@@ -181,9 +180,9 @@ body {
 }
 
 
-.pages.home a:visited {
-  color: #cecaca;
-}
+// .pages.home a:visited {
+//   color: #cecaca;
+// }
 
 .pages.home .main-nav .search {
   color: #cecaca;

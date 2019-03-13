@@ -21,12 +21,17 @@ body.items.index {
     padding-bottom: 50px;
   }
 
-  a:visited {
-    color: black;
+  // a:visited {
+  //   color: black;
+  // }
+
+
+  a:hover {
+    color: #74E4D6;
   }
 
   a {
-    color: black;
+    color: #cecaca;
     text-decoration: none;
   }
 
@@ -76,6 +81,7 @@ body.items.index {
   }
 
   .button1 {
+  z-index: 1;
   float: left;
   width: 20%;
   padding: 10px;
