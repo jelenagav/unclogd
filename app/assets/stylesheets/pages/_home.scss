@@ -158,6 +158,12 @@ body.pages.home {
     margin: 0;
 }
 
+@media (max-width: 576px) {
+  .main-container {
+    display: block;
+  }
+}
+
 .find-container:hover {
   color: black;
 
