@@ -5,9 +5,14 @@
     <nav class="side-nav">
 
       <ul class="dashboard-links" style="list-style-type:none;>
-         <li class="<%= "active" if @active_tab == "overview" %>"><%= link_to "OVERVIEW", user_path(current_user) %></li>
+      <li class="<%= "active" if @active_tab == "overview" %>"><%= link_to ">>> MY ACCOUNT", user_path(current_user) %></li>
+
         <li class="<%= "active" if @active_tab == "account details" %>"><%= link_to "ACCOUNT DETAILS", user_path(current_user) %></li>
         <li class="<%= "active" if @active_tab == "Orders" %>"><%= link_to "ORDERS", orders_path %></li>
+        <li class="<%= "active" if @active_tab == "Root" %>"><%= link_to "FAVOURITES", root_path %></li>
+        <li class="<%= "active" if @active_tab == "Root" %>"><%= link_to "ADDRESS BOOK", root_path %></li>
+        <li class="<%= "active" if @active_tab == "Root" %>"><%= link_to "PAYMENT DETAILS", root_path %></li>
+        <li class="<%= "active" if @active_tab == "Root" %>"><%= link_to "RETURNS", root_path %></li>
         <li class="<%= "active" if @active_tab == "Root" %>"><%= link_to "BACK", root_path %></li>
       </ul>
     </nav>
