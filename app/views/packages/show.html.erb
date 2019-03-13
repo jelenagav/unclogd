@@ -3,38 +3,39 @@
 
 <div>
 
-<<<<<<< HEAD
 
-  <div>
-    <img src="<%= image_path("Faces.jpg") %>" alt="" class="picture-front" width="400" height="250">
+
+<!--
+  <div class='headers'>
+    <h1> Your Basket</h1>
+    <h4 class="h4"> Product </h4>
+
   </div>
+ -->
+  <div class = "container">
+  <h2> Your Basket</h2> </br>
+  <div class = "shopping">
+  <h4 class="h4"> Product </h4>
 
 
-  <h1> Your Basket</h1>
-
-  <div class ="text">
-    <h4> Product </h4>
-    <h4> Amount </h4>
-  </div>
-
-
-  <div class = "row2">
-
-    <% @package.package_items.each  do |package_item| %>
-    <% item = package_item.item  %>
-      <%= render 'items/item_card', { item: item, package_item: package_item } %>
-    <% end %>
-
-    <div class = "shopping-cart">
       <% if @existing_order.nil? %>
-        <%= simple_form_for @new_order do |f| -%>
-          <%= f.hidden_field :package_id %>
-          <%= f.button :button, "Select" %>
+      <%= simple_form_for @new_order do |f| -%>
+      <%= f.hidden_field :package_id %>
+      <%= f.button :button, "Select", class: "shopping-cart" %>
       <% end %>
       <% end %>
     </div>
 
+      <hr />
+
+    <% @package.package_items.each  do |package_item| %>
+    <% item = package_item.item  %>
+    <%= render 'items/item_card', { item: item, package_item: package_item } %>
+    <hr />
+    <% end %>
+
   </div>
+</div>
 </div>
 </div>
 
