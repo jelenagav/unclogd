@@ -17,11 +17,13 @@
   %>
   <div class="row">
     <div class="col-lg-11"><hr class="bold">
+      <div class="package-suggested">
       <h4>Suggestion <%= i + 1 %></h4>
     <%= simple_form_for current_user, class: "form-relative", method: :put do |f| -%>
       <%= f.hidden_field :active_package_id, value: package.id %>
       <%= f.button :button, "Select", class: "select-button" %>
       <% end %>
+      </div>
     </div>
 
   </div>
