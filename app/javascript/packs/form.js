@@ -1,5 +1,5 @@
 
-if (document.querySelector('.pages.home')) {
+if (document.getElementById('login')) {
   document.getElementById('login').addEventListener('click', function(event) {
     event.preventDefault()
     document.querySelector('.bg-modal.login').style.display = 'flex';
