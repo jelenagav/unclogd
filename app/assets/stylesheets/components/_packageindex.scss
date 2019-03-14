@@ -14,6 +14,7 @@ body.packages.show, body.packages.show_multiple {
     height: 20px;
   }
 
+
   h1 {
   font-family: 'Crimson Text', serif;
   font-size: 40px;
@@ -35,11 +36,11 @@ body.packages.show, body.packages.show_multiple {
   }
 
   .picture-front {
-    height: 400px;
-    width: 91.2%;
-    display: flex;
-    margin-top: 100px;
+    height: 450px;
+    width: 101.5%;
+    margin-top: 50px;
     margin-bottom: 50px;
+    text-align: center;
 
   }
 
@@ -140,6 +141,23 @@ body.packages.show, body.packages.show_multiple {
 
   .package-suggested{
     margin-top: 40px;
+
+    > h4 {
+    font-family: 'Work Sans', sans-serif;
+    }
+    > h6 {
+    font-family: 'Work Sans', sans-serif;
+
   }
+
+
+  .title {
+    fontfont-family: 'Work Sans', sans-serif;
+
+  }
+
+
+  }
+
 
 }
