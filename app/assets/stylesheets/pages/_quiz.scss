@@ -205,20 +205,19 @@ h1 {
 }
 
 .mm-survey-controller button:hover {
-    font-family: 'Karla', serif;
-    font-weight: 300;
-    font-size: 18px;
-    color: white;
     opacity: .8;
-    border-color: black;
-    position: relative;
-    float: right;
-    bottom: 70px;
-    font-weight: lighter;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    color: white;
+
+}
+.mm-survey-controller button:active {
+    opacity: .8;
+    color: white;
+
+}
+.mm-survey-controller button:focus {
+    opacity: none;
+    color: white;
+    outline: none;
 }
 
 .mm-survey-progress {
@@ -339,7 +338,7 @@ input[type="radio"]:checked + label span {
     border-radius: 0px 0px 4px 4px;
 }
 
-.mm-prev-btn button:focus, .mm-next-btn button:focus, .mm-finish-btn button:focus {
+.mm-prev-btn button:focus, .mm-next-btn button:focus {
   outline: none;
   border: none;
   font-size: 25px;
