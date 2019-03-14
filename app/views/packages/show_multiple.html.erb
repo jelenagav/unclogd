@@ -6,6 +6,10 @@
     <img src="<%= image_path("Faces.jpg") %>" alt="" class="picture-front" width="400" height="250">
   </div>
 
+  <div class = "title">
+  <h2 class ="title"> <strong>RESULTS</strong>: Here are 3 suggestions from your answers!</h2>
+  <!-- <h2>Here are our 3 suggestions from your answers!</h2> -->
+  </div>
   <%
     packages = [
       [@package_1, @existing_order_1, @new_order_1],
@@ -16,16 +20,16 @@
       package, existing_order, new_order = *p
   %>
   <div class="row">
-    <div class="col-lg-11"><hr class="bold">
+    <div class="col-lg-11">
       <div class="package-suggested">
-      <h4>Package <%= i + 1 %></h4>
+      <h4>Package <%= i + 1 %> </h4>
+      <h6> <%= (i+1) *25 %> EUR </h6>
     <%= simple_form_for current_user, class: "form-relative", method: :put do |f| -%>
       <%= f.hidden_field :active_package_id, value: package.id %>
-      <%= f.button :button, "Select", class: "select-button" %>
+      <%= f.button :button, "Checkout", class: "select-button" %>
       <% end %>
       </div>
     </div>
-
   </div>
 
   <div class="row">

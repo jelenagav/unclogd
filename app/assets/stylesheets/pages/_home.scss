@@ -37,6 +37,10 @@ body.pages.home {
     #flash-button{
       margin-top: 20px;
     }
+
+     #flash-button:focus{
+      outline: none;
+    }
   }
   .flash-screen.disappear{
     opacity: 0;

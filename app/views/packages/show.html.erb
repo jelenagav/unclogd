@@ -15,23 +15,25 @@
     <% @package.package_items.each  do |package_item| %>
     <% item = package_item.item  %>
     <%= render 'items/item_card', { item: item, package_item: package_item } %>
+      <hr/>
+
    <% end %>
-   <hr/>
 
     <div class="checkout-container">
-      <div class="price">
-         <p1><strong> total amount: </strong></p1>
+      <div class="product">
+         <h1><strong> Product </strong></h1>
       </div>
-      <div class"price-amount">
-         <p1> <strong> 40 EUR </strong></p1>
+      <div class="total-amount">
+         <h1> <strong> Total amount </strong></h1>
       </div>
     </div>
+
       <div class="checkout-container2">
        <div class="price">
-         <p1><strong> delivery: </strong></p1>
+         <p1><strong> Package </strong></p1>
        </div>
       <div class"price-amount">
-         <p1> <strong> 40 EUR </strong></p1>
+         <p1> <strong>  </strong></p1>
       </div>
     </div>
       <div>
@@ -39,14 +41,8 @@
           <% if true # @existing_order.nil? %>
           <%= simple_form_for @new_order do |f| -%>
            <%= f.hidden_field :package_id %>
-           <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-           data-name="My Productssssds"
-           data-email="<%= current_user.email %>"
-           data-description="HI"
-           data-amount="<%= @new_order.amount_cents %>"
-           data-currency="<%= @new_order.amount.currency %>">
-          </script>
+          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="<%= Rails.configuration.stripe[:publishable_key] %>" data-name="Your Order" data-email="<%= current_user.email %>" data-description="Please enter the followings:" data-amount="<%= @new_order.amount_cents %>" data-currency="<%= @new_order.amount.currency %>">
+    </script>
         </div>
        </div>
           <% end %>
@@ -61,6 +57,7 @@
 <%= link_to order_path(@existing_order),
 method: :delete,
 data: { confirm: "Are you sure?" } do %>
+
 <i class="fas fa-trash"></i>
 <% end %>
 <% end %>
