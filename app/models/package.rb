@@ -18,12 +18,13 @@ class Package < ApplicationRecord
 
     item2 = Item.where(type_category: "Moisturizer").where("product_category ILIKE :query", query: "%#{sensitivity}%").where("product_category ILIKE :query", query: "%#{skin_type}%").where("product_category ILIKE :query", query: "%#{concern}%").where(price: price_range.capitalize).first
 
+    item3 = Item.where(type_category: "Serum").where("product_category ILIKE :query", query: "%#{sensitivity}%").where("product_category ILIKE :query", query: "%#{skin_type}%").where("product_category ILIKE :query", query: "%#{concern}%").where(price: price_range.capitalize).first
 
-    item3 = Item.where(type_category: "serum").where("product_category ILIKE :query", query: "%#{sensitivity}%").where("product_category ILIKE :query", query: "%#{skin_type}%").where("product_category ILIKE :query", query: "%#{concern}%").where(price: price_range.capitalize).first
+    item4 = Item.where(type_category: "Extrafoilator").where("product_category ILIKE :query", query: "%#{sensitivity}%").where("product_category ILIKE :query", query: "%#{skin_type}%").where("product_category ILIKE :query", query: "%#{concern}%").where(price: price_range.capitalize).first
 
     # item4 = Item.where(type_category: "eyecream").first
 
-    items = [item1, item2, item3].compact
+    items = [item1, item2, item3, item4].compact
     Package.new(items: items)
   end
   # Package.create_from_quiz_results
