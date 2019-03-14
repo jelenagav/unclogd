@@ -6,7 +6,7 @@
     <h4 class="h4"> Product </h4>
     <%= simple_form_for @new_order do |f| -%>
     <%= f.hidden_field :package_id %>
-    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="<%= Rails.configuration.stripe[:publishable_key] %>" data-name="My Productssssds" data-email="<%= current_user.email %>" data-description="HI" data-amount="<%= @new_order.amount_cents %>" data-currency="<%= @new_order.amount.currency %>">
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="<%= Rails.configuration.stripe[:publishable_key] %>" data-name="Your Order" data-email="<%= current_user.email %>" data-description="Please enter the followings:" data-amount="<%= @new_order.amount_cents %>" data-currency="<%= @new_order.amount.currency %>">
     </script>
     <% end %>
   </div>
