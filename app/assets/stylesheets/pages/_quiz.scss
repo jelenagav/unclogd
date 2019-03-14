@@ -79,22 +79,26 @@ h1 {
 }
 
 .btn.begin-btn:hover {
-  background-color: white !important;
-  // border: 0;
-  // border-radius: 0;
-  color: black !important;
-  border: 1px solid black;
-  position: absolute;
-  bottom: 125px;
-  left: 386px;
-  border-color: black;
-  font-weight: lighter;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  font-family: 'Karla', serif;
+  opacity: .8;
 }
+
+// .btn.begin-btn:hover {
+//   background-color: white !important;
+//   // border: 0;
+//   // border-radius: 0;
+//   color: black !important;
+//   border: 1px solid black;
+//   position: absolute;
+//   bottom: 125px;
+//   left: 386px;
+//   border-color: black;
+//   font-weight: lighter;
+//   padding-bottom: 10px;
+//   padding-top: 10px;
+//   padding-left: 20px;
+//   padding-right: 20px;
+//   font-family: 'Karla', serif;
+// }
 
 .mm-survey {
   margin-bottom: 50px;
@@ -198,15 +202,14 @@ h1 {
     padding-top: 10px;
     padding-left: 20px;
     padding-right: 20px;
-
 }
 
 .mm-survey-controller button:hover {
     font-family: 'Karla', serif;
     font-weight: 300;
     font-size: 18px;
-    color: black;
-    background-color: white;
+    color: white;
+    opacity: .8;
     border-color: black;
     position: relative;
     float: right;
@@ -351,6 +354,9 @@ input[type="radio"]:checked + label span {
   display: inline-block;
 }
 
+.mm-finish-btn.active {
+  opacity: .8;
+}
 .mm-survey-results {
   display: none;
 }
@@ -404,6 +410,6 @@ input[type="radio"]:checked + label span {
   background-color: #00c5cd;
 }
 
-#begin-survey:hover {
-  color: white;
-}
+// #begin-survey:hover {
+//   color: white;
+// }
