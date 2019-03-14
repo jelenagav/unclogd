@@ -77,8 +77,13 @@ body.packages.show, body.orders.show {
   justify-content: space-between;
 }
 
-.stripe-button {
+.stripe-button-el {
 background-color: white;
+position: relative;
+float: right;
+width: 130px;
+margin: 30px;
+margin-right: 0px;
 }
 
 hr {
@@ -87,6 +92,105 @@ hr {
   border: 1px solid;
 }
 
+.hr2 {
+  color: #E9ECEF;
+  width: 100%;
+  border: 1px solid;
+}
 
+.btn.btn-success{
+ background-color: black !important;
+  // border: 0;
+  // border-radius: 0;
+  color: white;
+  border-color: black;
+  font-weight: lighter;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'Karla', serif;
+}
 
+.btn.btn-success:hover{
+ background-color: white !important;
+  // border: 0;
+  // border-radius: 0;
+  color: black !important;
+  border: 1px solid black;
+  border-color: black;
+  font-weight: lighter;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'Karla', serif;
+}
+
+.checkout-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 17px;
+  color: #585F65;
+}
+
+.price {
+  margin-right: 10px;
+}
+
+.price-title {
+  font-size: 20px;
+  color: #434343;
+  margin: 10px;
+  margin-right: 0px;
+}
+
+.product-title {
+  font-size: 20px;
+  color: #434343;
+  margin: 10px;
+  margin-left: 10px;
+}
+
+.product-package {
+  color: #434343;
+  margin-left: 10px;
+}
+
+.price-package {
+  color: #434343;
+  margin-right: 10px;
+}
+
+.price-title {
+  padding-left: 60px;
+  color: #434343;
+  margin-right: 10px;
+}
+
+.product-last {
+  padding-bottom: 10px;
+  padding-top: 0px;
+  margin-left: 10px;
+}
+
+.product {
+  margin-left: 10px;
+}
+
+.product-total {
+  font-weight: 1200;
+  margin-left: 10px;
+}
+
+.price-total {
+  font-weight: 1200;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.pay {
+  align-self: flex-end;
+}
 }
