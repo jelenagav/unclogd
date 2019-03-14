@@ -1,3 +1,10 @@
+body.packages.show{
+  .container {
+    width: 900px;
+  }
+}
+
+
 body.packages.show, body.orders.show {
 
 
@@ -16,7 +23,6 @@ body.packages.show, body.orders.show {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 900px;
   }
 
   .information {
