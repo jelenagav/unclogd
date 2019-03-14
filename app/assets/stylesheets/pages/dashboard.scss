@@ -6,7 +6,7 @@ body.dashboard {
   .container-grid {
     // width: 2000px;
     height: 100%;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
 
   main {
@@ -35,6 +35,7 @@ body.dashboard {
     padding-top: 15px;
     border-color: #3D3D3D;
     width: 500px;
+    padding-left: 40px;
 
     ul, ol {
       margin-top: 30px;
@@ -42,13 +43,14 @@ body.dashboard {
     }
 
     a {
-    font-family: 'Karla', serif;
+    font-family: 'Noto Sans', sans-serif;
     font-size: 20px;
     }
 
     a:hover {
       text-decoration: none;
       font-weight: bold;
+      color: black;
     }
   }
   .btn.btn-success {

@@ -8,6 +8,8 @@ class UsersController < ApplicationController
   end
 
   def overview
+    @user = current_user
+    authorize @user
     @active_tab = "overview"
     render layout: "dashboard"
   end
@@ -27,10 +29,15 @@ class UsersController < ApplicationController
       @user.update(active_package: package)
       redirect_to package_path(package)
     else
+      if params[:user][:password] && !params[:user][:password].empty?
+        user_params[:password] = params[:user][:password]
+        user_params[:password_confirmation] = params[:user][:password_confirmation]
+      end
       if @user.update(user_params)
+        flash[:notice] = "Updated profile succesfully"
         redirect_to user_path(@user)
       else
-        render :edit
+        render :show
       end
     end
   end
@@ -38,7 +45,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user)
+    params.require(:user).permit(:name, :address, :city, :postcode)
   end
 
   def find_user
