@@ -6,16 +6,15 @@
 
     <nav class="side-nav">
 
-      <ul class="dashboard-links" style="list-style-type:none;>
-      <li class="<%= "active" if @active_tab == "overview" %>"><%= link_to ">>> MY ACCOUNT", overview_path %></li>
-
+      <ul class="dashboard-links" style="list-style-type:none;">
+        <li class="<%= 'active' if @active_tab == "overview" %>"><%= link_to "MY ACCOUNT", overview_path %></li>
         <li class="<%= "active" if @active_tab == "account details" %>"><%= link_to "Account details", user_path(current_user) %></li>
-        <li class="<%= "active" if @active_tab == "Orders" %>"><%= link_to "orders", orders_path %></li>
-        <li class="<%= "active" if @active_tab == "Root" %>"><%= link_to "favourites", root_path %></li>
-        <li class="<%= "active" if @active_tab == "Root" %>"><%= link_to "address book", root_path %></li>
-        <li class="<%= "active" if @active_tab == "Root" %>"><%= link_to "payment details", root_path %></li>
-        <li class="<%= "active" if @active_tab == "Root" %>"><%= link_to "returns", root_path %></li>
-        <li class="<%= "active" if @active_tab == "Root" %>"><%= link_to "back", root_path %></li>
+        <li class="<%= "active" if @active_tab == "Orders" %>"><%= link_to "Orders", orders_path %></li>
+        <li class="<%= "active" if @active_tab == "Root" %>"><%= link_to "Favourites", root_path %></li>
+        <li class="<%= "active" if @active_tab == "Root" %>"><%= link_to "Address book", root_path %></li>
+        <li class="<%= "active" if @active_tab == "Root" %>"><%= link_to "Payment details", root_path %></li>
+        <li class="<%= "active" if @active_tab == "Root" %>"><%= link_to "Returns", root_path %></li>
+        <li class="<%= "active" if @active_tab == "Root" %>"><%= link_to "<<<", root_path %></li>
       </ul>
     </nav>
 

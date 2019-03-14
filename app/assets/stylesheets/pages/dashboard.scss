@@ -22,6 +22,9 @@ body.dashboard {
     grid-area: header;
   }
 
+
+
+
   .col-md-5 {
     font-family: 'Karla', serif;
   }
@@ -32,23 +35,35 @@ body.dashboard {
     margin-right: 20px;
     padding-top: 15px;
     border-color: #3D3D3D;
-    width: 500px;
+    //width: 500px;
     padding-left: 40px;
 
     ul, ol {
       margin-top: 30px;
       margin-bottom: 12.5px;
+      width: 80%;
     }
+    li:first-of-type {
+      a{
+      font-weight: bold;}
+    }
+    ul:hover {
+      a{
+      font-weight: normal;
+      }
+    }
+
 
     a {
     font-family: 'Noto Sans', sans-serif;
     font-size: 20px;
     }
 
-    a:hover {
+    li:hover a {
       text-decoration: none;
-      font-weight: bold;
+      font-weight: bold!important;
       color: black;
+
     }
   }
   .btn.btn-success {
