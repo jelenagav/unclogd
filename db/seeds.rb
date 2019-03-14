@@ -13,6 +13,7 @@ Item.destroy_all
 user = User.create!(email: "test2@gmail.com", password:"123456")
 user1 = User.create!(email: "test3@gmail.com", password:"123456")
 user2 = User.create!(email: "test4@gmail.com", password:"123456")
+user2 = User.create!(email: "sam@lewagon.com", password:"123456")
 
 # seed file below
 
