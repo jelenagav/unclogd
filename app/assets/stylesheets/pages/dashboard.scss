@@ -4,7 +4,7 @@ body.dashboard {
   margin-left: 0px;
 
   .container-grid {
-    // width: 2000px;
+    overflow: scroll;
     height: 100%;
     margin-bottom: 20px;
   }
@@ -12,11 +12,9 @@ body.dashboard {
   main {
     grid-area: content;
     background-color:#FFFFFF;
-    // width: 1000px;
     padding-top: 25px;
     padding-left: 80px;
     padding-bottom: 30px;
-    // border: solid 1px;
     border-color: #3D3D3D;
   }
 

@@ -1,20 +1,8 @@
-<h1>Order</h1>
-<ul>
-  <li>Status: <%= @order.status %></li>
-  <li>Amount: <%= humanized_money_with_symbol(@order.amount) %></li>
+<p>Status: <%= @order.status %></p>
+<p>Amount: <%= humanized_money_with_symbol(@order.amount) %></p>
+<div class= "row">
   <% @order.package.items.each do |item| %>
-  <div class= "row">
-  <%= render 'items/item_card', {item: item} %>
-  </div>
+      <%= render 'items/item_card', {item: item} %>
+      <hr />
   <% end %>
-
-
-
-<!-- <h1>Order</h1>
-  <%# @order.package.items.each do |item| %>
-  <p>Status: <%#= @order.status %></p>
-  <p>Amount: <%#= humanized_money_with_symbol(@order.amount) %></p>
-
-  <%#= render 'items/item_card', {item: item} %>
-  <hr>
-  <%# end %> -->
+</div>
