@@ -7,9 +7,6 @@ a {
    color: black;
 }
 
-// a:hover {
-//   color: #74E4D6;
-// }
 
 .mm-survey-progress {
   margin: 59px;
@@ -162,7 +159,7 @@ h1 {
 }
 
 .mm-prev-btn .btn:hover {
- color: #74E4D6;
+ color: #00c5cd;
 
 }
 
@@ -175,45 +172,50 @@ h1 {
 // }
 
 .mm-next-btn .btn:hover {
-  color: #74E4D6;
+  color: #00c5cd;
 }
 
 .mm-finish-btn {
   display: none;
     position: relative;
     float: right;
+    padding-bottom: 20px;
 }
 
-.mm-finish-btn button {
-  // background: #74E4D6 !important;
-  //   color: #fff;
-  // padding-left: 30px;
-  // padding-right: 30px;
-  // padding-top: 10px;
-  // padding-bottom: 10px;
-    background-color: black !important;
-    border-color: black;
+
+.mm-survey-controller button {
+    font-family: 'Karla', serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: white;
+    background-color: black;
+    border: 1 px solid black;
+    position: relative;
+    float: right;
+    bottom: 70px;
     font-weight: lighter;
     padding-bottom: 10px;
     padding-top: 10px;
     padding-left: 20px;
     padding-right: 20px;
+
 }
 
-
-.mm-survey-controller button {
-  background: #fff;
-    border: none;
-    padding: 8px 18px;
-    font-family: 'Raleway';
+.mm-survey-controller button:hover {
+    font-family: 'Karla', serif;
     font-weight: 300;
-    font-size: 25px;
-}
-
-.mm-survey-results-controller button {
-  background: #fff;
-  border: none;
-  padding: 8px 18px;
+    font-size: 18px;
+    color: black;
+    background-color: white;
+    border-color: black;
+    position: relative;
+    float: right;
+    bottom: 70px;
+    font-weight: lighter;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .mm-survey-progress {
@@ -315,8 +317,8 @@ input[type="radio"] + label span {
 }
 
 input[type="radio"]:checked + label span {
-  background-color: #74E4D6;
-  border: 2px solid #74E4D6;
+  background-color: #00c5cd;
+  border: 2px solid #00c5cd;
 }
 
 input[type="radio"] + label span,
@@ -399,7 +401,7 @@ input[type="radio"]:checked + label span {
 }
 
 #begin-survey {
-  background-color: #74E4D6;
+  background-color: #00c5cd;
 }
 
 #begin-survey:hover {
