@@ -20,7 +20,7 @@ class Package < ApplicationRecord
 
     item3 = Item.where(type_category: "Serum").where("product_category ILIKE :query", query: "%#{sensitivity}%").where("product_category ILIKE :query", query: "%#{skin_type}%").where("product_category ILIKE :query", query: "%#{concern}%").where(price: price_range.capitalize).first
 
-    item4 = Item.where(type_category: "Extrafoilator").where("product_category ILIKE :query", query: "%#{sensitivity}%").where("product_category ILIKE :query", query: "%#{skin_type}%").where("product_category ILIKE :query", query: "%#{concern}%").where(price: price_range.capitalize).first
+    item4 = Item.where(type_category: "Extrafoliator").where("product_category ILIKE :query", query: "%#{sensitivity}%").where("product_category ILIKE :query", query: "%#{skin_type}%").where("product_category ILIKE :query", query: "%#{concern}%").where(price: price_range.capitalize).first
 
     # item4 = Item.where(type_category: "eyecream").first
 
