@@ -89,7 +89,7 @@ jQuery('.mm-prev-btn').hide();
           }
         }
         buttonConfig();
-      }, 500);
+      }, 300);
     });
 
   }
