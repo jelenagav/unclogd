@@ -7,7 +7,11 @@
       </div>
     </div>
     <div class = "information">
-      <h5><%= item.name.truncate(29) %></h5>
+      <% if current_page?(items_path) %>
+        <h5><%= item.name.truncate(29) %></h5>
+      <% else %>
+        <h5><%= item.name %></h5>
+      <% end %>
       <h5 class="padding-card"><strong><%= item.brand %></strong></h5>
       <% if defined? package_item %>
       <%= link_to package_item_path(package_item), method: :delete, data: {confirm: "are you sure?"} do  %>
