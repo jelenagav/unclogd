@@ -11,12 +11,12 @@
 		</div>
 		<div class="col-lg-6 col-xs-9">
 			<p class="title"><strong><%= item.name %></strong></p>
-			<p>Brand (Estee Lauder)</p>
+			<p>Brand (Argentum)</p>
 			<%= simple_form_for(@package_item) do |f| %>
 			<%=  f.hidden_field :package_id %>
 				<%=  f.hidden_field :item_id %>
 
-			<p>Price (150 pounds)
+			<p>Price (15 EUR)
 				<%= f.button :button do %> <i class="fas fa-shopping-cart"></i>
 			<% end %>
 			<% end %></p>

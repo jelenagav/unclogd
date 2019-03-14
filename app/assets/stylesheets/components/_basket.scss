@@ -71,8 +71,11 @@ body.packages.show {
   justify-content: space-between;
 }
 
-.stripe-button {
+.stripe-button-el {
 background-color: white;
+position: relative;
+float: right;
+width: 130px;
 }
 
 hr {
@@ -81,6 +84,56 @@ hr {
   border: 1px solid;
 }
 
+.btn.btn-success{
+ background-color: black !important;
+  // border: 0;
+  // border-radius: 0;
+  color: white;
+  border-color: black;
+  font-weight: lighter;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'Karla', serif;
+}
 
+.btn.btn-success:hover{
+ background-color: white !important;
+  // border: 0;
+  // border-radius: 0;
+  color: black !important;
+  border: 1px solid black;
+  border-color: black;
+  font-weight: lighter;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'Karla', serif;
+}
 
+.checkout-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 20px;
+  color: #4B4C4C
+}
+
+.pay {
+  width: 100%;
+}
+}
+
+.amount {
+  padding-left: 60px;
+}
+
+.checkout-container2 {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 20px;
+  color: #4B4C4C
 }
