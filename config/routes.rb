@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   get 'quiz', to: 'pages#quiz', as: :quiz
   resources :package_items
 
+  get 'overview', to: 'users#overview', as: :overview
+
+
   resources :orders, only: [:show, :create] do
     resources :payments, only: [:new, :create]
   end

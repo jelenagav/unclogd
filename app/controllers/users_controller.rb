@@ -8,6 +8,8 @@ class UsersController < ApplicationController
   end
 
   def overview
+    @user = current_user
+    authorize @user
     @active_tab = "overview"
     render layout: "dashboard"
   end
