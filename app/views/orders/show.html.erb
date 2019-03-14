@@ -1,5 +1,5 @@
 <p class = "order-status"><strong> Order number: </strong>472891037<%= @order.id %> </p>
-<p class = "order-status"><strong> Status: </strong><%= @order.status %> </p>
+<p class = "order-status"><strong> Status: </strong><%= @order.status.capitalize %> </p>
 <p class = "order-status"><strong>Amount: </strong> <%=  (@order.amount)%> EUR </p>
 <div class= "row">
   <% @order.package.items.each do |item| %>
