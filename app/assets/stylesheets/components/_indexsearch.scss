@@ -1,6 +1,6 @@
 body.items.index {
 
-    background: white;
+  background: white;
 
   .picture {
     width: 290px;
@@ -11,11 +11,6 @@ body.items.index {
   .inner-container {
     padding-top: 24px;
   }
-
-  // .picture1 {
-  //   width: 300px;
-  //   padding: 20px;
-  // }
 
   .row1 {
     display: flex;
@@ -28,15 +23,6 @@ body.items.index {
   .overfl {
     overflow-x: scroll;
   }
-
-  // a:visited {
-  //   color: black;
-  // }
-
-
-  // a:hover {
-  //   color: #74E4D6;
-  // }
 
   a {
     color: black;
@@ -67,9 +53,8 @@ body.items.index {
     align-items: center;
     justify-content: center;
     width: 1300px;
-    // margin-left: 190px;
 
-    > col {
+    >col {
       width: 300px;
       padding: 40px;
       background-color: green;
@@ -80,37 +65,35 @@ body.items.index {
 
   .search-bar {
     height: 141px;
-  display:block;
-    text-align:center;
+    display: block;
+    text-align: center;
   }
-
 
   .flash-success {
     justify-content: center;
     width: 50%;
     border-radius: 0;
-    border: solid 4px ;
+    border: solid 4px;
     border-width: 4px 0px 4px 4px;
     box-shadow: none;
   }
 
   .button1 {
-  z-index: 1;
-  float: left;
-  width: 65px;
-  height: 65px;
-  padding: 10px;
-  background: black;
-  color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none; /* Prevent double borders */
-  cursor: pointer;
-}
+    z-index: 1;
+    float: left;
+    width: 65px;
+    height: 65px;
+    padding: 10px;
+    background: black;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    /* Prevent double borders */
+    cursor: pointer;
+  }
 
-.button1:hover {
-  opacity: .8;
-}
-
-
+  .button1:hover {
+    opacity: .8;
+  }
 }

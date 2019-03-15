@@ -6,7 +6,6 @@ body {
 
 body.pages.home {
 
-
   .flash-screen {
     background-color: rgba(0, 0, 0, 0.85);
     width: 100vw;
@@ -24,7 +23,7 @@ body.pages.home {
     text-align: center;
     color: white;
 
-    p{
+    p {
       font-family: "Raleway", sans-serif;
       font-size: 32px;
       opacity: 0.8;
@@ -34,15 +33,16 @@ body.pages.home {
       max-width: 800px;
     }
 
-    #flash-button{
+    #flash-button {
       margin-top: 20px;
     }
 
-     #flash-button:focus{
+    #flash-button:focus {
       outline: none;
     }
   }
-  .flash-screen.disappear{
+
+  .flash-screen.disappear {
     opacity: 0;
   }
 
@@ -51,22 +51,24 @@ body.pages.home {
   text-decoration: none;
 
   height: 100vh;
+
   h1 {
- font-family: 'Crimson Text', serif;
-}
+    font-family: 'Crimson Text', serif;
+  }
 
   p {
- font-family: 'Crimson Text', serif;
-}
+    font-family: 'Crimson Text', serif;
+  }
 
-> .logo {
-  display: none;
-}
+  >.logo {
+    display: none;
+  }
 
-.navbar {
-  display: none;
-}
-.browse-container {
+  .navbar {
+    display: none;
+  }
+
+  .browse-container {
     float: left;
     background-color: #212529;
     color: #B5B5B5;
@@ -78,28 +80,27 @@ body.pages.home {
     flex-flow: row wrap;
     text-align: center;
     position: relative;
-    transition: all .5s ;
+    transition: all .5s;
     flex-direction: column;
     text-decoration: none;
 
-    > div {
-      // height: 100%;
+    >div {
       width: 100%;
       flex: 1 1;
     }
 
-    > .col3 {
+    >.col3 {
       position: relative;
 
-      > div {
+      >div {
         position: absolute;
         bottom: 50px;
         width: 100%;
       }
     }
-}
+  }
 
-.find-container {
+  .find-container {
     background-color: white;
     color: #B5B5B5;
     width: 100%;
@@ -110,30 +111,28 @@ body.pages.home {
     flex-flow: row wrap;
     text-align: center;
     position: relative;
-    transition: all .5s ;
+    transition: all .5s;
     flex-direction: column;
     text-decoration: none;
 
 
-    > div {
-      // height: 100%;
+    >div {
       width: 100%;
       flex: 1 1;
     }
 
-    > .col3 {
+    >.col3 {
       position: relative;
 
-      > div {
+      >div {
         position: absolute;
         bottom: 50px;
         width: 100%;
       }
     }
+  }
 
-}
-
-.check-container {
+  .check-container {
     float: right;
     background-color: #212529;
     color: #fff;
@@ -149,134 +148,129 @@ body.pages.home {
     flex-direction: column;
     text-decoration: none;
 
-    > div {
+    >div {
       height: 100%;
       width: 100%;
       flex: 1 1;
     }
 
-    > .col3 {
+    >.col3 {
       position: relative;
 
-      > div {
+      >div {
         position: absolute;
         bottom: 50px;
         width: 100%;
       }
     }
 
-    > .col2 {
+    >.col2 {
 
-      > h1, p {
+      >h1,
+      p {
         color: #B5B5B5;
         text-decoration: none;
       }
 
-      > h1, h1 {
+      >h1,
+      h1 {
         color: #B5B5B5;
         text-decoration: none;
       }
     }
-}
-
-.col2 {
-  a:hover {
-    text-decoration: none;
   }
-}
 
-.picture {
-  width: 80px;
-  height: 80px;
-}
+  .col2 {
+    a:hover {
+      text-decoration: none;
+    }
+  }
+
+  .picture {
+    width: 80px;
+    height: 80px;
+  }
 
 
-.hidden-text {
-  opacity: 0;
-  transition: all 220ms ease-out;
-}
+  .hidden-text {
+    opacity: 0;
+    transition: all 220ms ease-out;
+  }
 
-.main-container {
+  .main-container {
     overflow: hidden;
     display: flex;
     height: 100%;
     margin: 0;
-}
-
-@media (max-width: 576px) {
-  .main-container {
-    display: block;
   }
-}
 
-.find-container:hover {
-  color: black;
+  @media (max-width: 576px) {
+    .main-container {
+      display: block;
+    }
+  }
 
-  .picture {
+  .find-container:hover {
+    color: black;
+
+    .picture {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .find-container:hover .hidden-text {
+    color: black;
     opacity: 1;
-    transform: scale(1);
-  }
-}
-
-
-
-
-.find-container:hover .hidden-text{
-  color: black;
-  opacity: 1;
-
-}
-
-.browse-container:hover {
-  color: white;
-
-  .picture {
-    opacity: 1;
-    transform: scale(1);
   }
 
-}
-.browse-container:hover .hidden-text{
-  color: white;
-  opacity: 1;
-
-}
-
-.check-container:hover {
-  color: white;
-
-  p, h1{
+  .browse-container:hover {
     color: white;
+
+    .picture {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .browse-container:hover .hidden-text {
+    color: white;
+    opacity: 1;
+  }
+
+  .check-container:hover {
+    color: white;
+
+    p,
+    h1 {
+      color: white;
+    }
+
+    .picture {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+  }
+
+  .check-container:hover .hidden-text {
+    color: white;
+    opacity: 1;
+  }
+
+
+
+  .picture {
+    opacity: 0;
+    transform: scale(0.7);
   }
 
   .picture {
-    opacity: 1;
-    transform: scale(1);
+    transition: all 220ms ease-out;
   }
 
-}
 
-.check-container:hover .hidden-text{
-  color: white;
-  opacity: 1;
-
-}
-
-
-
-.picture {
-  opacity: 0;
-  transform: scale(0.7);
-}
-.picture{
-  transition: all 220ms ease-out;
-}
-
-
-.homepage-login {
-    // position: relative;
-    // top: 20px;
-    // height: auto;
+  .homepage-login {
     text-align: center;
     transition: .10s;
     align-items: right;
@@ -284,7 +278,7 @@ body.pages.home {
     margin-top: 25px;
     margin-bottom: 12.5px;
     margin-left: 200px;
-}
+  }
 
 }
 
@@ -292,11 +286,12 @@ body.pages.home {
 // Log-in
 .bg-modal {
   display: none;
-  position: fixed; /* Stay in place */
+  position: fixed;
+  /* Stay in place */
   z-index: 1;
   width: 100%;
   height: 100vh;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   position: absolute;
   top: 0;
   justify-content: center;
@@ -325,33 +320,15 @@ body.pages.home {
   font-weight: 10px;
 }
 
-//  {
-//   border: 2px solid #000000;
-//     font-weight: normal;
-//     font-size: 11px;
-//     text-transform: uppercase;
-//     background-color: #FFFFFF;
-//     color: #000000;
-//     letter-spacing: 0.4px;
-//     line-height: 13px;
-//     display: block;
-//     text-align: center;
-//     width: 100%;
-//     font-weight: bold;
-//     padding: 12px 22px 11px 24px;
-
-// }
-
-
-
 // Signup
 .modal {
   display: none;
-  position: fixed; /* Stay in place */
+  position: fixed;
+  /* Stay in place */
   z-index: 1;
   width: 100%;
   height: 100vh;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   position: absolute;
   top: 0;
   justify-content: center;
@@ -367,7 +344,6 @@ body.pages.home {
   position: relative;
   text-align: center;
   padding: 20px;
-
 }
 
 .exit {

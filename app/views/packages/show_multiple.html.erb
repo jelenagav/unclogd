@@ -1,14 +1,11 @@
 <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans|Karla" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 <div class="container">
   <div>
     <img src="<%= image_path("Faces.jpg") %>" alt="" class="picture-front" width="400" height="250">
   </div>
-
-  <div class = "title">
-  <h2 class ="title"> <strong>RESULTS</strong>: Here are 3 suggestions from your answers!</h2>
-  <!-- <h2>Here are our 3 suggestions from your answers!</h2> -->
+  <div class="title">
+    <h2 class="title"> <strong>RESULTS</strong>: Here are 3 suggestions from your answers!</h2>
   </div>
   <%
     packages = [
@@ -22,23 +19,26 @@
   <div class="row">
     <div class="col-lg-11">
       <div class="package-suggested">
-      <h4> Package <%= i + 1 %> </h4>
-      <h6> <%= (i+1) *25 %> EUR </h6>
-    <%= simple_form_for current_user, class: "form-relative", method: :put do |f| -%>
-      <%= f.hidden_field :active_package_id, value: package.id %>
-      <%= f.button :button, "Checkout", class: "select-button" %>
-      <% end %>
+        <% if i == 0 %>
+          <h4>Bronze </h4>
+        <% elsif i == 1 %>
+          <h4>Silver </h4>
+        <% elsif i == 2 %>
+          <h4>Gold </h4>
+        <% end %>
+        <h6>
+          <%= (i+1) *25 %> EUR </h6>
+        <%= simple_form_for current_user, class: "form-relative", method: :put do |f| -%>
+        <%= f.hidden_field :active_package_id, value: package.id %>
+        <%= f.button :button, "Checkout", class: "select-button" %>
+        <% end %>
       </div>
     </div>
   </div>
-
   <div class="row">
     <% package.items.each do |item| %>
-      <%= render 'items/item_card', { item: item } %>
+    <%= render 'items/item_card', { item: item } %>
     <% end %>
   </div>
   <% end %>
 </div>
-
-
-

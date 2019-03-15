@@ -1,4 +1,3 @@
-
 body.dashboard {
   padding-left: 0px;
   margin-left: 0px;
@@ -11,9 +10,9 @@ body.dashboard {
 
   main {
     grid-area: content;
-    background-color:#FFFFFF;
+    background-color: #FFFFFF;
     padding-top: 25px;
-    padding-left: 80px;
+    padding-left: 20px;
     padding-bottom: 30px;
     border-color: #3D3D3D;
   }
@@ -22,54 +21,50 @@ body.dashboard {
     grid-area: header;
   }
 
-
-
-
   .col-md-5 {
     font-family: 'Karla', serif;
   }
 
   .side-nav {
     grid-area: nav;
-    background-color:#00c5cd;
+    background-color: #00c5cd;
     margin-right: 20px;
     padding-top: 15px;
     border-color: #3D3D3D;
-    //width: 500px;
     padding-left: 40px;
 
-    ul, ol {
+    ul,
+    ol {
       margin-top: 30px;
       margin-bottom: 12.5px;
       width: 80%;
     }
+
     li:first-of-type {
-      a{
-      font-weight: bold;}
-    }
-    ul:hover {
-      a{
-      font-weight: normal;
+      a {
+        font-weight: bold;
       }
     }
 
 
+
     a {
-    font-family: 'Noto Sans', sans-serif;
-    font-size: 20px;
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 20px;
     }
 
     li:hover a {
       text-decoration: none;
-      font-weight: bold!important;
+      font-size: 2.1rem;
       color: black;
 
     }
   }
+
   .btn.btn-success {
     background-color: black;
     border-color: black;
-    position:absolute;
+    position: absolute;
     left: 0px;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -84,7 +79,7 @@ body.dashboard {
     color: black;
     border-color: black;
     background-color: white;
-    position:absolute;
+    position: absolute;
     left: 0px;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -99,4 +94,3 @@ body.dashboard {
     box-shadow: white !important;
   }
 }
-
