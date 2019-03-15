@@ -5,6 +5,7 @@ body {
 }
 
 .logo {
+  position: relative;
   height: 60px;
   width: 245px;
   display: block;
@@ -16,10 +17,10 @@ body {
 
 // main-navbar
 
-
 .navbar-unclogd-brand {
   margin-left: 800px;
 }
+
 .main-navbar .homepage-login {
     position: relative;
     top: 20px;
@@ -46,7 +47,6 @@ body {
 
 .homepage-login .main-navbar-link {
   padding: 10px;
-  // color: #cecaca;
 }
 
 
@@ -58,7 +58,6 @@ body {
 
 .homepage-login .main-navbar:hover ul {
   height: 40px;
-  // visibility: visible;
   padding-top: 10px;
   padding-bottom: 20px;
   overflow: hidden;
@@ -66,7 +65,6 @@ body {
   -moz-transition: all .1s ease-in-out;
   -o-transition: all .1s ease-in-out;
   transition: all .1s ease-in-out;
-
 }
 
 
@@ -76,29 +74,13 @@ body {
     text-decoration: none;
   }
 
-
-
-
-  // a:visited {
-  //   color: #cecaca;
-  // }
-
-  // a {
-  //   background-color: transparent;
-  // }
-
-
-
-
   .homepage-login .main-navbar .fa-bars {
     color: black;
     font-size: 30px;
   }
 
-
-  // login-navbar//
+// login-navbar//
 .main-nav {
-    // z-index: 12;
     position: fixed;
     top: 0;
     height: auto;
@@ -125,22 +107,14 @@ body {
 }
 
 .main-nav:hover ul {
-    // height: 40px;
   visibility: visible;
 }
 
-
-
-
 .main-nav ul li {
     color: #cecaca;
-    padding: 0px 16px;
-    // transition: .10s;
-    // transform: translateY(-81%);
+    padding: 0px 12px;
     display: inline-block;
     text-decoration: none;
-    // font-size: 13px;
-
 }
 
 .main-nav ul li, .main-nav-link ul li:hover {
@@ -156,28 +130,13 @@ body {
     font-size: 12px;
     letter-spacing: 1px;
     color: #cecaca;
-
 }
-
-
-  // a:visited {
-  //   color: #cecaca;
-  // }
-
-  // a {
-  //   background-color: transparent;
-  // }
 
 .navbar .main-nav-trigger .fa-bars, .navbar .dropdown .fa-bars {
     color: black;
     font-size: 30px;
 
 }
-
-
-// .pages.home a:visited {
-//   color: #cecaca;
-// }
 
 .pages.home .main-nav .search {
   color: #cecaca;
@@ -189,9 +148,7 @@ body {
 
   }
 
-
-  // drop-down-menu//
-
+// drop-down-menu//
 
 /* Dropdown menu */
 .navbar-dropdown-menu {
@@ -199,6 +156,7 @@ body {
   box-shadow: 1px 1px 2px black;
   border-color: black;
 }
+
 .navbar-dropdown-menu li > a {
   transition: color 0.3s ease;
   font-weight: lighter !important;
@@ -207,10 +165,12 @@ body {
   line-height: 22px !important;
   padding: 10px 20px;
 }
+
 .navbar-dropdown-menu li > a:hover {
   background: transparent !important;
   color: #00c5cd !important;
 }
+
 .navbar-dropdown-menu:before {
   content: ' ';
   height: 10px;

@@ -13,8 +13,6 @@ jQuery('.mm-prev-btn').hide();
   goToNext();
   goToPrev();
   getCount();
-  // checkStatus();
-  // buttonConfig();
   buildStatus();
   deliverStatus();
   submitData();
@@ -31,8 +29,6 @@ jQuery('.mm-prev-btn').hide();
       page = item.data('page');
 
       item.addClass('mm-page-'+page);
-      //item.html(page);
-
     });
 
     const beginButton = document.getElementById('begin-survey')
@@ -50,7 +46,6 @@ jQuery('.mm-prev-btn').hide();
 
     count = jQuery('.mm-survey-page').length;
     return count;
-
   }
 
   function goToNext() {
@@ -136,9 +131,7 @@ jQuery('.mm-prev-btn').hide();
   }
 
   function goToSlide(x) {
-
     return x;
-
   }
 
   function getCurrentSlide() {
@@ -187,7 +180,6 @@ jQuery('.mm-prev-btn').hide();
 
     jQuery(item).on('click', function() {
       if( jQuery('input:checked').length > 0 ) {
-          // console.log(item.val());
           setTimeout(() => {
             console.log("going to do it")
             jQuery('label').parent().removeClass('active');
@@ -195,7 +187,6 @@ jQuery('.mm-prev-btn').hide();
           }, 1000)
       }
       else {
-        //
       }
     });
 
@@ -263,34 +254,6 @@ jQuery('.mm-prev-btn').hide();
       jQuery('.mm-survey-results').slideDown();
     });
   }
-
-  // function collectData() {
-
-  //   var map = {};
-  //   var ax = ['0','red','mercedes','3.14','3'];
-  //   var answer = '';
-  //   var total = 0;
-  //   var ttl = 0;
-  //   var g;
-  //   var c = 0;
-
-    // jQuery('.mm-survey-item input:checked').each(function(index, val) {
-    //   var item;
-    //   var data;
-    //   var name;
-    //   var n;
-
-    //   item = jQuery(this);
-    //   data = item.val();
-    //   name = item.data('item');
-    //   n = parseInt(data);
-    //   total += n;
-
-    //   map[name] = data;
-
-    // });
-
-
 
   function goBack() {
     jQuery('.mm-back-btn').on('click', function() {

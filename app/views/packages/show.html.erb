@@ -1,128 +1,95 @@
-  <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans|Karla" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <div class = "container">
-    <h2> Your Basket</h2> </br>
-    <div class = "shopping">
-      <h4 class="h4"> Product </h4>
-
-     <%= link_to "Continue shopping", items_path, class: 'btn btn-success' %>
-
-
-
-    </div> <hr />
-
-    <% @package.package_items.each  do |package_item| %>
-    <% item = package_item.item  %>
-    <%= render 'items/item_card', { item: item, package_item: package_item } %>
-      <hr/>
-
-   <% end %>
-
-    <div class="checkout-container">
-      <div class="product-title">
-         <p1><strong> Product </strong></p1>
-      </div>
-      <div class="price-title">
-         <p1> <strong> Total amount </strong></p1>
-      </div>
+<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans|Karla" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="container">
+  <h2> Your Basket</h2> </br>
+  <div class="shopping">
+    <h4 class="h4"> Product </h4>
+    <%= link_to "Continue shopping", items_path, class: 'btn btn-success' %>
+  </div>
+  <hr />
+  <% @package.package_items.each  do |package_item| %>
+  <% item = package_item.item  %>
+  <%= render 'items/item_card', { item: item, package_item: package_item } %>
+  <hr />
+  <% end %>
+  <div class="checkout-container">
+    <div class="product-title">
+      <p1><strong> Product </strong></p1>
     </div>
-
-    <div class="checkout-container">
-       <div class="product-package">
-         <p1> <strong> Package 3 </strong> </p1>
-       </div>
-      <div class="price-package">
-         <p1> € 75 </p1>
-      </div>
+    <div class="price-title">
+      <p1> <strong> Total amount </strong></p1>
     </div>
-
-      <div class="checkout-container">
-       <div class="product">
-         <p1>Lumiere Essentielle illuminating micellar cleanser, Darphin </p1>
-       </div>
-      <div class="price">
-         <p1>   </p1>
-      </div>
+  </div>
+  <div class="checkout-container">
+    <div class="product-package">
+      <p1> <strong> Package 3 </strong> </p1>
     </div>
-
-   <div class="checkout-container">
-      <div class="product">
-         <p1> Moisture surge 72 hour auto replenishing hydrator, Clinique </p1>
-      </div>
-      <div class="price">
-         <p1>    </p1>
-      </div>
+    <div class="price-package">
+      <p1> € 75 </p1>
     </div>
-
-   <div class="checkout-container">
-      <div class="product">
-         <p1> Hydraskin serum, Darphin </p1>
-      </div>
-      <div class="price">
-         <p1> </p1>
-      </div>
+  </div>
+  <div class="checkout-container">
+    <div class="product">
+      <p1>Lumiere Essentielle illuminating micellar cleanser, Darphin </p1>
     </div>
-
-     <div class="checkout-container">
-      <div class="product-last">
-         <p1> Energie de vie exfoliating mask, Lancôme </p1>
-      </div>
-      <div class="price-last">
-         <p1>  </p1>
-      </div>
+    <div class="price">
+      <p1> </p1>
     </div>
-
-    <div class="checkout-container">
-      <div class="product">
-         <p1> <strong> Subtotal </strong> </p1>
-      </div>
-      <div class="price">
-         <p1> <strong> € 75 </strong> </p1>
-      </div>
+  </div>
+  <div class="checkout-container">
+    <div class="product">
+      <p1> Moisture surge 72 hour auto replenishing hydrator, Clinique </p1>
     </div>
-
-     <div class="checkout-container">
-      <div class="product">
-         <p1> La potion infinie anti-age cream, Argentum </p1>
-      </div>
-      <div class="price">
-         <p1> € 15 </p1>
-      </div>
+    <div class="price">
+      <p1> </p1>
     </div>
-
-<hr class="hr2">
-     <div class="checkout-container">
-      <div class="product-total">
-         <p1> <strong> Total </strong> </p1>
-      </div>
-      <div class="price-total">
-         <p1> <strong> € 90 </strong></p1>
-      </div>
+  </div>
+  <div class="checkout-container">
+    <div class="product">
+      <p1> Hydraskin serum, Darphin </p1>
     </div>
-
-
-        <div class="pay">
-          <% if true # @existing_order.nil? %>
-          <%= simple_form_for @new_order do |f| -%>
-           <%= f.hidden_field :package_id %>
-          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="<%= Rails.configuration.stripe[:publishable_key] %>" data-name="Your Order" data-email="<%= current_user.email %>" data-description="Please enter the followings:" data-amount="<%= @new_order.amount_cents %>" data-currency="<%= @new_order.amount.currency %>">
+    <div class="price">
+      <p1> </p1>
+    </div>
+  </div>
+  <div class="checkout-container">
+    <div class="product-last">
+      <p1> Energie de vie exfoliating mask, Lancôme </p1>
+    </div>
+    <div class="price-last">
+      <p1> </p1>
+    </div>
+  </div>
+  <div class="checkout-container">
+    <div class="product">
+      <p1> <strong> Subtotal </strong> </p1>
+    </div>
+    <div class="price">
+      <p1> <strong> € 75 </strong> </p1>
+    </div>
+  </div>
+  <div class="checkout-container">
+    <div class="product">
+      <p1> La potion infinie anti-age cream, Argentum </p1>
+    </div>
+    <div class="price">
+      <p1> € 15 </p1>
+    </div>
+  </div>
+  <hr class="hr2">
+  <div class="checkout-container">
+    <div class="product-total">
+      <p1> <strong> Total </strong> </p1>
+    </div>
+    <div class="price-total">
+      <p1> <strong> € 90 </strong></p1>
+    </div>
+  </div>
+  <div class="pay">
+    <%= simple_form_for @new_order do |f| -%>
+    <%= f.hidden_field :package_id %>
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="<%= Rails.configuration.stripe[:publishable_key] %>" data-name="Your Order" data-email="<%= current_user.email %>" data-description="Please enter the followings:" data-amount="<%= @new_order.amount_cents %>" data-currency="<%= @new_order.amount.currency %>">
     </script>
-        </div>
-       </div>
-          <% end %>
-          <% end %>
-        </div>
-      </div>
-    </div>
-
-
-
-<% if @existing_order %>
-<%= link_to order_path(@existing_order),
-method: :delete,
-data: { confirm: "Are you sure?" } do %>
-
-<i class="fas fa-trash"></i>
-<% end %>
+  </div>
+</div>
 <% end %>

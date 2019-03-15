@@ -2,9 +2,6 @@ import "bootstrap";
 import "./quiz";
 import "./form";
 
-// import { myTabClicks } from '../components/tab';
-// myTabClicks();
-
 window.addEventListener("load", function() {
   console.log("going to setup tabs")
   // store tabs variable

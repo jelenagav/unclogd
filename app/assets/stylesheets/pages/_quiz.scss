@@ -1,12 +1,10 @@
-
 b {
   padding-top: 8px;
 }
 
 a {
-   color: black;
+  color: black;
 }
-
 
 .mm-survey-progress {
   margin: 59px;
@@ -24,7 +22,7 @@ a {
   padding: 40px;
   padding-right: 20px;
   height: 500px;
-  text-align:left;
+  text-align: left;
 }
 
 .column-right {
@@ -35,7 +33,6 @@ a {
   height: 500px;
   position: relative;
 }
-
 
 h1 {
   font-size: 30px;
@@ -55,16 +52,15 @@ h1 {
   font-size: 32px;
   text-align: left;
 }
+
 .welcome p {
   font-family: 'Crimson Text', serif;
   font-size: 24px;
   margin-top: 30px;
 }
 
-  .btn.begin-btn {
+.btn.begin-btn {
   background-color: black !important;
-  // border: 0;
-  // border-radius: 0;
   color: white;
   position: absolute;
   bottom: 125px;
@@ -82,28 +78,9 @@ h1 {
   opacity: .8;
 }
 
-// .btn.begin-btn:hover {
-//   background-color: white !important;
-//   // border: 0;
-//   // border-radius: 0;
-//   color: black !important;
-//   border: 1px solid black;
-//   position: absolute;
-//   bottom: 125px;
-//   left: 386px;
-//   border-color: black;
-//   font-weight: lighter;
-//   padding-bottom: 10px;
-//   padding-top: 10px;
-//   padding-left: 20px;
-//   padding-right: 20px;
-//   font-family: 'Karla', serif;
-// }
-
-
 .mm-survey {
   margin-bottom: 50px;
-  width:500px;
+  width: 500px;
 
   .smaller {
     font-size: 10px;
@@ -136,45 +113,36 @@ h1 {
 
 .mm-survey-controller {
   position: relative;
-    background: #FFFFFF;
-    padding: 0px 0px;
+  background: #FFFFFF;
+  padding: 0px 0px;
 }
 
 .mm-survey-results-controller {
   position: relative;
-    // height: 60px;
-    background: #FFFFFF;
-    padding: 12px 14px;
+  background: #FFFFFF;
+  padding: 12px 14px;
 }
 
 .mm-back-btn {
   display: inline-block;
-    position: relative;
-    float: left;
+  position: relative;
+  float: left;
 }
 
-.mm-prev-btn .btn{
+.mm-prev-btn .btn {
   display: inline-block;
-    position: relative;
-    opacity: 0.8;
-    float: left;
-    padding: 0px;
-    margin: 0px;
-    font-size: 35px;
+  position: relative;
+  opacity: 0.8;
+  float: left;
+  padding: 0px;
+  margin: 0px;
+  font-size: 35px;
 }
 
 .mm-prev-btn .btn:hover {
- color: #00c5cd;
+  color: #00c5cd;
 
 }
-
-// .mm-next-.btn{
-//   // display: inline-block;
-//   opacity: 0.8;
-//     position: relative;
-//     float: right;
-//     font-size: 35px;
-// }
 
 .mm-next-btn .btn:hover {
   color: #00c5cd;
@@ -182,43 +150,42 @@ h1 {
 
 .mm-finish-btn {
   display: none;
-    position: relative;
-    float: right;
-    padding-bottom: 20px;
+  position: relative;
+  float: right;
+  padding-bottom: 20px;
 }
 
-
 .mm-survey-controller button {
-    font-family: 'Karla', serif;
-    font-weight: 300;
-    font-size: 18px;
-    color: white;
-    background-color: black;
-    border: 1 px solid black;
-    position: relative;
-    float: right;
-    bottom: 70px;
-    font-weight: lighter;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+  font-family: 'Karla', serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: white;
+  background-color: black;
+  border: 1 px solid black;
+  position: relative;
+  float: right;
+  bottom: 70px;
+  font-weight: lighter;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .mm-survey-controller button:hover {
-    opacity: .8;
-    color: white;
-
+  opacity: .8;
+  color: white;
 }
+
 .mm-survey-controller button:active {
-    opacity: .8;
-    color: white;
-
+  opacity: .8;
+  color: white;
 }
+
 .mm-survey-controller button:focus {
-    opacity: none;
-    color: white;
-    outline: none;
+  opacity: none;
+  color: white;
+  outline: none;
 }
 
 .mm-survey-progress {
@@ -248,7 +215,6 @@ h1 {
 
 .mm-survey-q li {
   display: block;
-  /*padding: 20px 0px;*/
   margin-bottom: 10px;
   width: 100%;
   background: #fff;
@@ -272,10 +238,6 @@ h1 {
   height: 315px;
 }
 
-.mm-survey-question {
-  // min-height: 100px;
-}
-
 .mm-survey-question p {
   font-family: 'Crimson Text', serif;
   font-size: 30px;
@@ -286,24 +248,24 @@ h1 {
 
 .mm-survery-content label p {
   display: inline-block;
-    position: relative;
-    top: 2px;
-    left: 5px;
-    margin: 0px;
+  position: relative;
+  top: 2px;
+  left: 5px;
+  margin: 0px;
 }
 
 input[type="radio"] {
   display: none;
 }
 
-input[type="radio"] + label {
+input[type="radio"]+label {
   color: #292321;
-    font-family: 'Raleway';
-    font-weight: 300;
-    font-size: 16px;
+  font-family: 'Raleway';
+  font-weight: 300;
+  font-size: 16px;
 }
 
-input[type="radio"] + label span {
+input[type="radio"]+label span {
   display: inline-block;
   width: 15px;
   height: 15px;
@@ -314,18 +276,18 @@ input[type="radio"] + label span {
   border-radius: 50%;
 }
 
-input[type="radio"] + label span {
+input[type="radio"]+label span {
   border: 2px solid #202528;
   background: transparent;
 }
 
-input[type="radio"]:checked + label span {
+input[type="radio"]:checked+label span {
   background-color: #00c5cd;
   border: 2px solid #00c5cd;
 }
 
-input[type="radio"] + label span,
-input[type="radio"]:checked + label span {
+input[type="radio"]+label span,
+input[type="radio"]:checked+label span {
   -webkit-transition: background-color 0.20s ease-in-out;
   -o-transition: background-color 0.20s ease-in-out;
   -moz-transition: background-color 0.20s ease-in-out;
@@ -335,18 +297,18 @@ input[type="radio"]:checked + label span {
 .mm-survey-item {
   background: #fff;
   margin-bottom: 15px;
-  border-bottom: 1px solid rgba(33,33,33,0.15);
-    border-radius: 0px 0px 4px 4px;
+  border-bottom: 1px solid rgba(33, 33, 33, 0.15);
+  border-radius: 0px 0px 4px 4px;
 }
 
-.mm-prev-btn button:focus, .mm-next-btn button:focus {
+.mm-prev-btn button:focus,
+.mm-next-btn button:focus {
   outline: none;
   border: none;
   font-size: 25px;
 }
 
 .mm-survey.okay .mm-next-btn {
-  // display: inline-block;
   opacity: 1;
 }
 
@@ -357,33 +319,34 @@ input[type="radio"]:checked + label span {
 .mm-finish-btn.active {
   opacity: .8;
 }
+
 .mm-survey-results {
   display: none;
 }
 
 .mm-survey-results-score {
   margin: 0px;
-    padding: 0px;
-    padding-bottom: 40px;
-    text-align: center;
-    font-size: 80px;
-    font-family: 'Raleway';
-    font-weight: 600;
-    letter-spacing: -6px;
+  padding: 0px;
+  padding-bottom: 40px;
+  text-align: center;
+  font-size: 80px;
+  font-family: 'Raleway';
+  font-weight: 600;
+  letter-spacing: -6px;
 }
 
 .mm-survey-results-list {
   list-style-type: none;
   padding: 0px 15px;
-    margin: 0px;
+  margin: 0px;
 }
 
 .mm-survey-results-item {
   color: #fff;
-    margin-top: 10px;
-    padding: 15px 15px 15px 0px;
-    font-family: 'Raleway';
-    font-weight: 300;
+  margin-top: 10px;
+  padding: 15px 15px 15px 0px;
+  font-family: 'Raleway';
+  font-weight: 300;
 }
 
 .mm-survey-results-item.correct {
@@ -409,7 +372,3 @@ input[type="radio"]:checked + label span {
 #begin-survey {
   background-color: #00c5cd;
 }
-
-// #begin-survey:hover {
-//   color: white;
-// }

@@ -4,16 +4,13 @@ body.packages.show{
   }
 }
 
-
 body.packages.show, body.orders.show {
-
 
   .index-card {
     display: flex;
     vertical-align: center;
     align-items: center;
     width: 900px;
-    // height: 210px;
     margin: auto;
     padding: 0px;
     margin-top: -60px;
@@ -27,7 +24,6 @@ body.packages.show, body.orders.show {
 
   .information {
     width: 700px;
-    // border: 1px solid black;
     margin-left: 40px;
   }
 
@@ -66,7 +62,6 @@ body.packages.show, body.orders.show {
     }
   }
 
-
 .description-headers {
   width: 900px;
   margin: auto;
@@ -99,9 +94,7 @@ hr {
 }
 
 .btn.btn-success{
- background-color: black !important;
-  // border: 0;
-  // border-radius: 0;
+  background-color: black !important;
   color: white;
   border-color: black;
   font-weight: lighter;
@@ -113,9 +106,7 @@ hr {
 }
 
 .btn.btn-success:hover{
- background-color: white !important;
-  // border: 0;
-  // border-radius: 0;
+  background-color: white !important;
   color: black !important;
   border: 1px solid black;
   border-color: black;
@@ -194,3 +185,20 @@ hr {
   align-self: flex-end;
 }
 }
+
+body.orders.show .index-card {
+  margin-bottom: 30px;
+
+  .picture-container {
+    width: 215px;
+    padding-left: 5px;
+    margin-left:10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+
+    .item-picture{
+      width: 178px;
+    }
+  }
+}
+

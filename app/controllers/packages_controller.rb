@@ -25,7 +25,6 @@ class PackagesController < ApplicationController
     @new_order_1 = Order.new(package: @package_1)
     @new_order_2 = Order.new(package: @package_2)
     @new_order_3 = Order.new(package: @package_3)
-
   end
 
 

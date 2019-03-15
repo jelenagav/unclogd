@@ -6,13 +6,10 @@ if (document.getElementById('login')) {
 
   });
 
-
-
   document.querySelector('.login .close').addEventListener('click', function(event) {
     event.preventDefault()
     document.querySelector('.bg-modal.login').style.display = 'none';
   });
-
 
   // Signup
 
@@ -22,11 +19,8 @@ if (document.getElementById('login')) {
 
   });
 
-
   document.querySelector('.signup .close').addEventListener('click', function(event) {
     event.preventDefault()
     document.querySelector('.bg-modal.signup').style.display = 'none';
   });
-
-
 }
