@@ -15,3 +15,9 @@
 @import "pages/index";
 @import "pages/quiz";
 // @import "components/forms";
+
+body {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 80px;
+}
