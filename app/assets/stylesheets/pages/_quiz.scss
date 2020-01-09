@@ -1,19 +1,29 @@
+body {
+  padding-bottom: 0px!important;
+  padding-right: 50px;
+}
+
+
 b {
   padding-top: 8px;
 }
 
-a {
-  color: black;
+.homepage-login a {
+  color: #24bec9;
+}
+
+.homepage-login a:hover, .homepage-login a:focus {
+  color: white!important;
 }
 
 .mm-survey-progress {
-  margin: 59px;
+  margin-left: 59px;
 }
 
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-top: 50px;
+  margin: 50px 0px 40px 0px;
 }
 
 .column-left {
@@ -28,8 +38,7 @@ a {
 .column-right {
   justify-content: left;
   display: flex;
-  padding: 40px;
-  padding-left: 20px;
+  padding: 20px;
   height: 500px;
   position: relative;
 }
@@ -129,23 +138,20 @@ h1 {
   float: left;
 }
 
+
 .mm-prev-btn .btn {
   display: inline-block;
   position: relative;
   opacity: 0.8;
   float: left;
   padding: 0px;
-  margin: 0px;
+  margin: 0px 0px 40px 0px;
   font-size: 35px;
 }
 
 .mm-prev-btn .btn:hover {
   color: #00c5cd;
 
-}
-
-.mm-next-btn .btn:hover {
-  color: #00c5cd;
 }
 
 .mm-finish-btn {

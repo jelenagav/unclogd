@@ -280,6 +280,10 @@ body.pages.home {
     margin-left: 200px;
   }
 
+  .btn-lg, .btn-group-lg > .btn {
+    padding: 15px 16px!important;
+  }
+
 }
 
 
@@ -344,6 +348,29 @@ body.pages.home {
   position: relative;
   text-align: center;
   padding: 20px;
+  margin-top: 10%;
+}
+
+.modal-content h4 {
+  margin-bottom: 40px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0px 8px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.modal-content button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border: 1px solid black;
+  padding: 8px 20px;
+  margin-top: 37px;
 }
 
 .exit {
